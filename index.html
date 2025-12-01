@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <title>GenTeraBio</title>
 </head>
@@ -13,15 +14,25 @@
     
     <main>
         <!-- --------------- hero --------------- -->
-        <section class="hero">
-            <div class="container hero__container">
+        <section class="flex-center hero">
+            <div class="hero__background">
+                <video autoplay muted loop>
+                    <source src="./assets/videos/hero.mp4" type="video/mp4" media="(min-width: 391px)">
+                    <source src="./assets/videos/hero_mobile.mp4" type="video/mp4" media="(max-width: 390px)">
+                </video>
+            </div>
+            <div class="flex-center container hero__container">
                 <p class="hero__subtitle">
                     인류의 더 나은 삶과 행복을 위해
                 </p>
                 <h1 class="hero__title">
-                    젠테라바이오는<br class="max-390px"> 다가올<br>
-                    새로운 미래를 준비합니다.
+                    젠테라바이오는<br class="max-390px"> 다가올<br class="no-mobile">
+                    새로운<br class="max-390px"> 미래를 준비합니다.
                 </h1>
+                <div class="hero__scroll">
+                    <p>SCROLL</p>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
             </div>
         </section>
     </main>
