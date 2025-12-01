@@ -1,0 +1,10 @@
+@use "../abstracts/bundle" as abs;
+
+// max-* 구조의 클래스명인 경우, responsiveShow() mixin 적용
+.max {
+    @each $label, $width in abs.$breakpoints {
+        &-#{$width} {
+            @include abs.responsiveShow($width);
+        }
+    } 
+}

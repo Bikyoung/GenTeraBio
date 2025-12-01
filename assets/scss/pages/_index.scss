@@ -1,0 +1,13 @@
+@use "../abstracts/bundle" as abs;
+
+.hero {
+    height: 100vh;
+
+    &__subtitle {
+        // @include abs.fontStyle($type: subtitle1, $weight: 700, $lineHeight: 1.3, $letterSpacing: -0.02em, $color: white);
+    }
+
+    &__title {
+        // @include abs.responsiveFontSize(display);
+    }
+}
