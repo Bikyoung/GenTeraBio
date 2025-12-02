@@ -43,3 +43,37 @@
         }
     }
 }
+
+// 반응형별로 상하 padding을 자동 재정의하는 mixin
+@mixin responsivePaddingY($pc: (pt, pb), $laptop: (pt, pb), $tablet: (pt, pb), $mobile: (pt, pb)) {
+    padding-top: map-get($pc, pt);
+    padding-bottom: map-get($pc, pb);
+
+    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile) {
+        @media (max-width: map-get(vars.$breakpoints, $bp)) {
+            padding-top: map-get($device, pt);
+            padding-bottom: map-get($device, pb);
+        }
+    }
+}
+
+@mixin responsiveGap($pc, $laptop, $tablet, $mobile) {
+    gap: $pc;
+
+    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile) {
+        @media (max-width: map-get(vars.$breakpoints, $bp)) {
+            gap: $device;
+        }
+    }
+}
+
+@mixin responsiveBorderRadius($pc: 3rem, $laptop: 3rem, $tablet: 2rem, $mobile: 1.2rem) {
+    border-radius: $pc;
+
+    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile) {
+        @media (max-width: map-get(vars.$breakpoints, $bp)) {
+            border-radius: $device;
+        }
+    }
+}
+

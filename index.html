@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome 링크 연결 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <title>GenTeraBio</title>
@@ -15,6 +16,7 @@
     <main>
         <!-- --------------- hero --------------- -->
         <section class="flex-center hero">
+            <!-- hero__bg -->
             <div class="hero__background">
                 <video autoplay muted loop>
                     <source src="./assets/videos/hero.mp4" type="video/mp4" media="(min-width: 391px)">
@@ -22,16 +24,141 @@
                 </video>
             </div>
             <div class="flex-center container hero__container">
+                <!-- hero__subtitle -->
                 <p class="hero__subtitle">
                     인류의 더 나은 삶과 행복을 위해
                 </p>
+                <!-- hero__title -->
                 <h1 class="hero__title">
                     젠테라바이오는<br class="max-390px"> 다가올<br class="no-mobile">
                     새로운<br class="max-390px"> 미래를 준비합니다.
                 </h1>
+                <!-- hero__scroll -->
                 <div class="hero__scroll">
                     <p>SCROLL</p>
                     <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------- story --------------- -->
+        <section class="story">
+            <!-- story__ci -->
+            <div class="flex-center background story__ci">
+                <picture>
+                    <source srcset="./assets/images/ci_story.webp" type="image/webp" media="(min-width: 769px)">
+                    <source srcset="./assets/images/ci_story_small.webp" type="image/webp"  media="(max-width: 768px)">
+                    <img src="./assets/images/ci_story.webp" alt="ci 이미지">
+                </picture>
+            </div>
+            <div class="container story__container story__container--top">
+                <!-- story__subtitle -->
+                <p class="story__subtitle">
+                    젠테라바이오는 축적된<br class="max-390px"> 임상 경험을 바탕으로
+                </p>
+            </div>
+            <div class="container story__container story__container--bottom">
+                <!-- story__title -->
+                <p class="story__title">
+                    새로운 치료의<br class="max-390px"> 길을 열어갑니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- --------------- technology --------------- -->
+        <section class="technology">
+            <div class="container technology__container">
+                <div class="title-wrapper">
+                    <h2 class="technology__title">
+                        TECHNOLOGY
+                    </h2>
+                    <p class="technology__subtitle">
+                        연구 과제 및 기술 현황
+                    </p>
+                </div>
+                <div class="flex-center content-wrapper">
+                    <ul class="technology-image__list">
+                        <li class="technology-image__item on">
+                            <img src="./assets/images/technology_t.webp" alt="CAR-T 설명 이미지">
+                        </li>
+                        <li class="technology-image__item">
+                            <img src="./assets/images/technology_nk.webp" alt="CAR-NK 설명 이미지">
+                        </li>
+                        <li class="technology-image__item">
+                            <img src="./assets/images/technology_msc.webp" alt="MSC 설명 이미지">
+                        </li>
+                    </ul>
+                    <ul class="technology-content__list">
+                        <li class="flex-center technology-content__item technology-content__item--t on">
+                            <a href="#" class="flex-center">
+                                <div class="technology-content__text">
+                                    <div class="technology-content__title">
+                                        <span class="title">
+                                            CAR-T
+                                        </span>
+                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                    </div>
+                                    <div class="technology-content__desc on">
+                                        <p class="summary">
+                                            암세포의 면역 회피 기전을 극복하기 위해 개발된 혁신적인 면역치료법입니다.    
+                                        </p>
+                                        <p class="detail">
+                                            당사는 CD19, BCMA, HER2 등 다양한 표적에 대한 CAR-T 세포를 개발하여, 기존 치료에 반응하지 않던 난치성 혈액암에서도 우수한 치료 반응률을 보이고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="technology-content__patent">
+                                    <img src="./assets/images/patent.webp" alt="특허증 이미지">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="technology-content__item technology-content__item--nk">
+                            <a href="#" class="flex-center">
+                                <div class="technology-content__text">
+                                    <div class="technology-content__title">
+                                        <span class="title">
+                                            CAR-NK
+                                        </span>
+                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                    </div>
+                                    <div class="technology-content__desc">
+                                        <p class="summary">
+                                            NK세포의 살상 능력과 CAR 기술로 암세포의 면역 회피를 극복할 수 있는 치료법입니다.    
+                                        </p>
+                                        <p class="detail">
+                                            당사는 CD19, CD22, HER2 등 다양한 종양 표적에 대한 CAR-NK 세포를 개발하고 있으며, 기존 CAR-T 치료의 한계를 보완하여 안전성과 치료 지속성을 동시에 확보하고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="technology-content__patent">
+                                    <img src="./assets/images/patent.webp" alt="특허증 이미지">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="technology-content__item technology-content__item--msc">
+                            <a href="#" class="flex-center">
+                                <div class="technology-content__text">
+                                    <div class="technology-content__title">
+                                        <span class="title">
+                                            MSC
+                                        </span>
+                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                    </div>
+                                    <div class="technology-content__desc">
+                                        <p class="summary">
+                                            제대혈 유래 MSC는 면역 조절과 조직 재생으로, 난치성 질환 치료를 위한 세포 치료제입니다.    
+                                        </p>
+                                        <p class="detail">
+                                            당사는 제대혈 유래 MSC를 활용한 IL-10, HGF ,IL-1Ra, 연구를 진행하고 있으며, 기존 치료로 효과가 미비했던 염증성 질환 및 퇴행성 질환에서 유의미한 치료 가능성을 확인하고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="technology-content__patent">
+                                    <img src="./assets/images/patent.webp" alt="특허증 이미지">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -47,7 +174,12 @@
 
 
 
-
+    <!-- Gsap 링크 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <!-- ScrollTrigger 링크 연결 -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- JQuery 링크 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

@@ -1,5 +1,19 @@
 @use "../abstracts/bundle" as abs;
 
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+a {
+    color: transparent;
+    text-decoration: none;
+}
+
 // max-* 구조의 클래스명인 경우, responsiveShow() mixin 적용
 .max {
     @each $label, $width in abs.$breakpoints {
@@ -9,6 +23,7 @@
     } 
 }
 
+// 모바일(<=390px)에서만 요소를 숨김
 .no-mobile {
     display: block;
 
@@ -17,14 +32,23 @@
     }
 }
 
+// display: flex 적용 후 X,Y축 모두 양쪽 정렬
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// 너비/높이 모두 100% + 기본 좌우 패딩값을 갖는 컨테이너
 .container {
     @include abs.responsivePaddingX();
     width: 100%;
     height: 100%;
+}
+
+// background-image 지정시 함께 자주 쓰이는 설정
+.background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

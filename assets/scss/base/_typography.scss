@@ -1,7 +1,14 @@
+@use "../abstracts/bundle" as abs;
+
 html {
     font-size: 62.5%;   // 1rem = 10px로 설정
 }
 
 body {
     font-family: 'Pretendard', sans-serif;
+}
+
+h2 {
+    @include abs.responsiveFontSize(title1);
+    @include abs.fontStyle(700, 1.3, -0.02em, map-get(abs.$colors, black));
 }
