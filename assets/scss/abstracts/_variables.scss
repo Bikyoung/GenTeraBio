@@ -1,6 +1,6 @@
 // --------------- breakpoints ---------------
 $breakpoints: (
-    large: 1440px,
+    large: 1024px,
     medium: 768px,
     small: 390px
 );
@@ -25,21 +25,21 @@ $colors: (
 $font-size: (
     display: (
         desktop: 7.4rem,
-        laptop: 6.6rem,
+        laptop: 5.8rem,
         tablet: 4.8rem,
         mobile: 4.4rem
     ),
 
     title1: (
         desktop: 7rem,
-        laptop: 6.2rem,
+        laptop: 5rem,
         tablet: 4.8rem,
         mobile: 3.8rem
     ),
 
     title2: (
         desktop: 4.2rem,
-        laptop: 3.8rem,
+        laptop: 3rem,
         tablet: 3.4rem,
         mobile: 2.8rem
     ),
@@ -53,7 +53,7 @@ $font-size: (
 
     title4: (
         desktop: 2.4rem,
-        laptop: 2rem,
+        laptop: 1.8rem,
         tablet: 1.7rem,
         mobile: 1.5rem
     ),
@@ -74,7 +74,7 @@ $font-size: (
     
     subtitle2: (
         desktop: 3rem,
-        laptop: 2.6rem,
+        laptop: 2rem,
         tablet: 2rem,
         mobile: 1.6rem
     ),
@@ -109,7 +109,7 @@ $font-size: (
 
     body1: (
         desktop: 2rem,
-        laptop: 1.8rem,
+        laptop: 1.6rem,
         tablet: 1.6rem,
         mobile: 1.4rem
     ),
@@ -128,11 +128,18 @@ $font-size: (
         mobile: 1.1rem
     ),
 
-    button: (
+    button1: (
         desktop: 2rem,
-        laptop: 1.8rem,
+        laptop: 1.6rem,
         tablet: 1.6rem,
         mobile: 1.4rem
+    ),
+
+    button2: (
+        desktop: 1.6rem,
+        laptop: 1.4rem,
+        tablet: 1.3rem,
+        mobile: 1.2rem
     )
 );
 

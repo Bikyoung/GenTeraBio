@@ -12,7 +12,6 @@
     }
 }
 
-
 // font-size를 제외한 폰트 관련된 모든 속성들을 정의하는 mixin
 @mixin fontStyle($fontWeight, $lineHeight, $letterSpacing, $color) {
 
@@ -31,8 +30,19 @@
     }
 }
 
-// 반응형별로 좌우 padding을 자동 재정의하는 mixin
-@mixin responsivePaddingX($pc: 10rem, $laptop: 10rem, $tablet: 4.6rem, $mobile: 2.4rem) {
+// 반응형별로 max-width를 자동 재정의하는 mixin (수정해야함!!)
+@mixin responsiveMaxWidth($pc: 172rem, $laptop: 90.4rem, $tablet: 67.6rem, $mobile: 33rem) {
+    max-width: $pc; 
+
+    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile) {
+        @media (max-width: map-get(vars.$breakpoints, $bp)) {
+            max-width: $device;
+        }
+    }
+}
+
+// 반응형별로 좌우 padding을 자동 재정의하는 mixin (수정해야함!!)
+@mixin responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile: 1.2rem) {
     padding-left: $pc;
     padding-right: $pc;
 
