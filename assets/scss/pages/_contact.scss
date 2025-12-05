@@ -1,0 +1,46 @@
+@use "../abstracts/bundle" as abs;
+// -----------폰트,믹스인연결-------------
+
+.content-container {
+    @include abs.responsivePaddingX(24.5rem, 15rem);
+    @include abs.responsiveMaxWidth(141rem, 25.4rem, 67.6rem, 33rem);
+
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    // overflow: hidden;
+
+}
+
+// ------------------------
+
+.contact {
+    &__hero {
+        &--wrap {
+            position: absolute;
+            top: 50%;
+            // left: 0%;
+            @include abs.responsivePaddingX(24.5rem, 15rem);
+        }
+
+        &--title {
+            @include abs.responsiveFontSize(display);
+            @include abs.fontStyle(600, 1.2, -0.02em, map-get(abs.$colors, white));
+        }
+
+        &--des {
+            @include abs.responsiveFontSize(subtitle1);
+            // font-size: 28px;
+            @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, white));
+        }
+    }
+
+    &__hero img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    // &__kind{}
+    // &__info{}
+}
