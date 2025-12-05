@@ -1,16 +1,4 @@
 @use "../abstracts/bundle" as abs;
-//--------------- common ---------------
-.index-container {
-    @include abs.responsivePaddingX(5rem, 2.5rem, 1.6rem, 1.2rem);
-    @include abs.responsiveMaxWidth(172rem, 90.4rem, 67.6rem, 33rem);
-
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-
 
 //--------------- hero ---------------
 .hero {
@@ -74,10 +62,6 @@
             margin-top: 1rem;
             animation: scrollAnimation 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
         }
-
-        @media (max-width: map-get(abs.$breakpoints, medium)) {
-            bottom: 3.7rem;
-        }
     }
 
     @media (min-width: 1441px) {
@@ -86,6 +70,7 @@
         }
     }
 
+    // @media (max-width: 768px0
     @media (max-width: map-get(abs.$breakpoints, medium)) {
         &__container {
             align-items: center;
@@ -93,6 +78,10 @@
 
         &__subtitle, &__title {
             text-align: center;
+        }
+
+        &__scroll {
+            bottom: 3.7rem;
         }
     }
 }
@@ -164,13 +153,14 @@
 
 //--------------- technology ---------------
 .technology {
+    // height: 100vh;
 
     &__container {
         @include abs.responsivePaddingY($pc: (pt: 16rem, pb: 14.5rem), $laptop: (pt: 10rem, pb: 7rem), $tablet: (pt: 10rem, pb: 2rem), $mobile: (pt: 5.5rem, pb: 4rem));
-        @include abs.responsiveGap(7rem, 4.2rem, 4.2rem, 4rem);
+        @include abs.responsiveGap(7rem, 4.2rem, 6rem, 4rem);
 
-        display: flex;
         flex-direction: column;
+        overflow: hidden;
     }  
 
     &__subtitle {
@@ -181,10 +171,11 @@
     .content-wrapper {
         width: 100%;
         height: fit-content;
+        align-items: stretch;
         position: relative;
 
-        @media (max-width: 769px) {
-            align-items: stretch;
+        > * {
+            width: 50%;
         }
     }
 
@@ -196,73 +187,51 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 0;
 
-            &.on {
+            &:nth-child(1) {
+                z-index: 3;
+            }
+
+            &:nth-child(2) {
+                z-index: 2;
+            }
+
+            &:nth-child(3) {
                 z-index: 1;
             }
 
             img {
-                @include abs.responsiveBorderRadius();
-
+                display: inline-block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                display: block;
             }
         }
     }
+
 
     &-content {
         &__list {
             flex-direction: column;
             flex: 1;
+
+            li {
+                justify-content: start;
+            }
         }
 
         &__item {
-            @include abs.responsivePaddingX(8rem, 6rem, 2rem, 0);
-            @include abs.responsivePaddingY($pc: (pt: 3.5rem, pb: 3.5rem), $laptop: (pt: 2.5rem, pb: 2.5rem), $tablet: (pt: 0rem, pb: 0rem), $mobile: (pt: 0rem, pb: 0rem));
+            // padding-top: clamp(1.8rem, -0.872rem + 3.475vw, 5.8rem);
+            // padding-bottom: clamp(1.8rem, -0.872rem + 3.475vw, 5.8rem);
+            // padding-left: clamp(5rem, 2.996rem + 2.606vw, 8rem);
+            // padding-right: clamp(5rem, 2.996rem + 2.606vw, 8rem);
+            padding: 2rem 4rem;
 
             border: 1px solid map-get(abs.$colors, gray-100);
+            flex: 1;
 
-            &:last-child, &:first-child {
-                @include abs.responsiveBorderRadius();
-
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-
-            &:last-child {
-                border-top-right-radius: 0;
-            }
-
-            &:first-child {
-                border-bottom-right-radius: 0;
-            }
-
-            &.on {
-                
-                @media (min-width: 769px) {
-                    padding-top: 5.8rem;
-                    padding-bottom: 5.8rem;
-                    background-color: #111;
-
-                    .summary {
-                        display: none;
-                    }
-    
-                    .detail {
-                        display: block;
-                    }
-
-                    .title, i, .summary, .detail {
-                        color: map-get(abs.$colors, white);
-                    }
-    
-                    .technology-content__patent {
-                        display: block;
-                    }
-                }
+            i {
+                display: none;
             }
 
             a {
@@ -277,6 +246,9 @@
         }
         
         &__title {
+            justify-content: start;
+            gap: 2rem;
+
             .title {
                 @include abs.responsiveFontSize(title2);
                 @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, black));        
@@ -290,7 +262,8 @@
 
         &__desc {
             > * {
-                @include abs.responsiveFontSize(body1);
+                // @include abs.responsiveFontSize(body1);
+                font-size: 16px;
                 @include abs.fontStyle(400, 1.5, -0.02em, map-get(abs.$colors, black));
             }
 
@@ -303,34 +276,73 @@
             display: none;
 
             img {
-                border-radius: 0.5rem;
+                display: inline-block;
+                height: 12rem;
             }
         }
     }
     
-    @media (min-width: 769px) {
+    @media (max-width: 1440px) and (min-width: 769px) {
         .content-wrapper {
             width: 100%;
-            
+            flex-direction: column;
+
             > * {
-                width: 50%;
+                width: 100%;
             }
         }
 
-        .technology-image__item img {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+        &-image {
+            &__list {
+                display: grid;
+                place-items: center;
+            }
+
+            &__item {
+                grid-area: 1 / 1;
+                position: relative;
+                width: 100%;
+                height: 25rem;
+            }
+        }
+    } 
+ 
+    @media (min-width: 769px) {
+        &-content__item {
+            &.on {
+                background-color: #111;
+
+                .summary {
+                    display: none;
+                }
+    
+                .detail {
+                    display: block;
+                }
+    
+                .title, i, .summary, .detail {
+                    color: map-get(abs.$colors, white);
+                }
+    
+                .technology-content__patent, i {
+                    display: block;
+                }
+            }
+
         }
 
-        .technology-content__list{
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
+        &-image__item {
+            &.on {
+                z-index: 5;
+            }
         }
     }
 
     @media (max-width: map-get(abs.$breakpoints, medium)) {
         background-color: map-get(abs.$colors, gray-50);
     }
+
+ 
 }
 
 
