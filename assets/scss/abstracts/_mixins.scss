@@ -77,13 +77,4 @@
     }
 }
 
-@mixin responsiveBorderRadius($pc: 3rem, $laptop: 3rem, $tablet: 2rem, $mobile: 1.2rem) {
-    border-radius: $pc;
-
-    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile) {
-        @media (max-width: map-get(vars.$breakpoints, $bp)) {
-            border-radius: $device;
-        }
-    }
-}
 

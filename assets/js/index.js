@@ -21,3 +21,26 @@ $storyTimeline
         scale: 0,
         autoAlpha: 0
     }, "-=0.5");
+
+// ------------------------------ technology ------------------------------
+// .technology-content__item에 마우스를 올리면(mouseenter) 보여지는 이미지와 텍스트가 변경됨 
+$(".technology-content__item").on("mouseenter", function() {
+    let index = $(this).index();
+
+    $(".technology-content__item").removeClass("on");
+    $(this).addClass("on");
+
+    $(".technology-image__item").removeClass("on");
+    $(".technology-image__item").eq(index).addClass("on");
+});
+
+// .technology-content__item에 마우스를 떼면(mouseleave) 보여지는 이미지와 텍스트가 변경됨 
+$(".technology-content__item").on("mouseleave", function() {
+    $(".technology-content__item").removeClass("on");
+    $(".technology-content__item").eq(0).addClass("on");
+    
+
+    $(".technology-image__item").removeClass("on");
+    $(".technology-image__item").eq(0).addClass("on");
+});
+
