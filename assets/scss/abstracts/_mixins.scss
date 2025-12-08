@@ -29,7 +29,7 @@
     }
 }
 
-// 반응형별로 max-width를 자동 재정의하는 mixin (수정해야함!!)
+// 반응형별로 max-width를 자동 재정의하는 mixin
 @mixin responsiveMaxWidth($pc: 172rem, $laptop: 90.4rem, $tablet: 67.6rem, $mobile-L: 41rem, $mobile-S: 33rem) {
     max-width: $pc; 
 
@@ -40,7 +40,7 @@
     }
 }
 
-// 반응형별로 좌우 padding을 자동 재정의하는 mixin (수정해야함!!)
+// 반응형별로 좌우 padding을 자동 재정의하는 mixin
 @mixin responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem) {
     padding-left: $pc;
     padding-right: $pc;
@@ -66,12 +66,24 @@
     }
 }
 
+// 반응형별로 gap을 자동 재정의하는 mixin
 @mixin responsiveGap($pc, $laptop, $tablet, $mobile-L, $mobile-S) {
     gap: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
         @media (max-width: map-get(vars.$breakpoints, $bp)) {
             gap: $device;
+        }
+    }
+}
+
+// 반응형별로 border-radius를 자동 재정의하는 mixin
+@mixin responsiveBorderRadius($pc, $laptop, $tablet, $mobile-L, $mobile-S) {
+    border-radius: $pc;
+
+    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
+        @media (max-width: map-get(vars.$breakpoints, $bp)) {
+            border-radius: $device;
         }
     }
 }
