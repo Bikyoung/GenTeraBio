@@ -40,8 +40,8 @@ a {
 
 // 너비/높이 모두 100% + 좌측 기본 패딩값 + 모든 방향에서 가운데 정렬하는 컨테이너
 .container {
-    @include abs.responsiveMaxWidth(172rem, 90.4rem, 67.6rem, 33rem);
-    @include abs.responsivePaddingX(5rem, 2.5rem, 1.6rem, 1.2rem);
+    @include abs.responsiveMaxWidth();
+    @include abs.responsivePaddingX();
 
     width: 100%;
     height: 100%;
@@ -55,7 +55,7 @@ a {
 }
 
 // background-image 지정시 함께 자주 쓰이는 설정
-.background {
+.bg-center {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
