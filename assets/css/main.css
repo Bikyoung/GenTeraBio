@@ -135,9 +135,14 @@ h2 {
     font-size: 4.8rem;
   }
 }
+@media (max-width: 480px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
 @media (max-width: 390px) {
   h2 {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -163,6 +168,14 @@ a {
 }
 @media (max-width: 768px) {
   .max-768px {
+    display: block;
+  }
+}
+.max-480px {
+  display: none;
+}
+@media (max-width: 480px) {
+  .max-480px {
     display: block;
   }
 }
@@ -212,7 +225,7 @@ a {
     max-width: 67.6rem;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .container {
     max-width: 33rem;
   }
@@ -227,6 +240,12 @@ a {
   .container {
     padding-left: 1.6rem;
     padding-right: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 }
 @media (max-width: 390px) {
@@ -294,6 +313,11 @@ a {
     font-size: 2.4rem;
   }
 }
+@media (max-width: 480px) {
+  .hero__subtitle {
+    font-size: 2.2rem;
+  }
+}
 @media (max-width: 390px) {
   .hero__subtitle {
     font-size: 2rem;
@@ -313,12 +337,17 @@ a {
 }
 @media (max-width: 768px) {
   .hero__title {
-    font-size: 4.8rem;
+    font-size: 5rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 4.4rem;
   }
 }
 @media (max-width: 390px) {
   .hero__title {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
   }
 }
 .hero__scroll {
@@ -416,9 +445,14 @@ a {
     font-size: 3.4rem;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .story__subtitle {
     font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .story__subtitle {
+    font-size: 2.6rem;
   }
 }
 .story__title {
@@ -436,12 +470,17 @@ a {
 }
 @media (max-width: 768px) {
   .story__title {
-    font-size: 4.8rem;
+    font-size: 5rem;
+  }
+}
+@media (max-width: 480px) {
+  .story__title {
+    font-size: 4.4rem;
   }
 }
 @media (max-width: 390px) {
   .story__title {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
   }
 }
 
@@ -464,7 +503,7 @@ a {
     padding-bottom: 2rem;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .technology__container {
     padding-top: 5.5rem;
     padding-bottom: 4rem;
@@ -480,7 +519,7 @@ a {
     gap: 6rem;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .technology__container {
     gap: 4rem;
   }
@@ -500,6 +539,11 @@ a {
 @media (max-width: 768px) {
   .technology__subtitle {
     font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .technology__subtitle {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 390px) {
@@ -566,7 +610,7 @@ a {
     gap: 0;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .technology-content__item a {
     gap: 0;
   }
@@ -597,9 +641,14 @@ a {
     font-size: 3.4rem;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .technology-content__title .title {
     font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .technology-content__title .title {
+    font-size: 2.6rem;
   }
 }
 .technology-content__title i {
