@@ -44,3 +44,14 @@ $(".technology-content__item").on("mouseleave", function() {
     $(".technology-image__item").eq(0).addClass("on");
 });
 
+// ------------------------------ facilities ------------------------------
+let facilitiesSwiper = new Swiper(".facilities__Swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    }
+  });
+
