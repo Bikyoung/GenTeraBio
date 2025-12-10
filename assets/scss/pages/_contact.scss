@@ -14,18 +14,15 @@
 }
 
 .inquiry--container {
-    // @include abs.responsivePaddingY($pc: 8rem, $laptop: 12rem, $tablet: 12rem, $mobile-L: 12.6rem, $mobile-S: 12rem);
+    @include abs.responsivePaddingY($pc: 8rem, $laptop: 12rem, $tablet: 12rem, $mobile-L: 12.6rem, $mobile-S: 12rem);
 }
 
 // connect 문의유형
 select {
+    @include abs.font(title4, map-get(abs.$colors, black));
+
     border: none;
-    padding: .5rem 1rem;
-    @include abs.responsiveFontSize(title4);
-    @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, black));
-
-    // @include abs.font(title4, map-get(abs.$colors, black));
-
+    padding: 0.5rem 1rem;
 }
 
 // ------------------------
@@ -34,21 +31,18 @@ select {
 .contact {
     &__hero {
         &--wrap {
+            @include abs.responsivePaddingX(24.5rem, 15rem, 13rem, 5.6rem, 3rem);
+
             position: absolute;
             top: 50%;
-            // left: 0%;
-            @include abs.responsivePaddingX(24.5rem, 15rem, 13rem, 5.6rem, 3rem)
         }
 
         &--title {
-            @include abs.responsiveFontSize(display);
-            @include abs.fontStyle(600, 1.2, -0.02em, map-get(abs.$colors, white));
+            @include abs.font(display, map-get(abs.$colors, white));
         }
 
         &--des {
-            @include abs.responsiveFontSize(subtitle1);
-            // font-size: 28px;
-            @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, white));
+            @include abs.font(subtitle1, map-get(abs.$colors, white));
         }
     }
 
@@ -63,15 +57,13 @@ select {
         text-align: center;
 
         &--title {
-            @include abs.responsiveFontSize(title2);
+            @include abs.font(title2, map-get(abs.$colors, black));
 
-            @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, black));
             padding-bottom: 4rem;
         }
 
         &--mintitle {
-            @include abs.responsiveFontSize(title4);
-            @include abs.fontStyle(600, 1.2, -0.02em, map-get(abs.$colors, black));
+            @include abs.font(title4, map-get(abs.$colors, black));
         }
 
         &--list {
@@ -93,13 +85,11 @@ select {
         text-align: center;
 
         &--bigtitle {
-            @include abs.responsiveFontSize(title2);
-            @include abs.fontStyle(600, 1.2, -0.02em, map-get(abs.$colors, black));
+            @include abs.font(title2, map-get(abs.$colors, black));
         }
 
         &--bigdes {
-            @include abs.responsiveFontSize(body1);
-            @include abs.fontStyle(400, 1.5, -0.02em, map-get(abs.$colors, black));
+            @include abs.font(body1, map-get(abs.$colors, black));
         }
 
         &--list {
@@ -116,7 +106,8 @@ select {
         }
 
         &--title {
-            @include abs.responsiveFontSize(subtitle3);
+            @include abs.font(subtitle3, map-get(abs.$colors, black));
+
             padding-left: 2rem;
         }
 
@@ -144,10 +135,6 @@ select {
             margin-bottom: 2rem;
         }
 
-        // &--agree input {
-        //     font-size: 18px;
-        // }
-
         &--agree-field {
             text-align: start;
             width: 100%;
@@ -157,27 +144,28 @@ select {
         }
 
         &--agree-field li {
-            @include abs.responsiveFontSize(subtitle5);
+            @include abs.font(subtitle5, map-get(abs.$colors, black));
+
             padding-bottom: 1rem;
         }
 
         &--check {
             display: flex;
-            // justify-content: center;
             gap: 1rem;
             padding: 1rem 0 0 2rem;
         }
 
         &--agreeCheck {
-            @include abs.responsiveFontSize(subtitle5);
+            @include abs.font(subtitle5, map-get(abs.$colors, black));
         }
 
         &--btn {
+            @include abs.font(subtitle4, map-get(abs.$colors, black));
+
             margin-top: 2rem;
             padding: 2rem 8.5rem;
             border-radius: 5rem;
             border: 1px solid;
-            @include abs.responsiveFontSize(subtitle4);
             background-color: map-get(abs.$colors, white);
         }
 
@@ -200,7 +188,7 @@ select {
 
             &--box img {
                 width: clamp(5rem, 8.3vw, 8.5rem);
-                padding: .5rem 0;
+                padding: 0.5rem 0;
             }
         }
 
@@ -227,7 +215,7 @@ select {
             }
 
             &--title {
-                @include abs.responsiveFontSize(subtitle3);
+                @include abs.font(subtitle3, map-get(abs.$colors, black));
                 margin-top: 2rem;
             }
 
@@ -237,8 +225,6 @@ select {
         }
     }
 }
-
-// @media (max-width: map-get(abs.$breakpoints, small)) {}
 
 @media (max-width: map-get(abs.$breakpoints, xsmall)) {
     .contact {
