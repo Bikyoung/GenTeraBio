@@ -13,10 +13,23 @@
 }
 
 // font-size를 제외한 폰트 관련된 모든 속성들을 정의하는 mixin
-@mixin fontStyle($fontWeight, $lineHeight, $letterSpacing, $color) {
-    font-weight: $fontWeight;
-    line-height: $lineHeight;
-    letter-spacing: $letterSpacing;
+@mixin fontStyle($category) {
+    $fontStyleMap: map-get(vars.$font-style, $category);
+    
+    font-weight: map-get($fontStyleMap, font-weight);
+    line-height: map-get($fontStyleMap, line-height);
+    letter-spacing: map-get($fontStyleMap, letterSpacing);
+}
+
+// font의 모든 속성들을 정의하는 mixin
+@mixin font($category, $color) {
+    $fontMap: map-get(vars.$font, $category);
+    $sizeCategory: map-get($fontMap, size-category);
+    $styleCategory: map-get($fontMap, style-category);
+    
+    @include responsiveFontSize($sizeCategory);
+    @include fontStyle($styleCategory);
+
     color: $color;
 }
 
@@ -46,33 +59,56 @@
     padding-right: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-        @media (max-width: map-get(vars.$breakpoints, $bp)) {
-            padding-left: $device;
-            padding-right: $device;
+        @if($device != null) {
+            @media (max-width: map-get(vars.$breakpoints, $bp)) {
+                padding-left: $device;
+                padding-right: $device;
+            }
         }
     }
 }
 
 // 반응형별로 상하 padding을 자동 재정의하는 mixin
-@mixin responsivePaddingY($pc: (pt, pb), $laptop: (pt, pb), $tablet: (pt, pb), $mobile-L: (pt, pb), $mobile-S: (pt, pb)) {
+@mixin responsivePaddingY($pc: null, $laptop: null, $tablet: null, $mobile-L: null, $mobile-S: null) {
+
+    // $pc에 인수가 map 타입이 아닌 경우 map 타입으로 전환
+    @if((type-of($pc) == "list") and (length($pc) == 2)) {
+        $pc: (pt: nth($pc, 1), pb: nth($pc, 2))
+    } @else if(type-of($pc) != "map") {
+        $pc: (pt: $pc, pb: $pc);
+    }
+
     padding-top: map-get($pc, pt);
     padding-bottom: map-get($pc, pb);
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-        @media (max-width: map-get(vars.$breakpoints, $bp)) {
-            padding-top: map-get($device, pt);
-            padding-bottom: map-get($device, pb);
+
+        /* null 체크
+           null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+        @if($device != null) {
+            @media (max-width: map-get(vars.$breakpoints, $bp)) {
+                @if((type-of($device) == "list") and (length($device) == 2)) {
+                    $device: (pt: nth($device, 1), pb: nth($device, 2));
+                } @else if(type-of($device) != "map") {
+                    $device: (pt: $device, pb: $device);
+                }
+    
+                padding-top: map-get($device, pt);
+                padding-bottom: map-get($device, pb);
+            }
         }
     }
 }
 
 // 반응형별로 gap을 자동 재정의하는 mixin
-@mixin responsiveGap($pc, $laptop, $tablet, $mobile-L, $mobile-S) {
+@mixin responsiveGap($pc, $laptop: null, $tablet: null, $mobile-L: null, $mobile-S: null) {
     gap: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-        @media (max-width: map-get(vars.$breakpoints, $bp)) {
-            gap: $device;
+        @if($device != null) {
+            @media (max-width: map-get(vars.$breakpoints, $bp)) {
+                gap: $device;
+            }
         }
     }
 }

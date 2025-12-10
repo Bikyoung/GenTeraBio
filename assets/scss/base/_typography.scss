@@ -9,6 +9,5 @@ body {
 }
 
 h2 {
-    @include abs.responsiveFontSize(title1);
-    @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, black));
+    @include abs.font(title1, map-get(abs.$colors, black));
 }
