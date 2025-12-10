@@ -14,17 +14,17 @@
 }
 
 .inquiry--container {
-    // @include abs.responsivePaddingY($pc: 8rem, $laptop: 12rem, $tablet: 12rem, $mobile-L: 12.6rem, $mobile-S: 12rem);
+    @include abs.responsivePaddingY($pc: 8rem, $laptop: 12rem, $tablet: 12rem, $mobile-L: 12.6rem, $mobile-S: 12rem);
 }
 
 // connect 문의유형
 select {
     border: none;
     padding: .5rem 1rem;
-    @include abs.responsiveFontSize(title4);
-    @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, black));
+    // @include abs.responsiveFontSize(title4);
+    // @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, black));
 
-    // @include abs.font(title4, map-get(abs.$colors, black));
+    @include abs.font(title4, map-get(abs.$colors, black));
 
 }
 
