@@ -205,7 +205,6 @@
         }
     }
 
-
     &-content {
         &__list {
             flex-direction: column;
@@ -770,10 +769,13 @@
 //--------------- contact ---------------
 .contact {
     height: 100dvh;
+    position: relative;
     background-image: url("../images/contact.webp");
 
     &__container {
         flex-direction: column;
+        position: relative;
+        z-index: 10;
 
         .contact__title {
             @include abs.font(title1, map-get(abs.$colors, white));
@@ -781,17 +783,19 @@
 
         .contact__desc {
             @include abs.font(body1, map-get(abs.$colors, white));
+            @include abs.responsivePaddingY($pc: (pt: 0.2rem, pb: 3rem), $laptop: (pt: 0.4rem, pb: 2rem), $tablet: (pt: 0.2rem, pb: 2.4rem), $mobile-L: (pt: 0.2rem, pb: 2rem));
         }
 
         .contact__button {
-            @include abs.responsivePaddingX(10rem, 7rem, 7rem, 6rem);
-            @include abs.font(button2, map-get(abs.$colors, black));
+            @include abs.responsivePaddingX(10rem, 7rem, 10rem, 6rem);
+            @include abs.responsivePaddingY(1rem, 0.8rem, 1rem, 0);
+            @include abs.font(button1, map-get(abs.$colors, black)); 
 
             background-color: map-get(abs.$colors, white);
+            border-radius: 5rem;
         }
     }  
         
-    
 }
 
 

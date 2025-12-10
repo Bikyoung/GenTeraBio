@@ -1,4 +1,34 @@
+// ------------------------------ hero ------------------------------
+// .hero__title과 .hero__subtitle이 스크롤에 따라 fadeInUp
+const $heroTimeline = gsap.timeline();
+
+$heroTimeline
+    .from(".hero__subtitle", {
+        y: 100,
+        autoAlpha: 0,
+        duration: 1,
+        ease: "power1.out"
+    })
+    .from(".hero__title", {
+        y: 100,
+        autoAlpha: 0,
+        duration: 1,
+        ease: "power1.out"
+    },"-=0.35");
+
 // ------------------------------ story ------------------------------
+// .story__title과 .story__subtitle이 스크롤에 따라 fadeIn
+gsap.from(".story__title, .story__subtitle", {
+   scale: 0.5,
+   autoAlpha: 0,
+   duration: 1.2,
+   scrollTrigger: {
+        trigger: ".story",
+        start: "top 40%",
+        // once: true
+   } 
+});
+
 // .story__container--top와 .story__container--bottom이 스크롤에 따라 y축으로 이동하며, 중첩되어 있던 picture img가 등장
 const $storyTimeline = gsap.timeline({
     scrollTrigger: {
@@ -7,13 +37,14 @@ const $storyTimeline = gsap.timeline({
         end: "bottom top",
         pin: true,
         anticipatePin: true,
-        scrub: 1.5    }
+        scrub: 1.5   
+    }
 });
 
 $storyTimeline
     .to(".story__container--top", {
         y: "-100%"
-    })
+    },)
     .to(".story__container--bottom", {
         y: "100%"
     }, "<")
@@ -46,7 +77,20 @@ $(function() {
     });
 });
 
+// .technology__container가 스크롤에 따라 fadeInUp
+gsap.from(".technology__container", {
+    y: 100,
+    autoAlpha: 0,
+    duration: 1,
+    ease: "power1.out",
+    scrollTrigger: {
+        trigger: ".technology",
+        start: "top 30%"
+    }
+});
+
 // ------------------------------ facilities ------------------------------
+// 화살표 버튼 클릭 및 스와이프 시, 슬라이드가 좌우로 이동
 let facilitiesSwiper = new Swiper(".facilities__Swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -57,17 +101,17 @@ let facilitiesSwiper = new Swiper(".facilities__Swiper", {
     }
 });
 
-// .facilities .swiper-slide의 제각각 높이를 하나로 통일함
+// .swiper-slide의 제각각 높이를 하나로 통일함
 $(function() {
 
     function setFacilitiesSlideHeight() {
         let facilitiesSlideArray = $(".facilities .swiper-slide");
     
-        /* 모든 .facilities .swiper-slide의 높이를 초기화
-           반응형시 .facilities .swiper-slide의 기존 높이가 필요함 */
+        /* 모든 .swiper-slide의 높이를 초기화
+           반응형시 .swiper-slide의 기존 높이가 필요함 */
         facilitiesSlideArray.css("height", "auto");
 
-        // .facilities .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
+        // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
         let firstSlideHeight = facilitiesSlideArray.eq(0).outerHeight();
     
         facilitiesSlideArray.css("height", `${firstSlideHeight}px`);
@@ -78,8 +122,20 @@ $(function() {
     $(window).on("resize", () => {setFacilitiesSlideHeight()});
 });
 
+// .facilities__container가 스크롤에 따라 fadeInUp
+gsap.from(".facilities__container", {
+    y: 100,
+    autoAlpha: 0,
+    duration: 0.8,
+    ease: "power1.out",
+    scrollTrigger: {
+        trigger: ".facilities",
+        start: "top 45%"
+    }
+});
 
-// ------------------------------ partnership ------------------------------
+// ------------------------------ partners ------------------------------
+// .partners-slide가 무한 반복 자동 재생
 let partnersSwiper = new Swiper(".partnersSwiper", {
     slidesPerView: 1.2,
     centeredSlides: true,
@@ -106,17 +162,17 @@ let partnersSwiper = new Swiper(".partnersSwiper", {
     }
 });
 
-// .partners .swiper-slide의 제각각 높이를 하나로 통일함
+// .swiper-slide의 제각각 높이를 하나로 통일함
 $(function() {
 
     function setPartnersSlideHeight() {
         let partnersSlideArray = $(".partners .swiper-slide");
     
-        /* 모든 .partners .swiper-slide의 높이를 초기화
-           반응형시 .partners .swiper-slide의 기존 높이가 필요함 */
+        /* 모든 .swiper-slide의 높이를 초기화
+           반응형시 .swiper-slide의 기존 높이가 필요함 */
         partnersSlideArray.css("height", "auto");
 
-        // .partners .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
+        // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
         let firstSlideHeight = partnersSlideArray.eq(0).outerHeight();
     
         partnersSlideArray.css("height", `${firstSlideHeight}px`);
@@ -125,5 +181,17 @@ $(function() {
     setPartnersSlideHeight();
 
     $(window).on("resize", () => {setPartnersSlideHeight()});
+});
+
+// ------------------------------ contact ------------------------------
+gsap.from(".contact__container", {
+    scale: 0.2,
+    autoAlpha: 0.2,
+    duration: 1,
+    ease: "power1.out",
+    scrollTrigger: {
+        trigger: ".contact",
+        start: "top 50%",
+    }
 });
 

@@ -1656,10 +1656,13 @@ a {
 
 .contact {
   height: 100dvh;
+  position: relative;
   background-image: url("../images/contact.webp");
 }
 .contact__container {
   flex-direction: column;
+  position: relative;
+  z-index: 10;
 }
 .contact__container .contact__title {
   font-size: 7rem;
@@ -1692,6 +1695,16 @@ a {
   font-weight: 400;
   line-height: 1.5;
   color: #FFFFFF;
+  padding-top: 0.2rem;
+  padding-bottom: 3rem;
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
   .contact__container .contact__desc {
@@ -1713,14 +1726,43 @@ a {
     font-size: 1.4rem;
   }
 }
+@media (max-width: 1024px) {
+  .contact__container .contact__desc {
+    padding-top: 0.4rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__container .contact__desc {
+    padding-top: 0.2rem;
+    padding-bottom: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__container .contact__desc {
+    padding-top: 0.2rem;
+    padding-bottom: 2rem;
+  }
+}
 .contact__container .contact__button {
   padding-left: 10rem;
   padding-right: 10rem;
-  font-size: 1.6rem;
-  font-weight: 600;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  font-size: 2rem;
+  font-weight: 700;
   line-height: 1.2;
   color: #1C1C1C;
   background-color: #FFFFFF;
+  border-radius: 5rem;
 }
 @media (max-width: 1024px) {
   .contact__container .contact__button {
@@ -1730,8 +1772,8 @@ a {
 }
 @media (max-width: 768px) {
   .contact__container .contact__button {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 }
 @media (max-width: 480px) {
@@ -1748,22 +1790,40 @@ a {
 }
 @media (max-width: 1024px) {
   .contact__container .contact__button {
-    font-size: 1.4rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
 }
 @media (max-width: 768px) {
   .contact__container .contact__button {
-    font-size: 1.3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 @media (max-width: 480px) {
   .contact__container .contact__button {
-    font-size: 1.2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .contact__container .contact__button {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__container .contact__button {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__container .contact__button {
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 390px) {
   .contact__container .contact__button {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1780,4 +1840,561 @@ a {
     transform: translateY(0);
     opacity: 0;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+.content-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.kind-container {
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+}
+@media (max-width: 1024px) {
+  .kind-container {
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .kind-container {
+    padding-top: 12rem;
+    padding-bottom: 0rem;
+  }
+}
+@media (max-width: 480px) {
+  .kind-container {
+    padding-top: 12.6rem;
+    padding-bottom: 0rem;
+  }
+}
+@media (max-width: 390px) {
+  .kind-container {
+    padding-top: 100rem;
+    padding-bottom: 0rem;
+  }
+}
+
+.inquiry--container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+}
+@media (max-width: 1024px) {
+  .inquiry--container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .inquiry--container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+@media (max-width: 480px) {
+  .inquiry--container {
+    padding-top: 12.6rem;
+    padding-bottom: 12.6rem;
+  }
+}
+@media (max-width: 390px) {
+  .inquiry--container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+
+select {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1C1C1C;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 1024px) {
+  select {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  select {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 480px) {
+  select {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 390px) {
+  select {
+    font-size: 1.5rem;
+  }
+}
+
+.contact__hero--wrap {
+  padding-left: 24.5rem;
+  padding-right: 24.5rem;
+  position: absolute;
+  top: 50%;
+}
+@media (max-width: 1024px) {
+  .contact__hero--wrap {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__hero--wrap {
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__hero--wrap {
+    padding-left: 5.6rem;
+    padding-right: 5.6rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__hero--wrap {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.contact__hero--title {
+  font-size: 7.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .contact__hero--title {
+    font-size: 5.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__hero--title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__hero--title {
+    font-size: 4.4rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__hero--title {
+    font-size: 3.8rem;
+  }
+}
+.contact__hero--des {
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .contact__hero--des {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__hero--des {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__hero--des {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__hero--des {
+    font-size: 2rem;
+  }
+}
+.contact__hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.contact__kind {
+  text-align: center;
+}
+.contact__kind--title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1C1C1C;
+  padding-bottom: 4rem;
+}
+@media (max-width: 1024px) {
+  .contact__kind--title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__kind--title {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__kind--title {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__kind--title {
+    font-size: 2.6rem;
+  }
+}
+.contact__kind--mintitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .contact__kind--mintitle {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__kind--mintitle {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__kind--mintitle {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__kind--mintitle {
+    font-size: 1.5rem;
+  }
+}
+.contact__kind--list {
+  display: flex;
+  gap: 1rem;
+}
+.contact__kind--box {
+  border-radius: 2rem;
+  border: 1px solid #15CEC9;
+  width: 100%;
+  padding: 6rem 0;
+  gap: 2rem;
+}
+.contact__inquiry {
+  text-align: center;
+}
+.contact__inquiry--bigtitle {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .contact__inquiry--bigtitle {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--bigtitle {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__inquiry--bigtitle {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__inquiry--bigtitle {
+    font-size: 2.6rem;
+  }
+}
+.contact__inquiry--bigdes {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .contact__inquiry--bigdes {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--bigdes {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__inquiry--bigdes {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__inquiry--bigdes {
+    font-size: 1.4rem;
+  }
+}
+.contact__inquiry--list {
+  padding-top: 6rem;
+}
+.contact__inquiry--rowWrap {
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem;
+  width: 100%;
+}
+.contact__inquiry--title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1C1C;
+  padding-left: 2rem;
+}
+@media (max-width: 1024px) {
+  .contact__inquiry--title {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__inquiry--title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__inquiry--title {
+    font-size: 1.4rem;
+  }
+}
+.contact__inquiry--input {
+  width: clamp(39rem, 44.593vw, 76.7rem);
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-bottom: 1px solid #969696;
+}
+.contact__inquiry--inquiry {
+  width: 100%;
+  height: 14rem;
+  margin-top: 2rem;
+}
+.contact__inquiry--agree {
+  text-align: start;
+  padding-bottom: 1rem;
+}
+.contact__inquiry--agree label {
+  margin-bottom: 2rem;
+}
+.contact__inquiry--agree-field {
+  text-align: start;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem 4rem;
+  background-color: #D9D9D9;
+}
+.contact__inquiry--agree-field li {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1C1C;
+  padding-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+  .contact__inquiry--agree-field li {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--agree-field li {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__inquiry--agree-field li {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__inquiry--agree-field li {
+    font-size: 1.2rem;
+  }
+}
+.contact__inquiry--check {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0 0 2rem;
+}
+.contact__inquiry--agreeCheck {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .contact__inquiry--agreeCheck {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--agreeCheck {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__inquiry--agreeCheck {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__inquiry--agreeCheck {
+    font-size: 1.2rem;
+  }
+}
+.contact__inquiry--btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1C1C;
+  margin-top: 2rem;
+  padding: 2rem 8.5rem;
+  border-radius: 5rem;
+  border: 1px solid;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .contact__inquiry--btn {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--btn {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__inquiry--btn {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact__inquiry--btn {
+    font-size: 1.3rem;
+  }
+}
+
+.inquiry {
+  text-align: start;
+  padding: 8rem 0;
+}
+
+@media (max-width: 1024px) {
+  .contact__kind--box {
+    padding: 4rem 0;
+  }
+  .contact__kind--box img {
+    width: clamp(5rem, 8.3vw, 8.5rem);
+    padding: 0.5rem 0;
+  }
+  .contact__inquiry--input {
+    width: clamp(32rem, 38.0859vw, 39rem);
+  }
+}
+@media (max-width: 768px) {
+  .field {
+    padding-top: 3rem;
+  }
+  .contact__inquiry--rowWrap {
+    display: block;
+    padding: 0 2rem;
+  }
+  .contact__inquiry--title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #1C1C1C;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 1024px) {
+  .contact__inquiry--title {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .contact__inquiry--title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .contact__inquiry--title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 390px) {
+  .contact__inquiry--title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__inquiry--input {
+    width: clamp(26rem, 72.9166vw, 58rem);
+  }
+}
+@media (max-width: 390px) {
+  .contact__kind--list {
+    display: flex;
+    gap: 1rem;
+  }
+  .contact__kind--box {
+    padding: 2rem 0;
+  }
+}
+.header {
+  position: relative;
+  height: 100dvh;
+}
+.header__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/news_bg.webp");
+}
+
+.search__bar {
+  width: 340px;
+  height: 408px;
+  background-color: #666666;
+}
