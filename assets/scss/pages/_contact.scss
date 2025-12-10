@@ -1,18 +1,35 @@
-@use "../abstracts/bundle" as abs;
 // -----------폰트,믹스인연결-------------
+@use "../abstracts/bundle" as abs;
 
+// --------영역별 컨테이너-------
 .content-container {
-    @include abs.responsivePaddingX(24.5rem, 15rem);
-    @include abs.responsiveMaxWidth(141rem, 25.4rem, 67.6rem, 33rem);
-
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    // overflow: hidden;
+}
+
+
+.kind-container {
+    @include abs.responsivePaddingY($pc: (pt: 14rem, pb: 8rem), $laptop: (pt: 9rem, pb: 6rem), $tablet: (pt: 12rem, pb: 0rem), $mobile-L: (pt:12.6rem, pb:0rem), $mobile-S: (pt:100rem, pb:0rem));
+}
+
+.inquiry--container {
+    // @include abs.responsivePaddingY($pc: 8rem, $laptop: 12rem, $tablet: 12rem, $mobile-L: 12.6rem, $mobile-S: 12rem);
+}
+
+// connect 문의유형
+select {
+    border: none;
+    padding: .5rem 1rem;
+    @include abs.responsiveFontSize(title4);
+    @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, black));
+
+    // @include abs.font(title4, map-get(abs.$colors, black));
 
 }
 
 // ------------------------
+
 
 .contact {
     &__hero {
@@ -20,7 +37,7 @@
             position: absolute;
             top: 50%;
             // left: 0%;
-            @include abs.responsivePaddingX(24.5rem, 15rem);
+            @include abs.responsivePaddingX(24.5rem, 15rem, 13rem, 5.6rem, 3rem)
         }
 
         &--title {
@@ -41,6 +58,200 @@
         object-fit: cover;
     }
 
-    // &__kind{}
-    // &__info{}
+
+    &__kind {
+        text-align: center;
+
+        &--title {
+            @include abs.responsiveFontSize(title2);
+
+            @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, black));
+            padding-bottom: 4rem;
+        }
+
+        &--mintitle {
+            @include abs.responsiveFontSize(title4);
+            @include abs.fontStyle(600, 1.2, -0.02em, map-get(abs.$colors, black));
+        }
+
+        &--list {
+            display: flex;
+            gap: 1rem;
+        }
+
+        &--box {
+            // 상자 꾸미기
+            border-radius: 2rem;
+            border: 1px solid map-get(abs.$colors, primary);
+            width: 100%;
+            padding: 6rem 0;
+            gap: 2rem;
+        }
+    }
+
+    &__inquiry {
+        text-align: center;
+
+        &--bigtitle {
+            @include abs.responsiveFontSize(title2);
+            @include abs.fontStyle(600, 1.2, -0.02em, map-get(abs.$colors, black));
+        }
+
+        &--bigdes {
+            @include abs.responsiveFontSize(body1);
+            @include abs.fontStyle(400, 1.5, -0.02em, map-get(abs.$colors, black));
+        }
+
+        &--list {
+            padding-top: 6rem;
+        }
+
+        &--rowWrap {
+            text-align: start;
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        &--title {
+            @include abs.responsiveFontSize(subtitle3);
+            padding-left: 2rem;
+        }
+
+        &--input {
+            width: clamp(39rem, 44.5930vw, 76.7rem);
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-bottom: 1px solid map-get(abs.$colors, gray-200);
+        }
+
+        // &--field {}
+        &--inquiry {
+            width: 100%;
+            height: 14rem;
+            margin-top: 2rem;
+        }
+
+        &--agree {
+            text-align: start;
+            padding-bottom: 1rem;
+        }
+
+        &--agree label {
+            margin-bottom: 2rem;
+        }
+
+        // &--agree input {
+        //     font-size: 18px;
+        // }
+
+        &--agree-field {
+            text-align: start;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 2rem 4rem;
+            background-color: map-get(abs.$colors, gray-100);
+        }
+
+        &--agree-field li {
+            @include abs.responsiveFontSize(subtitle5);
+            padding-bottom: 1rem;
+        }
+
+        &--check {
+            display: flex;
+            // justify-content: center;
+            gap: 1rem;
+            padding: 1rem 0 0 2rem;
+        }
+
+        &--agreeCheck {
+            @include abs.responsiveFontSize(subtitle5);
+        }
+
+        &--btn {
+            margin-top: 2rem;
+            padding: 2rem 8.5rem;
+            border-radius: 5rem;
+            border: 1px solid;
+            @include abs.responsiveFontSize(subtitle4);
+            background-color: map-get(abs.$colors, white);
+        }
+
+    }
+}
+
+.inquiry {
+    text-align: start;
+    padding: 8rem 0;
+}
+
+// -----------1024
+@media (max-width: map-get(abs.$breakpoints, large)) {
+    .contact {
+
+        &__kind {
+            &--box {
+                padding: 4rem 0;
+            }
+
+            &--box img {
+                width: clamp(5rem, 8.3vw, 8.5rem);
+                padding: .5rem 0;
+            }
+        }
+
+        &__inquiry {
+
+            &--input {
+                width: clamp(32rem, 38.0859vw, 39rem);
+            }
+        }
+    }
+}
+
+// --------------768
+@media (max-width: map-get(abs.$breakpoints, medium)) {
+    .field {
+        padding-top: 3rem;
+    }
+
+    .contact {
+        &__inquiry {
+            &--rowWrap {
+                display: block;
+                padding: 0 2rem;
+            }
+
+            &--title {
+                @include abs.responsiveFontSize(subtitle3);
+                margin-top: 2rem;
+            }
+
+            &--input {
+                width: clamp(26rem, 72.9166vw, 58rem);
+            }
+        }
+    }
+}
+
+// @media (max-width: map-get(abs.$breakpoints, small)) {}
+
+@media (max-width: map-get(abs.$breakpoints, xsmall)) {
+    .contact {
+
+        &__kind {
+            &--list {
+                display: flex;
+                gap: 1rem;
+            }
+
+            &--box {
+                padding: 2rem 0;
+            }
+        }
+    }
 }
