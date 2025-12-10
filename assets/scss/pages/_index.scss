@@ -153,7 +153,7 @@
 
 //--------------- technology ---------------
 .technology {
-    height: 100vh;
+    @include abs.responsivePaddingY($pc: (pt: 15rem, pb: 7.5rem), $laptop: (pt: 10rem, pb: 5rem), $tablet: (pt: 0, pb: 0), $mobile-L: (pt: 0rem, pb: 0rem), $mobile-S: (pt: 0rem, pb: 0));
 
     &__container {
         @include abs.responsivePaddingY($pc: (pt: 0, pb: 0), $laptop: (pt: 0, pb: 0), $tablet: (pt: 8rem, pb: 2rem), $mobile-L: (pt: 5.5rem, pb: 2rem), $mobile-S: (pt: 5.5rem, pb: 2rem));
@@ -506,9 +506,285 @@
     }
 }
 
+//--------------- facilities ---------------
+.facilities {
+    @include abs.responsivePaddingY($pc: (pt: 15rem, pb: 15rem), $laptop: (pt: 10rem, pb: 10rem), $tablet: (pt: 8rem, pb: 0), $mobile-L: (pt: 5.5rem, pb: 0), $mobile-S: (pt: 5.5rem, pb: 0));
 
+    &__container {
+        @include abs.responsiveGap(7rem, 3rem, 6rem, 4rem, 4rem);
 
+        flex-direction: column;
+    }  
 
+    &__Swiper {
+        width: 100%;
+        position: relative;
+
+        .swiper-wrapper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            @include abs.responsiveGap(0, 0, 2rem, 3rem, 3rem);
+
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            &:nth-child(1) {
+                .facilities__image {
+                    background-image: url("../images/facility_01.webp");
+                }
+            }
+
+            &:nth-child(2) {
+                .facilities__image {
+                    background-image: url("../images/facility_02.webp");
+                }
+            }
+
+            &:nth-child(3) {
+                .facilities__image {
+                    background-image: url("../images/facility_03.webp");
+                }
+            }
+        }
+
+        .swiper-button {
+            gap: 2rem;
+            position: absolute;
+            left: 50%;
+            bottom: clamp(3rem, 2.733rem + 0.348vw, 3.4rem);
+            padding-left: clamp(4rem, 2.667rem + 1.736vw, 6rem);
+
+            > * {
+                position: relative;
+                width: fit-content;
+                height: fit-content;
+            }
+
+            svg {
+                display: none;
+            }
+
+            i {
+                color: map-get(abs.$colors, black);
+                font-size: clamp(5rem, 4.333rem + 0.868vw, 6rem);
+            }
+        }
+
+        .swiper-pagination {
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            top: clamp(1rem, 0.077rem + 2.564vw, 5rem);
+            left: 50%;
+            padding-left: clamp(4rem, 2.667rem + 1.736vw, 6rem);
+
+            &-bullet {
+                position: relative;
+            }
+        }
+    }
+
+    &__text {
+        @include abs.responsivePaddingX($pc: 6rem, $laptop: 4rem, $tablet: 0, $mobile-L: 0, $mobile-S: 0);
+        @include abs.responsivePaddingY($pc: (pt: 14.4rem, pb: 12.4rem), $laptop: (pt: 9.2rem, pb: 10rem), $tablet: (pt: 5.2rem, pb: 6rem), $mobile-L: (pt: 4rem, pb: 6rem), $mobile-S: (pt: 4rem, pb: 6rem));
+
+        background-color: map-get(abs.$colors, gray-50);
+
+        .facilities__subtitle {
+            @include abs.responsiveFontSize(subtitle2);
+            @include abs.fontStyle(500, 1.2, -0.02em, map-get(abs.$colors, blue));
+        }
+
+        .facilities__title {
+            @include abs.responsiveFontSize(title2);
+            @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, black));
+        }
+
+        .facilities__desc {
+            @include abs.responsiveFontSize(body1);
+            @include abs.fontStyle(400, 1.5, -0.02em, map-get(abs.$colors, black));
+
+            margin-top: 1.6rem;
+        }
+
+        .facilities__certificationMark {
+            @include abs.responsiveGap(1.2rem, 1.2rem, 2rem, 2rem, 2rem);
+            @include abs.responsivePaddingY($pc: (pt: 2rem, pb: 0), $laptop: (pt: 1rem, pb: 0), $tablet: (pt: 3rem, pb: 0), $mobile-L: (pt: 2.4rem, pb: 0), $mobile-S: (pt: 2.4rem, pb: 0));
+            justify-content: right;
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        background: linear-gradient(to bottom, #fff 594px, map-get(abs.$colors, gray-50) 595px, map-get(abs.$colors, gray-50) 100%);
+
+        &__image {
+            width: 100%;
+            height: 35.3rem;
+            border-radius: 1.2rem;
+            object-fit: cover;
+        }
+
+        &__Swiper {
+            .swiper-slide {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .swiper-button {
+                display: none;
+            }
+
+            .swiper-pagination {
+                padding-top: 4rem;
+                top: 35.3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-left: 0; 
+            }
+        }
+
+        &__text {
+            position: relative;
+            .facilities__certificationMark {
+                justify-content: center;
+            }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        background: linear-gradient(to bottom, #fff 434px, map-get(abs.$colors, gray-50) 434.6px, map-get(abs.$colors, gray-50) 100%);
+
+        &__image {
+            height: 24rem;
+        }
+
+        &__Swiper {
+            .swiper-pagination {
+                padding-top: 24rem;
+                top: 4rem;
+            }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, xsmall)) {
+        background: linear-gradient(to bottom, #fff 422px, map-get(abs.$colors, gray-50) 422.6px, map-get(abs.$colors, gray-50) 100%);
+
+        &__image {
+            height: 24rem;
+        }
+    }
+}
+
+//--------------- partners ---------------
+.partners {
+    @include abs.responsivePaddingY($pc: (pt: 15rem, pb: 15rem), $laptop: (pt: 10rem, pb: 10rem), $tablet: (pt: 8rem, pb: 8rem), $mobile-L: (pt: 5.5rem, pb: 5.5rem), $mobile-S: (pt: 5.5rem, pb: 5.5rem));
+
+    position: relative;
+
+    &__container {
+        @include abs.responsiveGap(10rem, 7rem, 18rem, 16rem, 10rem);
+
+        flex-direction: column;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__title {
+        > * {
+            @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, white));
+    
+            text-align: center;
+        }
+
+        &--top {
+            @include abs.responsiveFontSize(title2);
+
+            font-size: clamp(5rem, 2.714rem + 2.232vw, 7rem);
+        }
+
+        &--bottom {
+            @include abs.responsiveFontSize(title1);
+
+            font-size: clamp(5rem, 2.714rem + 2.232vw, 7rem);
+        }
+    }
+
+    // 배경 이미지의 밝기를 50% 어둡게 설정
+    &::before {
+        content: "";
+        background-image: url("../images/partners_bg.webp");
+        filter: brightness(50%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    // 배경에 어두운 그라데이션 적용
+    &::after {
+        content: "";
+        background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .partnersSwiper {
+        width: 100%;
+
+        .partners-slide {
+            width: fit-content;
+            padding: 2.7rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(7px);
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.5);
+            text-align: center;
+
+            img {
+                display: inline-block;
+                width: clamp(20rem, 14.8rem + 10.833vw, 35.6rem);
+            }
+
+            &__name {
+                @include abs.responsiveFontSize(title2);
+                @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, white));
+            }
+
+            &__technology {
+                @include abs.responsiveFontSize(title4);
+                @include abs.fontStyle(700, 1.2, -0.02em, map-get(abs.$colors, white));
+                @include abs.responsivePaddingY($pc: (pt: 1.4rem, pb: 1.2rem), $laptop: (pt: 1.2rem, pb: 1rem), $tablet: (pt: 1rem, pb: 0.8rem), $mobile-L: (pt: 1rem, pb: 1rem), $mobile-S: (pt: 1rem, pb: 1rem));
+            }
+
+            &__desc {
+                @include abs.responsiveFontSize(body1);
+                @include abs.fontStyle(400, 1.5, -0.02em, map-get(abs.$colors, white));
+            }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        .partnersSwiper {
+            
+            .partners-slide {
+                padding: 1.6rem;
+
+                img {
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
 
 
 
