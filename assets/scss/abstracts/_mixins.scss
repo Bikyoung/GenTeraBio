@@ -69,7 +69,7 @@
 }
 
 // 반응형별로 상하 padding을 자동 재정의하는 mixin
-@mixin responsivePaddingY($pc: null, $laptop: null, $tablet: null, $mobile-L: null, $mobile-S: null) {
+@mixin responsivePaddingY($pc: 15rem, $laptop: 10rem, $tablet: 8.8rem, $mobile-L: 5.5rem, $mobile-S: 5.5rem) {
 
     // $pc에 인수가 map 타입이 아닌 경우 map 타입으로 전환
     @if((type-of($pc)=="list") and (length($pc)==2)) {

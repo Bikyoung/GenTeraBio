@@ -1,15 +1,15 @@
-// ------------------------------ hero ------------------------------
-// .hero__title과 .hero__subtitle이 스크롤에 따라 fadeInUp
-const $heroTimeline = gsap.timeline();
+// ------------------------------ index-hero ------------------------------
+// .index-hero__title과 .index-hero__subtitle이 스크롤에 따라 fadeInUp
+const $indexHeroTimeline = gsap.timeline();
 
-$heroTimeline
-    .from(".hero__subtitle", {
+$indexHeroTimeline
+    .from(".index-hero__subtitle", {
         y: 100,
         autoAlpha: 0,
         duration: 1,
         ease: "power1.out"
     })
-    .from(".hero__title", {
+    .from(".index-hero__title", {
         y: 100,
         autoAlpha: 0,
         duration: 1,
