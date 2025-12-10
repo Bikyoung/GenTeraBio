@@ -15,7 +15,7 @@
             <img src="./assets/images/sub05_hero_sec01.webp" alt="히어로섹션">
             <div class="contact__hero--wrap contact-container">
                 <h2 class="contact__hero--title">CONTACT</h2>
-                <p class="contact__hero--des">GenTeraBio에 문의할 사항이 있으신가요?<br>
+                <p class="contact__hero--dec">GenTeraBio에 문의할 사항이 있으신가요?<br>
                     담당자 확인 후, 연락드리도록 하겠습니다.
                 </p>
             </div>
@@ -52,7 +52,7 @@
         <section class="contact__inquiry container 
         inquiry--container">
             <h3 class="contact__inquiry--bigtitle">정보입력</h3>
-            <p class="contact__inquiry--bigdes">귀하의 정보를 입력해주세요</p>
+            <p class="contact__inquiry--bigdec">귀하의 정보를 입력해주세요</p>
             <div class="contact__inquiry--list ">
                 <div class="contact__inquiry--rowWrap ">
                     <div class="field">
@@ -93,18 +93,23 @@
                     <input class="contact__inquiry--inquiry" type="text" placeholder="문의내용 입력" required>
                 </div>
             </div>
-            <!-- 첨부파일 -->
-            <!-- <div class="contact__inquiry--field">
+            <!-- 첨부파일 : 선택된 파일 응용 하기 방법 더 찾아보기ㅜㅠㅠㅠㅠ -->
+            <div class="contact__inquiry--field">
                 <div class="file">
-                    <label class="contact__inquiry--title" for="file">첨부파일</label>
-                    <input type="file" accept=".zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif"
-                        required>
+                    <label class="contact__inquiry--title" for="file">첨부파일 *</label>
+                    <div class="contact__inaquiry--file">
+                        <label class="file-label">첨부 파일 입력</label>
+                        <input type="file" accept=".zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif"
+                            required>
+
+                        <button type="submit" class="file-name">파일 선택 </button>
+                    </div>
                 </div>
-            </div> -->
+            </div>
             <!-- 약관동의 -->
             <div class="contact__inquiry--agree">
                 <label class="contact__inquiry--title">
-                    약관 동의 * </label><br>
+                    개인정보 수집 및 이용에 대한 동의 * </label><br>
                 <ul class="contact__inquiry--agree-field">
                     <li>
                         <젠트라바이오>(이하’회사’)는 고객님의 홈페이지 문의 서비스 이용을 위해 다음과 같이 고객님의 정보를 수집 및 이용합니다.
@@ -118,13 +123,29 @@
 
             <div class="contact__inquiry--check">
                 <input type="checkbox" required>
-                <p class="contact__inquiry--agreeCheck">개인정보 수집 동의</p>
+                <p class="contact__inquiry--agreeCheck">개인정보 수집 및 이용에 동의합니다.</p>
             </div>
             <!-- 버튼 -->
             <button class="contact__inquiry--btn" type="submit" class="submit-btn">보내기</button>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
+    <script>
+        gsap.to(".contact__hero--title", {
+            duration: 2,
+            opacity: 1,
+            y: 0,
+            ease: "power2.out"
+        });
+        gsap.to(".contact__hero--dec", {
+            duration: 2,
+            opacity: 1,
+            y: 0,
+            ease: "power2.out"
+        });
+
+    </script>
     <!-- <script src="./assets/js/index.js"></script> -->
 </body>
 

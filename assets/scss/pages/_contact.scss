@@ -8,9 +8,8 @@
     margin: 0 auto;
 }
 
-
 .kind-container {
-    @include abs.responsivePaddingY($pc: (pt: 14rem, pb: 8rem), $laptop: (pt: 9rem, pb: 6rem), $tablet: (pt: 12rem, pb: 0rem), $mobile-L: (pt:12.6rem, pb:0rem), $mobile-S: (pt:100rem, pb:0rem));
+    @include abs.responsivePaddingY($pc: (pt: 14rem, pb: 8rem), $laptop: (pt: 9rem, pb: 6rem), $tablet: (pt: 12rem, pb: 0rem), $mobile-L: (pt:12.6rem, pb:0rem), $mobile-S: (pt:10rem, pb:0rem));
 }
 
 .inquiry--container {
@@ -25,8 +24,10 @@ select {
     padding: 0.5rem 1rem;
 }
 
+// .ex{
+//     background-image: url()
+// }
 // ------------------------
-
 
 .contact {
     &__hero {
@@ -38,10 +39,14 @@ select {
         }
 
         &--title {
+            opacity: 0;
+            transform: translateY(-50%);
             @include abs.font(display, map-get(abs.$colors, white));
         }
 
-        &--des {
+        &--dec {
+            opacity: 0;
+            transform: translateY(-50%);
             @include abs.font(subtitle1, map-get(abs.$colors, white));
         }
     }
@@ -88,7 +93,7 @@ select {
             @include abs.font(title2, map-get(abs.$colors, black));
         }
 
-        &--bigdes {
+        &--bigdec {
             @include abs.font(body1, map-get(abs.$colors, black));
         }
 
@@ -107,7 +112,6 @@ select {
 
         &--title {
             @include abs.font(subtitle3, map-get(abs.$colors, black));
-
             padding-left: 2rem;
         }
 
@@ -116,19 +120,32 @@ select {
             margin-top: 1rem;
             padding: 1rem 2rem;
             border: none;
+            outline: none;
             border-bottom: 1px solid map-get(abs.$colors, gray-200);
         }
 
-        // &--field {}
+        &--input:focus {
+            border-bottom: 1px solid map-get(abs.$colors, primary);
+        }
+
         &--inquiry {
             width: 100%;
             height: 14rem;
             margin-top: 2rem;
+            border: 1px solid map-get(abs.$colors, black);
+            // border: none;
+            outline: none;
         }
+
+        &--input:focus {
+            border: 1px solid map-get(abs.$colors, primary);
+        }
+
 
         &--agree {
             text-align: start;
             padding-bottom: 1rem;
+            padding-top: 8rem;
         }
 
         &--agree label {
@@ -145,7 +162,6 @@ select {
 
         &--agree-field li {
             @include abs.font(subtitle5, map-get(abs.$colors, black));
-
             padding-bottom: 1rem;
         }
 
@@ -160,6 +176,7 @@ select {
         }
 
         &--btn {
+            // text-align: center;
             @include abs.font(subtitle4, map-get(abs.$colors, black));
 
             margin-top: 2rem;
@@ -175,6 +192,37 @@ select {
 .inquiry {
     text-align: start;
     padding: 8rem 0;
+}
+
+// ----------첨부파일 스타일적용
+.contact__inaquiry--file input[type="file"] {
+    display: none;
+}
+
+.contact__inaquiry--file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid map-get(abs.$colors, gray-black);
+}
+
+.file label {
+    display: block;
+    text-align: start;
+    padding-left: 2rem;
+}
+
+.file-label {
+    @include abs.font(subtitle5, map-get(abs.$colors, gray-200));
+}
+
+.file-name {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    border: 1px solid map-get(abs.$colors, gray-200);
+    @include abs.font(subtitle5, map-get(abs.$colors, gray-200));
+    background-color: map-get(abs.$colors, white);
 }
 
 // -----------1024
@@ -208,6 +256,12 @@ select {
     }
 
     .contact {
+        &__hero {
+            &--dec {
+                padding-top: 4rem;
+            }
+        }
+
         &__inquiry {
             &--rowWrap {
                 display: block;

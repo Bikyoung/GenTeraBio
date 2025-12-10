@@ -15,7 +15,7 @@
 // font-size를 제외한 폰트 관련된 모든 속성들을 정의하는 mixin
 @mixin fontStyle($category) {
     $fontStyleMap: map-get(vars.$font-style, $category);
-    
+
     font-weight: map-get($fontStyleMap, font-weight);
     line-height: map-get($fontStyleMap, line-height);
     letter-spacing: map-get($fontStyleMap, letterSpacing);
@@ -26,7 +26,7 @@
     $fontMap: map-get(vars.$font, $category);
     $sizeCategory: map-get($fontMap, size-category);
     $styleCategory: map-get($fontMap, style-category);
-    
+
     @include responsiveFontSize($sizeCategory);
     @include fontStyle($styleCategory);
 
@@ -44,7 +44,7 @@
 
 // 반응형별로 max-width를 자동 재정의하는 mixin
 @mixin responsiveMaxWidth($pc: 172rem, $laptop: 90.4rem, $tablet: 67.6rem, $mobile-L: 41rem, $mobile-S: 33rem) {
-    max-width: $pc; 
+    max-width: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
         @media (max-width: map-get(vars.$breakpoints, $bp)) {
@@ -59,7 +59,7 @@
     padding-right: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-        @if($device != null) {
+        @if($device !=null) {
             @media (max-width: map-get(vars.$breakpoints, $bp)) {
                 padding-left: $device;
                 padding-right: $device;
@@ -72,32 +72,47 @@
 @mixin responsivePaddingY($pc: null, $laptop: null, $tablet: null, $mobile-L: null, $mobile-S: null) {
 
     // $pc에 인수가 map 타입이 아닌 경우 map 타입으로 전환
-    @if((type-of($pc) == "list") and (length($pc) == 2)) {
-        $pc: (pt: nth($pc, 1), pb: nth($pc, 2))
-    } @else if(type-of($pc) != "map") {
-        $pc: (pt: $pc, pb: $pc);
+    @if((type-of($pc)=="list") and (length($pc)==2)) {
+        $pc: (
+            pt: nth($pc, 1),
+            pb: nth($pc, 2))
     }
 
-    padding-top: map-get($pc, pt);
-    padding-bottom: map-get($pc, pb);
+    @else if(type-of($pc) !="map") {
+        $pc: (
+            pt: $pc,
+            pb: $pc
+        );
+}
 
-    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
+padding-top: map-get($pc, pt);
+padding-bottom: map-get($pc, pb);
 
-        /* null 체크
+@each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
+
+    /* null 체크
            null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
-        @if($device != null) {
-            @media (max-width: map-get(vars.$breakpoints, $bp)) {
-                @if((type-of($device) == "list") and (length($device) == 2)) {
-                    $device: (pt: nth($device, 1), pb: nth($device, 2));
-                } @else if(type-of($device) != "map") {
-                    $device: (pt: $device, pb: $device);
-                }
-    
-                padding-top: map-get($device, pt);
-                padding-bottom: map-get($device, pb);
-            }
+    @if($device !=null) {
+        @media (max-width: map-get(vars.$breakpoints, $bp)) {
+            @if((type-of($device)=="list") and (length($device)==2)) {
+                $device: (
+                    pt: nth($device, 1),
+                    pb: nth($device, 2)
+                );
         }
+
+        @else if(type-of($device) !="map") {
+            $device: (
+                pt: $device,
+                pb: $device
+            );
     }
+
+    padding-top: map-get($device, pt);
+    padding-bottom: map-get($device, pb);
+}
+}
+}
 }
 
 // 반응형별로 gap을 자동 재정의하는 mixin
@@ -105,7 +120,7 @@
     gap: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-        @if($device != null) {
+        @if($device !=null) {
             @media (max-width: map-get(vars.$breakpoints, $bp)) {
                 gap: $device;
             }
@@ -123,5 +138,3 @@
         }
     }
 }
-
-
