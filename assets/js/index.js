@@ -54,27 +54,25 @@ $storyTimeline
     }, "-=0.5");
 
 // ------------------------------ technology ------------------------------
-$(function() {
-    // .technology-content__item에 마우스를 올리면(mouseenter) 보여지는 이미지와 텍스트가 변경됨 
-    $(".technology-content__item").on("mouseenter", function() {
-        let index = $(this).index();
+// .technology-content__item에 마우스를 올리면(mouseenter) 보여지는 이미지와 텍스트가 변경됨 
+$(".technology-content__item").on("mouseenter", function() {
+    let index = $(this).index();
+
+    $(".technology-content__item").removeClass("on");
+    $(this).addClass("on");
+
+    $(".technology-image__item").removeClass("on");
+    $(".technology-image__item").eq(index).addClass("on");
+});
+
+// .technology-content__item에 마우스를 떼면(mouseleave) 보여지는 이미지와 텍스트가 변경됨 
+$(".technology-content__item").on("mouseleave", function() {
+    $(".technology-content__item").removeClass("on");
+    $(".technology-content__item").eq(0).addClass("on");
     
-        $(".technology-content__item").removeClass("on");
-        $(this).addClass("on");
-    
-        $(".technology-image__item").removeClass("on");
-        $(".technology-image__item").eq(index).addClass("on");
-    });
-    
-    // .technology-content__item에 마우스를 떼면(mouseleave) 보여지는 이미지와 텍스트가 변경됨 
-    $(".technology-content__item").on("mouseleave", function() {
-        $(".technology-content__item").removeClass("on");
-        $(".technology-content__item").eq(0).addClass("on");
-        
-    
-        $(".technology-image__item").removeClass("on");
-        $(".technology-image__item").eq(0).addClass("on");
-    });
+
+    $(".technology-image__item").removeClass("on");
+    $(".technology-image__item").eq(0).addClass("on");
 });
 
 // .technology__container가 스크롤에 따라 fadeInUp
@@ -102,25 +100,23 @@ let facilitiesSwiper = new Swiper(".facilities__Swiper", {
 });
 
 // .swiper-slide의 제각각 높이를 하나로 통일함
-$(function() {
+function setFacilitiesSlideHeight() {
+    let facilitiesSlideArray = $(".facilities .swiper-slide");
 
-    function setFacilitiesSlideHeight() {
-        let facilitiesSlideArray = $(".facilities .swiper-slide");
-    
-        /* 모든 .swiper-slide의 높이를 초기화
-           반응형시 .swiper-slide의 기존 높이가 필요함 */
-        facilitiesSlideArray.css("height", "auto");
+    /* 모든 .swiper-slide의 높이를 초기화
+        반응형시 .swiper-slide의 기존 높이가 필요함 */
+    facilitiesSlideArray.css("height", "auto");
 
-        // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
-        let firstSlideHeight = facilitiesSlideArray.eq(0).outerHeight();
-    
-        facilitiesSlideArray.css("height", `${firstSlideHeight}px`);
-    }
+    // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
+    let firstSlideHeight = facilitiesSlideArray.eq(0).outerHeight();
 
-    setFacilitiesSlideHeight();
+    facilitiesSlideArray.css("height", `${firstSlideHeight}px`);
+}
 
-    $(window).on("resize", () => {setFacilitiesSlideHeight()});
-});
+setFacilitiesSlideHeight();
+
+$(window).on("resize", () => {setFacilitiesSlideHeight()});
+
 
 // .facilities__container가 스크롤에 따라 fadeInUp
 gsap.from(".facilities__container", {
@@ -133,6 +129,35 @@ gsap.from(".facilities__container", {
         start: "top 45%"
     }
 });
+
+// ------------------------------ network ------------------------------
+// .network__value-number의 숫자가 동시에 카운트 업
+let networkList = $(".network__value-number");
+let counter = {c1: 0, c2: 0, c3: 0, c4: 0, c5: 0, c6: 0 };
+
+gsap.to(counter, {
+    c1: 8491, 
+    c2: 102,
+    c3: 3000,
+    c4: 570,
+    c5: 4000,
+    c6: 1200,
+    scrollTrigger: {
+        trigger: ".network",
+        start: "top 20%",
+        toggleActions: "play none none reset"
+    },
+    duration: 1.5,
+    onUpdate() {
+        networkList.eq(0).text(Math.floor(counter.c1)).toLocaleString();
+        networkList.eq(1).text(Math.floor(counter.c2)).toLocaleString();
+        networkList.eq(2).text(Math.floor(counter.c3)).toLocaleString();
+        networkList.eq(3).text(Math.floor(counter.c4)).toLocaleString();
+        networkList.eq(4).text(Math.floor(counter.c5)).toLocaleString();
+        networkList.eq(5).text(Math.floor(counter.c6)).toLocaleString();
+    }
+});
+
 
 // ------------------------------ partners ------------------------------
 // .partners-slide가 무한 반복 자동 재생
@@ -163,25 +188,23 @@ let partnersSwiper = new Swiper(".partnersSwiper", {
 });
 
 // .swiper-slide의 제각각 높이를 하나로 통일함
-$(function() {
+function setPartnersSlideHeight() {
+    let partnersSlideArray = $(".partners .swiper-slide");
 
-    function setPartnersSlideHeight() {
-        let partnersSlideArray = $(".partners .swiper-slide");
-    
-        /* 모든 .swiper-slide의 높이를 초기화
-           반응형시 .swiper-slide의 기존 높이가 필요함 */
-        partnersSlideArray.css("height", "auto");
+    /* 모든 .swiper-slide의 높이를 초기화
+        반응형시 .swiper-slide의 기존 높이가 필요함 */
+    partnersSlideArray.css("height", "auto");
 
-        // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
-        let firstSlideHeight = partnersSlideArray.eq(0).outerHeight();
-    
-        partnersSlideArray.css("height", `${firstSlideHeight}px`);
-    }
+    // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
+    let firstSlideHeight = partnersSlideArray.eq(0).outerHeight();
 
-    setPartnersSlideHeight();
+    partnersSlideArray.css("height", `${firstSlideHeight}px`);
+}
 
-    $(window).on("resize", () => {setPartnersSlideHeight()});
-});
+setPartnersSlideHeight();
+
+$(window).on("resize", () => {setPartnersSlideHeight()});
+
 
 // ------------------------------ contact ------------------------------
 gsap.from(".contact__container", {

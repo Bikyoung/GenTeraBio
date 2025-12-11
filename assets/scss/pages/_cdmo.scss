@@ -48,8 +48,6 @@
     @include abs.responsivePaddingY($pc: (pt: 16rem, pb: 8rem), $laptop: (pt: 16rem, pb: 8rem), $tablet: (pt: 12rem, pb: 6rem), $mobile-L: (pt: 8rem, pb: 4rem), $mobile-S: (pt: 7rem, pb: 3.5rem));
 
     &__container {
-        max-width: 172rem;
-        width: 100%;
         justify-content: space-between;
     }
 
@@ -60,6 +58,8 @@
     &__desc {
         > * {
             @include abs.font(subtitle2, map-get(abs.$colors, black));
+
+            max-width: 92.2rem;
         }
     }
 

@@ -182,6 +182,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            transition: 0.5s all ease-out;
 
             &:nth-child(1) {
                 z-index: 3;
@@ -221,6 +222,7 @@
                      clamp(4rem, -2rem + 4.167vw, 6rem);
             border: 1px solid map-get(abs.$colors, gray-100);
             flex: 1;
+            transition: 0.5s all ease-out;
 
             &.on {
                 padding: clamp(4rem, 1rem + 2.083vw, 5rem)
@@ -665,7 +667,7 @@
 
 //--------------- network ---------------
 .network {
-    @include abs.responsivePaddingY();
+    @include abs.responsivePaddingY($pc: 15rem, $laptop: 10rem, $tablet: 8.8rem, $mobile-L: (pt: 10rem, pb: 14.7rem), $mobile-S: (pt: 10rem, pb: 16.3rem));
 
     min-height: 100dvh;
     position: relative;
@@ -695,10 +697,11 @@
     }
 
     &__container {
-        @include abs.responsiveGap(8rem, 11.2rem, 20rem, 15rem);
+        @include abs.responsiveGap(8rem, 11.2rem, 10rem, 34rem);
 
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     &__title {
@@ -734,6 +737,10 @@
 
         &-unit {
             @include abs.font(title4, map-get(abs.$colors, white));
+            
+            &--big {
+                @include abs.font(title2, map-get(abs.$colors, white));
+            }
         }
 
         &-desc {
@@ -741,16 +748,46 @@
         }
     }
 
-    // @media (max-width: map-get(abs.$breakpoints, medium)) {
-    //     &__content {
-    //         flex-direction: row;
-    //     }
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        &__value-group {
+            &:nth-child(2) {
+                margin: 0 1.5rem;
+            }
+        } 
+    }
 
-    //     &__value-group {
-    //         height: 20.8rem;
-    //         flex-direction: column;
-    //     }
-    // }
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__title {
+            text-align: center;
+        }
+
+        &__value-group {
+            justify-content: center;
+            gap: 4rem;
+
+            > * {
+                width: 15rem;
+            }
+
+            &:not(:nth-child(2)) {
+                padding: 0;
+            }
+
+            &:nth-child(2) {
+                margin: 0;
+            }
+        } 
+    }
+    
+    @media (max-width: map-get(abs.$breakpoints, xsmall)) {
+        &__value-group {
+            gap: 2.3rem;
+
+            > * {
+                width: 14rem;
+            }
+        } 
+    }
 }
 
 //--------------- partners ---------------
