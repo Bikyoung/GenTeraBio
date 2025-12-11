@@ -43,7 +43,7 @@
 }
 
 // 반응형별로 max-width를 자동 재정의하는 mixin
-@mixin responsiveMaxWidth($pc: 172rem, $laptop: 90.4rem, $tablet: 67.6rem, $mobile-L: 41rem, $mobile-S: 33rem) {
+@mixin responsiveMaxWidth($pc: 182rem, $laptop: 95.4rem, $tablet: 70.8rem, $mobile-L: 44rem, $mobile-S: 35.4rem) {
     max-width: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
@@ -75,44 +75,43 @@
     @if((type-of($pc)=="list") and (length($pc)==2)) {
         $pc: (
             pt: nth($pc, 1),
-            pb: nth($pc, 2))
+            pb: nth($pc, 2)
+        );
     }
-
     @else if(type-of($pc) !="map") {
         $pc: (
             pt: $pc,
             pb: $pc
         );
-}
-
-padding-top: map-get($pc, pt);
-padding-bottom: map-get($pc, pb);
-
-@each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-
-    /* null 체크
-           null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
-    @if($device !=null) {
-        @media (max-width: map-get(vars.$breakpoints, $bp)) {
-            @if((type-of($device)=="list") and (length($device)==2)) {
-                $device: (
-                    pt: nth($device, 1),
-                    pb: nth($device, 2)
-                );
-        }
-
-        @else if(type-of($device) !="map") {
-            $device: (
-                pt: $device,
-                pb: $device
-            );
     }
 
-    padding-top: map-get($device, pt);
-    padding-bottom: map-get($device, pb);
-}
-}
-}
+    padding-top: map-get($pc, pt);
+    padding-bottom: map-get($pc, pb);
+
+    @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
+    
+        /* null 체크
+            null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+        @if($device !=null) {
+            @media (max-width: map-get(vars.$breakpoints, $bp)) {
+                @if((type-of($device)=="list") and (length($device)==2)) {
+                    $device: (
+                        pt: nth($device, 1),
+                        pb: nth($device, 2)
+                    );
+                }
+                @else if(type-of($device) !="map") {
+                    $device: (
+                        pt: $device,
+                        pb: $device
+                    );
+                }
+    
+                padding-top: map-get($device, pt);
+                padding-bottom: map-get($device, pb);
+            }
+        }
+    }
 }
 
 // 반응형별로 gap을 자동 재정의하는 mixin

@@ -121,6 +121,7 @@
     }
 
     &__container {
+        width: 100%;
         height: 50%;
         background-color: map-get(abs.$colors, white);
         position: relative;
@@ -663,40 +664,94 @@
 }
 
 //--------------- network ---------------
-// .network {
-//     @include abs.responsivePaddingY();
+.network {
+    @include abs.responsivePaddingY();
 
-//     min-height: 100dvh;
-//     position: relative;
+    min-height: 100dvh;
+    position: relative;
 
-//     &__background {
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         inset: 0;
-//         z-index: -1;
+    &__background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
 
-//         video {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//         }
-//     }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-//     &__title {
-//         color: map-get(abs.$colors, white);
-//     }
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
 
-//     &__value {
-//         &-number {
-//             @include abs.font(title2, map-get(abs.$colors, white));
-//         }
+    &__container {
+        @include abs.responsiveGap(8rem, 11.2rem, 20rem, 15rem);
 
-//         &-unit {
-//             @include abs.font(title4, map-get(abs.$colors, white));
-//         }
-//     }
-// }
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: map-get(abs.$colors, white);
+    }
+
+    &__content {
+        @include abs.responsiveGap(7.5rem, 6.5rem, 3rem, 2,2rem);
+
+        width: 100%;
+        max-width: 116rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__value-group {
+        justify-content: space-between;
+
+        &:not(:nth-child(2)) {
+            @include abs.responsivePaddingX(8rem, 12rem, 6rem);
+        }
+    }
+
+    &__value {
+        > * {
+            text-align: center;
+        }
+
+        &-number {
+            @include abs.font(title2, map-get(abs.$colors, white));
+        }
+
+        &-unit {
+            @include abs.font(title4, map-get(abs.$colors, white));
+        }
+
+        &-desc {
+            @include abs.font(body1, map-get(abs.$colors, gray-150));
+        }
+    }
+
+    // @media (max-width: map-get(abs.$breakpoints, medium)) {
+    //     &__content {
+    //         flex-direction: row;
+    //     }
+
+    //     &__value-group {
+    //         height: 20.8rem;
+    //         flex-direction: column;
+    //     }
+    // }
+}
 
 //--------------- partners ---------------
 .partners {

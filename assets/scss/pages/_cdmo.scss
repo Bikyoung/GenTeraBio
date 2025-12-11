@@ -1,0 +1,66 @@
+@use "../abstracts/bundle" as abs;
+
+//--------------- cdmo-hero ---------------
+.cdmo-hero {
+    height: 100dvh;
+    position: relative;
+    background-image: url("../images/facility_02.webp");
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: rgba(0,0,0,0.5);
+        
+    }
+
+    &__container {
+        flex-direction: column;
+        align-items: start;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__title {
+        @include abs.font(display, map-get(abs.$colors, white));
+    }
+
+    &__subtitle {
+        @include abs.font(subtitle1, map-get(abs.$colors, white));
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        &__container {
+            align-items: center;
+        }
+
+        &__subtitle {
+           text-align: center;
+        }
+    }
+
+}
+
+.cdmo-process {
+    @include abs.responsivePaddingY($pc: (pt: 16rem, pb: 8rem), $laptop: (pt: 16rem, pb: 8rem), $tablet: (pt: 12rem, pb: 6rem), $mobile-L: (pt: 8rem, pb: 4rem), $mobile-S: (pt: 7rem, pb: 3.5rem));
+
+    &__container {
+        max-width: 172rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__subtitle {
+        @include abs.font(title2, map-get(abs.$colors, black));
+    }
+
+    &__desc {
+        > * {
+            @include abs.font(subtitle2, map-get(abs.$colors, black));
+        }
+    }
+
+}

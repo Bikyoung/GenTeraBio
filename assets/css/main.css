@@ -208,7 +208,7 @@ a {
 }
 
 .container {
-  max-width: 172rem;
+  max-width: 182rem;
   padding-left: 5rem;
   padding-right: 5rem;
   width: 100%;
@@ -217,22 +217,22 @@ a {
 }
 @media (max-width: 1024px) {
   .container {
-    max-width: 90.4rem;
+    max-width: 95.4rem;
   }
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 67.6rem;
+    max-width: 70.8rem;
   }
 }
 @media (max-width: 480px) {
   .container {
-    max-width: 41rem;
+    max-width: 44rem;
   }
 }
 @media (max-width: 390px) {
   .container {
-    max-width: 33rem;
+    max-width: 35.4rem;
   }
 }
 @media (max-width: 1024px) {
@@ -420,6 +420,7 @@ a {
   }
 }
 .story__container {
+  width: 100%;
   height: 50%;
   background-color: #FFFFFF;
   position: relative;
@@ -490,13 +491,13 @@ a {
   padding-top: 15rem;
   padding-bottom: 7.5rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
   .technology {
@@ -526,13 +527,13 @@ a {
   padding-top: 0;
   padding-bottom: 0;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   gap: 7rem;
   flex-direction: column;
 }
@@ -1036,13 +1037,13 @@ a {
   padding-top: 15rem;
   padding-bottom: 15rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
   .facilities {
@@ -1160,13 +1161,13 @@ a {
   padding-top: 14.4rem;
   padding-bottom: 12.4rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   background-color: #F6F6F6;
 }
 @media (max-width: 1024px) {
@@ -1301,13 +1302,13 @@ a {
   padding-top: 2rem;
   padding-bottom: 0;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   justify-content: right;
 }
 @media (max-width: 1024px) {
@@ -1396,17 +1397,240 @@ a {
   }
 }
 
+.network {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  min-height: 100dvh;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .network {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+@media (max-width: 768px) {
+  .network {
+    padding-top: 8.8rem;
+    padding-bottom: 8.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .network {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+@media (max-width: 390px) {
+  .network {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+.network__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.network__background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.network__background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.network__container {
+  gap: 8rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .network__container {
+    gap: 11.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .network__container {
+    gap: 20rem;
+  }
+}
+@media (max-width: 480px) {
+  .network__container {
+    gap: 15rem;
+  }
+}
+.network__title {
+  color: #FFFFFF;
+}
+.network__content {
+  gap: 7.5rem;
+  width: 100%;
+  max-width: 116rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .network__content {
+    gap: 6.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .network__content {
+    gap: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .network__content {
+    gap: 2;
+  }
+}
+@media (max-width: 390px) {
+  .network__content {
+    gap: 2rem;
+  }
+}
+.network__value-group {
+  justify-content: space-between;
+}
+.network__value-group:not(:nth-child(2)) {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+@media (max-width: 1024px) {
+  .network__value-group:not(:nth-child(2)) {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .network__value-group:not(:nth-child(2)) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (max-width: 480px) {
+  .network__value-group:not(:nth-child(2)) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 390px) {
+  .network__value-group:not(:nth-child(2)) {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+.network__value > * {
+  text-align: center;
+}
+.network__value-number {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .network__value-number {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .network__value-number {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .network__value-number {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .network__value-number {
+    font-size: 2.6rem;
+  }
+}
+.network__value-unit {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .network__value-unit {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .network__value-unit {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .network__value-unit {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 390px) {
+  .network__value-unit {
+    font-size: 1.5rem;
+  }
+}
+.network__value-desc {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ADADAD;
+}
+@media (max-width: 1024px) {
+  .network__value-desc {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .network__value-desc {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .network__value-desc {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 390px) {
+  .network__value-desc {
+    font-size: 1.4rem;
+  }
+}
+
 .partners {
   padding-top: 15rem;
   padding-bottom: 15rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   position: relative;
 }
 @media (max-width: 1024px) {
@@ -1583,13 +1807,13 @@ a {
   padding-top: 1.4rem;
   padding-bottom: 1.2rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
@@ -1643,13 +1867,13 @@ a {
   padding-top: 0.2rem;
   padding-bottom: 3rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1752,13 +1976,13 @@ a {
   padding-top: 0.2rem;
   padding-bottom: 3rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
   .contact__container .contact__desc {
@@ -1810,13 +2034,13 @@ a {
   padding-top: 1rem;
   padding-bottom: 1rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
@@ -1907,6 +2131,204 @@ a {
     opacity: 0;
   }
 }
+.about {
+  background-color: pink;
+}
+
+.cdmo-hero {
+  height: 100dvh;
+  position: relative;
+  background-image: url("../images/facility_02.webp");
+}
+.cdmo-hero::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.cdmo-hero__container {
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  z-index: 5;
+}
+.cdmo-hero__title {
+  font-size: 7.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .cdmo-hero__title {
+    font-size: 5.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-hero__title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-hero__title {
+    font-size: 4.4rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-hero__title {
+    font-size: 3.8rem;
+  }
+}
+.cdmo-hero__subtitle {
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .cdmo-hero__subtitle {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-hero__subtitle {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-hero__subtitle {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-hero__subtitle {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-hero__container {
+    align-items: center;
+  }
+  .cdmo-hero__subtitle {
+    text-align: center;
+  }
+}
+
+.cdmo-process {
+  padding-top: 16rem;
+  padding-bottom: 8rem;
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+}
+@media (max-width: 1024px) {
+  .cdmo-process {
+    padding-top: 16rem;
+    padding-bottom: 8rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-process {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-process {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-process {
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+  }
+}
+.cdmo-process__container {
+  max-width: 172rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.cdmo-process__subtitle {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .cdmo-process__subtitle {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-process__subtitle {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-process__subtitle {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-process__subtitle {
+    font-size: 2.6rem;
+  }
+}
+.cdmo-process__desc > * {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .cdmo-process__desc > * {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-process__desc > * {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-process__desc > * {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-process__desc > * {
+    font-size: 1.6rem;
+  }
+}
+
+.header {
+  position: relative;
+  height: 100dvh;
+}
+.header__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/news_bg.webp");
+}
+
+.search__bar {
+  width: 340px;
+  height: 408px;
+  background-color: #666666;
+}
+
 .content-container {
   width: 100%;
   height: 100%;
@@ -1917,13 +2339,13 @@ a {
   padding-top: 14rem;
   padding-bottom: 8rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
   .kind-container {
@@ -1945,7 +2367,7 @@ a {
 }
 @media (max-width: 390px) {
   .kind-container {
-    padding-top: 100rem;
+    padding-top: 10rem;
     padding-bottom: 0rem;
   }
 }
@@ -1954,13 +2376,13 @@ a {
   padding-top: 8rem;
   padding-bottom: 8rem;
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
   /* null 체크
-     null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
   .inquiry--container {
@@ -2047,6 +2469,8 @@ select {
   }
 }
 .contact__hero--title {
+  opacity: 0;
+  transform: translateY(-50%);
   font-size: 7.4rem;
   font-weight: 700;
   line-height: 1.3;
@@ -2072,29 +2496,31 @@ select {
     font-size: 3.8rem;
   }
 }
-.contact__hero--des {
+.contact__hero--dec {
+  opacity: 0;
+  transform: translateY(-50%);
   font-size: 3.4rem;
   font-weight: 500;
   line-height: 1.2;
   color: #FFFFFF;
 }
 @media (max-width: 1024px) {
-  .contact__hero--des {
+  .contact__hero--dec {
     font-size: 2.8rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__hero--des {
+  .contact__hero--dec {
     font-size: 2.4rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__hero--des {
+  .contact__hero--dec {
     font-size: 2.2rem;
   }
 }
 @media (max-width: 390px) {
-  .contact__hero--des {
+  .contact__hero--dec {
     font-size: 2rem;
   }
 }
@@ -2199,29 +2625,29 @@ select {
     font-size: 2.6rem;
   }
 }
-.contact__inquiry--bigdes {
+.contact__inquiry--bigdec {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
   color: #1C1C1C;
 }
 @media (max-width: 1024px) {
-  .contact__inquiry--bigdes {
+  .contact__inquiry--bigdec {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__inquiry--bigdes {
+  .contact__inquiry--bigdec {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__inquiry--bigdes {
+  .contact__inquiry--bigdec {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 390px) {
-  .contact__inquiry--bigdes {
+  .contact__inquiry--bigdec {
     font-size: 1.4rem;
   }
 }
@@ -2268,16 +2694,26 @@ select {
   margin-top: 1rem;
   padding: 1rem 2rem;
   border: none;
+  outline: none;
   border-bottom: 1px solid #969696;
+}
+.contact__inquiry--input:focus {
+  border-bottom: 1px solid #15CEC9;
 }
 .contact__inquiry--inquiry {
   width: 100%;
   height: 14rem;
   margin-top: 2rem;
+  border: 1px solid #1C1C1C;
+  outline: none;
+}
+.contact__inquiry--input:focus {
+  border: 1px solid #15CEC9;
 }
 .contact__inquiry--agree {
   text-align: start;
   padding-bottom: 1rem;
+  padding-top: 8rem;
 }
 .contact__inquiry--agree label {
   margin-bottom: 2rem;
@@ -2384,6 +2820,82 @@ select {
   padding: 8rem 0;
 }
 
+.contact__inaquiry--file input[type=file] {
+  display: none;
+}
+
+.contact__inaquiry--file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.file label {
+  display: block;
+  text-align: start;
+  padding-left: 2rem;
+}
+
+.file-label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #969696;
+}
+@media (max-width: 1024px) {
+  .file-label {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .file-label {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .file-label {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .file-label {
+    font-size: 1.2rem;
+  }
+}
+
+.file-name {
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  border: 1px solid #969696;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #969696;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .file-name {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .file-name {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .file-name {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .file-name {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .contact__kind--box {
     padding: 4rem 0;
@@ -2399,6 +2911,9 @@ select {
 @media (max-width: 768px) {
   .field {
     padding-top: 3rem;
+  }
+  .contact__hero--dec {
+    padding-top: 4rem;
   }
   .contact__inquiry--rowWrap {
     display: block;
@@ -2445,22 +2960,4 @@ select {
   .contact__kind--box {
     padding: 2rem 0;
   }
-}
-.header {
-  position: relative;
-  height: 100dvh;
-}
-.header__background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url("../images/news_bg.webp");
-}
-
-.search__bar {
-  width: 340px;
-  height: 408px;
-  background-color: #666666;
 }/*# sourceMappingURL=main.css.map */
