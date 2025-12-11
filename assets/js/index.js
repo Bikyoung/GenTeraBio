@@ -144,7 +144,7 @@ gsap.to(counter, {
     c6: 1200,
     scrollTrigger: {
         trigger: ".network",
-        start: "top 20%",
+        start: "top 25%",
         toggleActions: "play none none reset"
     },
     duration: 1.5,

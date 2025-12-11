@@ -182,7 +182,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            transition: 0.5s all ease-out;
+            transition: 0.5s all ease-in-out;
 
             &:nth-child(1) {
                 z-index: 3;
@@ -222,7 +222,7 @@
                      clamp(4rem, -2rem + 4.167vw, 6rem);
             border: 1px solid map-get(abs.$colors, gray-100);
             flex: 1;
-            transition: 0.5s all ease-out;
+            transition: 0.5s all ease-in-out;
 
             &.on {
                 padding: clamp(4rem, 1rem + 2.083vw, 5rem)
