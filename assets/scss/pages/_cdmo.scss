@@ -91,6 +91,12 @@
             text-align: center;
         }    
     }
+}
 
-
+//--------------- cdmo-credible ---------------
+.cdmo-credible {
+    &__container {
+        flex-direction: column;
+        justify-content: start;
+    }
 }
