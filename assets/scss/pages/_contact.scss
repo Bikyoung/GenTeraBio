@@ -1,7 +1,7 @@
 // -----------폰트,믹스인연결-------------
 @use "../abstracts/bundle" as abs;
 
-// --------영역별 컨테이너-------
+// --------영역별 컨테이너------- 컨테이너 다시 적용하기
 .content-container {
     width: 100%;
     height: 100%;
@@ -24,16 +24,10 @@ select {
     padding: 0.5rem 1rem;
 }
 
-// .ex{
-//     background-image: url()
-// }
-// ------------------------
-
 .contact {
     &__hero {
         &--wrap {
             @include abs.responsivePaddingX(24.5rem, 15rem, 13rem, 5.6rem, 3rem);
-
             position: absolute;
             top: 50%;
         }
@@ -43,7 +37,6 @@ select {
             transform: translateY(-50%);
             @include abs.font(display, map-get(abs.$colors, white));
         }
-
         &--dec {
             opacity: 0;
             transform: translateY(-50%);
