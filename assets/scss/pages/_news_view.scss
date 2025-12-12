@@ -1,0 +1,281 @@
+@use '../abstracts/bundle' as abs;
+
+// --------------- header ---------------
+.newsHeader {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: url("../images/news_bg.webp");
+    }
+
+    &__container {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+        position: relative;
+    }
+
+    &__title {
+        @include abs.font(display, map-get(abs.$colors, white));
+    }
+
+    &__subtitle {
+        @include abs.font(subtitle1, map-get(abs.$colors, white));
+    }
+}
+
+.news {
+    &__searchBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 34rem;
+        height: 4.8rem;
+        border-radius: 3rem;
+        background-color: #e8e8e8;
+        margin-top: 5rem;
+        border: none;
+        padding: 0 2.4rem;
+        margin-left: auto;
+        margin-bottom: 3rem;
+    }
+
+    &__searchBar input {
+        flex: 1;
+        border: none;
+        background-color: transparent;
+        border-radius: 3rem;
+        padding-left: 1rem;
+    }
+
+    &__searchBar a {
+        display: inline-block;
+    }
+
+    &__searchBar i {
+        font-size: 2.5rem;
+        color: map-get(abs.$colors, gray-250);
+    }
+
+    &__tab--wrap {
+        width: 100%;
+        height: 7.8rem;
+        margin-bottom: 5rem;
+    }
+
+    &__tab--menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    &__tab--menu li {
+        width: 50%;
+        background: transparent;
+    }
+
+    &__tab--menu li.on &__tab {
+        background-color: map-get(abs.$colors, primary-dark);
+    }
+
+    &__tab--menu li.on &__tab h3,
+    &__tab--menu li.on &__tab p {
+        color: map-get(abs.$colors, white)
+    }
+
+    &__tab {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid map-get(abs.$colors, gray-100);
+    }
+
+    &__tab--left {
+        border-radius: 1rem 0 0 0;
+    }
+
+    &__tab--right {
+        border-radius: 0 1rem 0 0;
+    }
+
+    &__tab h3 {
+        @include abs.fontStyle(title);
+        font-size: 3rem;
+        color: #3d3d3d
+    }
+
+    &__tab p {
+        @include abs.fontStyle(subtitle);
+        font-size: 1.6rem;
+        color: #3d3d3d;
+    }
+
+    &__list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 3rem;
+        margin-bottom: 6rem;
+    }
+
+    &__item {
+        width: 30%;
+        margin-bottom: 2rem;
+    }
+
+    &__item img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        margin-bottom: 1.4rem;
+    }
+
+    &__item h3 {
+        @include abs.font(subtitle2, map-get(abs.$colors, black));
+        margin-bottom: 1rem;
+    }
+
+    &__item p {
+        @include abs.font(body2, map-get(abs.$colors, gray-250));
+    }
+}
+
+.pagination {
+    width: 100%;
+    height: auto;
+    // font-size: 5rem;
+    padding: 3rem 0;
+
+    & ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & a {
+        color: map-get(abs.$colors, gray-200);
+    }
+
+    &__btn--list {
+        li {
+            &.on {
+                background-color: map-get(abs.$colors, primary);
+                border-radius: 0.6rem;
+
+                a {
+                    color: map-get(abs.$colors, white);
+                }
+            }
+        }
+    }
+
+    &__btn--prev {
+        width: auto;
+        height: auto;
+        display: block;
+        font-size: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    &__btn--next {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    &__btn--num {
+        width: 4rem;
+        height: 4rem;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+        font-weight: 500;
+        color: map-get(abs.$colors, gray-200);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.view-container {
+    padding: 0 10rem;
+}
+
+.newsView {
+    &__wrap {
+        margin-top: 12.8rem;
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10rem;
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+    }
+
+    &__title h3 {
+        @include abs.font(title2, map-get(abs.$colors, black));
+        margin-bottom: 1.6rem;
+    }
+
+    &__title p {
+        @include abs.font(body3, map-get(abs.$colors, gray-250));
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        min-height: 32rem;
+        background-image: url("../images/newsItem-img03.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 5rem;
+    }
+
+    &__desc p, a {
+        @include abs.font(body2, map-get(abs.$colors, gray-300));
+    }
+
+    &__desc p {
+        margin-bottom: 5rem;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__btn--head {
+        @include abs.font(button2, map-get(abs.$colors, gray-250));
+        padding: 0 10rem;
+    }
+
+    &__btn--prev, &__btn--next {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 2.4rem;
+        border-top: 0.1rem solid #d9d9d9;
+    }
+
+    &btn--next {
+        border-bottom: 0.1rem solid #d9d9d9;;
+        margin-bottom: 10rem;
+    }
+
+
+}
