@@ -39,8 +39,10 @@ a {
             $nextLabel: abs.findNextKey(abs.$breakpoints, $label);
             @include abs.responsiveShow($width);
 
-            @media (max-width: map-get(abs.$breakpoints, $nextLabel)) {
-                display: none;
+            @if $nextLabel != null {
+                @media (max-width: map-get(abs.$breakpoints, $nextLabel)) {
+                    display: none;
+                }
             }
         }
     }
@@ -58,8 +60,10 @@ a {
                 display: none;
             }
 
-            @media (max-width: map-get(abs.$breakpoints, $nextLabel)) {
-                display: block;
+            @if $nextLabel != null {
+                @media (max-width: map-get(abs.$breakpoints, $nextLabel)) {
+                    display: block;
+                }
             }
         }
     }

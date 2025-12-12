@@ -281,11 +281,6 @@ a {
     display: block;
   }
 }
-@media (max-width: ) {
-  .only-390px {
-    display: none;
-  }
-}
 
 .no-1024px {
   display: block;
@@ -332,11 +327,6 @@ a {
 @media (max-width: 390px) {
   .no-390px {
     display: none;
-  }
-}
-@media (max-width: ) {
-  .no-390px {
-    display: block;
   }
 }
 
