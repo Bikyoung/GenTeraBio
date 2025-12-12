@@ -1,0 +1,22 @@
+@use "./variables" as vars;
+
+// map과 해당 map의 key를 입력받아 동일한 map의 다음 key를 반환하는 함수 
+@function findNextKey($map, $currentKey) {
+    $keyList: map-keys($map);                       // 입력된 map의 key 리스트를 생성
+    $currentIdx: index($keyList, $currentKey);      // $keyList 내에서 입력된 key의 인덱스를 구함
+    $length: length($keyList);                      // $keyList의 길이
+
+    // 입력된 key가 존재하지 않는 key일 때 에러메세지 출력
+    @if($currentIdx == null) {
+        @error "key `#{$currentKey}` not found in map";
+    }
+    // 입력된 key가 마지막 key일 때 null 반환
+    @else if($currentIdx == $length) {
+        @return null;
+    } 
+    @else {
+        $nextKey: nth($keyList, $currentIdx + 1);    // $keyList에서 다음 인덱스의 key를 구함
+    
+        @return $nextKey;
+    }
+}

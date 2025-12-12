@@ -44,23 +44,53 @@
 
 }
 
+//--------------- cdmo-process ---------------
 .cdmo-process {
     @include abs.responsivePaddingY($pc: (pt: 16rem, pb: 8rem), $laptop: (pt: 16rem, pb: 8rem), $tablet: (pt: 12rem, pb: 6rem), $mobile-L: (pt: 8rem, pb: 4rem), $mobile-S: (pt: 7rem, pb: 3.5rem));
 
     &__container {
-        justify-content: space-between;
+        @include abs.responsiveGap(10.4rem, 2rem, 4rem, 3.6rem, 3rem);
+
+        justify-content: space-evenly;
+    }
+
+    &__title {
+        font-size: clamp(5rem, 2.714rem + 2.232vw, 7rem);
     }
 
     &__subtitle {
         @include abs.font(title2, map-get(abs.$colors, black));
+
+        font-size: clamp(3rem, 1.629rem + 1.339vw, 4.2rem);
     }
 
     &__desc {
+        max-width: 92.2rem;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.6rem;
+
         > * {
-            @include abs.font(subtitle2, map-get(abs.$colors, black));
+            @include abs.font(body1, map-get(abs.$colors, black));
 
             max-width: 92.2rem;
         }
     }
+
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__container, &__desc {
+            align-items: center;
+            text-align: center;
+        }    
+    }
+
 
 }

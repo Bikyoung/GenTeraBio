@@ -2313,13 +2313,38 @@ a {
   }
 }
 .cdmo-process__container {
-  justify-content: space-between;
+  gap: 10.4rem;
+  justify-content: space-evenly;
+}
+@media (max-width: 1024px) {
+  .cdmo-process__container {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-process__container {
+    gap: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-process__container {
+    gap: 3.6rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-process__container {
+    gap: 3rem;
+  }
+}
+.cdmo-process__title {
+  font-size: clamp(5rem, 2.714rem + 2.232vw, 7rem);
 }
 .cdmo-process__subtitle {
   font-size: 4.2rem;
   font-weight: 700;
   line-height: 1.2;
   color: #1C1C1C;
+  font-size: clamp(3rem, 1.629rem + 1.339vw, 4.2rem);
 }
 @media (max-width: 1024px) {
   .cdmo-process__subtitle {
@@ -2341,31 +2366,63 @@ a {
     font-size: 2.6rem;
   }
 }
+.cdmo-process__desc {
+  max-width: 92.2rem;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.6rem;
+}
 .cdmo-process__desc > * {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
   color: #1C1C1C;
   max-width: 92.2rem;
 }
 @media (max-width: 1024px) {
   .cdmo-process__desc > * {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
   .cdmo-process__desc > * {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 480px) {
   .cdmo-process__desc > * {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 390px) {
   .cdmo-process__desc > * {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+.cdmo-process__desc .only-480px, .cdmo-process__desc .only-768px {
+  display: none;
+}
+@media (max-width: 768px) {
+  .cdmo-process__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .cdmo-process .only-768px {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-process__container, .cdmo-process__desc {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) and (min-width: 391px) {
+  .cdmo-process .only-480px {
+    display: block;
   }
 }
 
