@@ -4,6 +4,10 @@ section {
     width: 100%;
 }
 
+.section-paddingY {
+    @include abs.responsivePaddingY($pc: 15rem, $laptop: 10rem, $tablet: 8.8rem, $mobile-L: 5.5rem, $mobile-S: 5.5rem);
+}
+
 a {
     color: transparent;
     text-decoration: none;
@@ -18,27 +22,46 @@ a {
     } 
 }
 
+// 모바일(480px 이하)에서만 요소를 숨김
+.no-mobile {
+    display: block;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+
 // only-* 구조의 클래스명인 경우, 특정 해상도에서만 보여짐
 .only {
     @each $label, $width in abs.$breakpoints {
-        $nextLabel: abs.findNextKey(abs.$breakpoints, $label);
-
         &-#{$width} {
+            $nextLabel: abs.findNextKey(abs.$breakpoints, $label);
             @include abs.responsiveShow($width);
 
-            @media (max-width: $nextLabel) {
+            @media (max-width: map-get(abs.$breakpoints, $nextLabel)) {
                 display: none;
             }
         }
     }
 }
 
-// 모바일(<=390px)에서만 요소를 숨김
-.no-mobile {
-    display: block;
+// no-* 구조의 클래스명인 경우, 특정 해상도에서만 요소를 숨김
+.no {
+    @each $label, $width in abs.$breakpoints {
+        &-#{$width} {
+            $nextLabel: abs.findNextKey(abs.$breakpoints, $label);
 
-    @media (max-width: 480px) {
-        display: none;
+            display: block;
+
+            @media(max-width: $width) {
+                display: none;
+            }
+
+            @media (max-width: map-get(abs.$breakpoints, $nextLabel)) {
+                display: block;
+            }
+        }
     }
 }
 
@@ -56,7 +79,7 @@ a {
 // 너비/높이 모두 100% + 좌측 기본 패딩값 + 모든 방향에서 가운데 정렬하는 컨테이너
 .container {
     @include abs.responsiveMaxWidth();
-    @include abs.responsivePaddingX();
+    @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);
 
     width: 100%;
     height: 100%;

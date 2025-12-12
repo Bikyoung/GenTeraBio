@@ -54,7 +54,7 @@
 }
 
 // 반응형별로 좌우 padding을 자동 재정의하는 mixin
-@mixin responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem) {
+@mixin responsivePaddingX($pc: null, $laptop: null, $tablet: null, $mobile-L: null, $mobile-S: null) {
     padding-left: $pc;
     padding-right: $pc;
 
@@ -69,7 +69,7 @@
 }
 
 // 반응형별로 상하 padding을 자동 재정의하는 mixin
-@mixin responsivePaddingY($pc: 15rem, $laptop: 10rem, $tablet: 8.8rem, $mobile-L: 5.5rem, $mobile-S: 5.5rem) {
+@mixin responsivePaddingY($pc: null, $laptop: null, $tablet: null, $mobile-L: null, $mobile-S: null) {
 
     // $pc에 인수가 map 타입이 아닌 경우 map 타입으로 전환
     @if((type-of($pc)=="list") and (length($pc)==2)) {
@@ -128,12 +128,14 @@
 }
 
 // 반응형별로 border-radius를 자동 재정의하는 mixin
-@mixin responsiveBorderRadius($pc, $laptop, $tablet, $mobile-L, $mobile-S) {
+@mixin responsiveBorderRadius($pc: null, $laptop: null, $tablet:null, $mobile-L: null, $mobile-S: null) {
     border-radius: $pc;
 
     @each $bp, $device in (large: $laptop, medium: $tablet, small: $mobile-L, xsmall: $mobile-S) {
-        @media (max-width: map-get(vars.$breakpoints, $bp)) {
-            border-radius: $device;
+        @if($device !=null) {        
+            @media (max-width: map-get(vars.$breakpoints, $bp)) {
+                border-radius: $device;
+            }
         }
     }
 }

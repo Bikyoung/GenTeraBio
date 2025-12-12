@@ -49,13 +49,9 @@
     @include abs.responsivePaddingY($pc: (pt: 16rem, pb: 8rem), $laptop: (pt: 16rem, pb: 8rem), $tablet: (pt: 12rem, pb: 6rem), $mobile-L: (pt: 8rem, pb: 4rem), $mobile-S: (pt: 7rem, pb: 3.5rem));
 
     &__container {
-        @include abs.responsiveGap(10.4rem, 2rem, 4rem, 3.6rem, 3rem);
+        @include abs.responsiveGap(0, 2rem, 4rem, 3.6rem, 3rem);
 
-        justify-content: space-evenly;
-    }
-
-    &__title {
-        font-size: clamp(5rem, 2.714rem + 2.232vw, 7rem);
+        justify-content: space-between;
     }
 
     &__subtitle {
@@ -65,10 +61,10 @@
     }
 
     &__desc {
-        max-width: 92.2rem;
         flex-direction: column;
         align-items: start;
         gap: 1.6rem;
+        padding-right: clamp(0rem, -66.667rem + 55.556vw, 40rem);
 
         > * {
             @include abs.font(body1, map-get(abs.$colors, black));
@@ -96,6 +92,56 @@
 //--------------- cdmo-credible ---------------
 .cdmo-credible {
     &__container {
+        @include abs.responsiveGap(5.4rem, 5rem, 4rem, 4rem, 3rem);
+
+        align-items: start;
         flex-direction: column;
     }
+
+    &__title-wrapper {
+        > * {
+            text-align: left;
+        }
+    }
+
+    &__subtitle {
+        @include abs.font(subtitle2, map-get(abs.$colors, black));
+
+        margin-top: 1rem;
+    }
+
+    &__content {
+        @include abs.responsiveGap(2.1rem, 1.4rem, 2rem);
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        li {
+            @include abs.responsivePaddingX(4rem, 2rem, 4rem, 3rem, 4rem);
+            @include abs.responsivePaddingY(4rem, 2rem, 2rem, 3rem, 2rem);
+
+            background-color: map-get(abs.$colors, gray-50);
+            border-radius: 2rem;
+            padding-left: clamp(2rem, -0.286rem + 2.232vw, 4rem);
+            padding-right: clamp(2rem, -0.286rem + 2.232vw, 4rem);
+            text-align: center;
+        }
+        
+        img {
+            width: clamp(17.5rem, -0.671rem + 17.746vw, 33.4rem);
+        }
+
+        h3 {
+            @include abs.font(title2, map-get(abs.$colors, black));
+            @include abs.responsivePaddingY($pc: (2rem, 0.8rem), $laptop: (1rem, 0.4rem), $tablet: (1.4rem, 0.4rem), $mobile-L: (2rem, 1rem), $mobile-S: (1rem, 0.4rem));
+        }
+
+        p {
+            @include abs.font(body2, map-get(abs.$colors, black));
+        }
+    }
+
+
+
 }

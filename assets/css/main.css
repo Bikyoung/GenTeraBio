@@ -150,6 +150,43 @@ section {
   width: 100%;
 }
 
+.section-paddingY {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+}
+@media (max-width: 1024px) {
+  .section-paddingY {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-paddingY {
+    padding-top: 8.8rem;
+    padding-bottom: 8.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-paddingY {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+@media (max-width: 390px) {
+  .section-paddingY {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
 a {
   color: transparent;
   text-decoration: none;
@@ -188,6 +225,15 @@ a {
   }
 }
 
+.no-mobile {
+  display: block;
+}
+@media (max-width: 480px) {
+  .no-mobile {
+    display: none;
+  }
+}
+
 .only-1024px {
   display: none;
 }
@@ -196,7 +242,7 @@ a {
     display: block;
   }
 }
-@media (max-width: medium) {
+@media (max-width: 768px) {
   .only-1024px {
     display: none;
   }
@@ -209,7 +255,7 @@ a {
     display: block;
   }
 }
-@media (max-width: small) {
+@media (max-width: 480px) {
   .only-768px {
     display: none;
   }
@@ -222,7 +268,7 @@ a {
     display: block;
   }
 }
-@media (max-width: xsmall) {
+@media (max-width: 390px) {
   .only-480px {
     display: none;
   }
@@ -241,12 +287,56 @@ a {
   }
 }
 
-.no-mobile {
+.no-1024px {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .no-1024px {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .no-1024px {
+    display: block;
+  }
+}
+.no-768px {
+  display: block;
+}
+@media (max-width: 768px) {
+  .no-768px {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .no-768px {
+    display: block;
+  }
+}
+.no-480px {
   display: block;
 }
 @media (max-width: 480px) {
-  .no-mobile {
+  .no-480px {
     display: none;
+  }
+}
+@media (max-width: 390px) {
+  .no-480px {
+    display: block;
+  }
+}
+.no-390px {
+  display: block;
+}
+@media (max-width: 390px) {
+  .no-390px {
+    display: none;
+  }
+}
+@media (max-width: ) {
+  .no-390px {
+    display: block;
   }
 }
 
@@ -564,18 +654,6 @@ a {
     padding-bottom: 0;
   }
 }
-@media (max-width: 480px) {
-  .technology {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
-@media (max-width: 390px) {
-  .technology {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
 .technology__container {
   padding-top: 0;
   padding-bottom: 0;
@@ -606,12 +684,6 @@ a {
   .technology__container {
     padding-top: 5.5rem;
     padding-bottom: 2rem;
-  }
-}
-@media (max-width: 390px) {
-  .technology__container {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
   }
 }
 @media (max-width: 1024px) {
@@ -699,11 +771,6 @@ a {
   }
 }
 @media (max-width: 480px) {
-  .technology-image__item img {
-    border-radius: 1.2rem;
-  }
-}
-@media (max-width: 390px) {
   .technology-image__item img {
     border-radius: 1.2rem;
   }
@@ -1118,12 +1185,6 @@ a {
     padding-bottom: 0;
   }
 }
-@media (max-width: 390px) {
-  .facilities {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
 .facilities__container {
   gap: 7rem;
   flex-direction: column;
@@ -1237,18 +1298,6 @@ a {
     padding-right: 0;
   }
 }
-@media (max-width: 480px) {
-  .facilities__text {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 390px) {
-  .facilities__text {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-  }
-}
 @media (max-width: 1024px) {
   .facilities__text {
     padding-top: 9.2rem;
@@ -1265,12 +1314,6 @@ a {
   .facilities__text {
     padding-top: 4rem;
     padding-bottom: 6rem;
-  }
-}
-@media (max-width: 390px) {
-  .facilities__text {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
   }
 }
 .facilities__text .facilities__subtitle {
@@ -1394,12 +1437,6 @@ a {
     padding-bottom: 0;
   }
 }
-@media (max-width: 390px) {
-  .facilities__text .facilities__certificationMark {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
 @media (max-width: 768px) {
   .facilities {
     background: linear-gradient(to bottom, #fff 594px, #F6F6F6 595px, #F6F6F6 100%);
@@ -1426,9 +1463,6 @@ a {
   }
   .facilities__text {
     position: relative;
-  }
-  .facilities__text .facilities__certificationMark {
-    justify-content: center;
   }
 }
 @media (max-width: 480px) {
@@ -1582,18 +1616,6 @@ a {
     padding-right: 6rem;
   }
 }
-@media (max-width: 480px) {
-  .network__value-group:not(:nth-child(2)) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 390px) {
-  .network__value-group:not(:nth-child(2)) {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-  }
-}
 .network__value > * {
   text-align: center;
 }
@@ -1734,40 +1756,28 @@ a {
 }
 
 .partners {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
-  /* null 체크
-      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
-  /* null 체크
-      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
-  /* null 체크
-      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
-  /* null 체크
-      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  gap: 10rem;
+  flex-direction: column;
   position: relative;
 }
 @media (max-width: 1024px) {
   .partners {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    gap: 7rem;
   }
 }
 @media (max-width: 768px) {
   .partners {
-    padding-top: 8.8rem;
-    padding-bottom: 8.8rem;
+    gap: 18rem;
   }
 }
 @media (max-width: 480px) {
   .partners {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+    gap: 16rem;
   }
 }
 @media (max-width: 390px) {
   .partners {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+    gap: 10rem;
   }
 }
 .partners__container {
@@ -1876,6 +1886,8 @@ a {
 }
 .partners .partnersSwiper {
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 .partners .partnersSwiper .partners-slide {
   width: fit-content;
@@ -1952,8 +1964,8 @@ a {
 }
 @media (max-width: 390px) {
   .partners .partnersSwiper .partners-slide__technology {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 @media (max-width: 1024px) {
@@ -2010,12 +2022,6 @@ a {
     padding-bottom: 2rem;
   }
 }
-@media (max-width: 390px) {
-  .partners .partnersSwiper .partners-slide__desc {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
 @media (max-width: 1024px) {
   .partners .partnersSwiper .partners-slide__desc {
     font-size: 1.6rem;
@@ -2045,43 +2051,43 @@ a {
   }
 }
 
-.contact {
+.index-contact {
   height: 100dvh;
   position: relative;
   background-image: url("../images/contact.webp");
 }
-.contact__container {
+.index-contact__container {
   flex-direction: column;
   position: relative;
   z-index: 10;
 }
-.contact__container .contact__title {
+.index-contact__container .index-contact__title {
   font-size: 7rem;
   font-weight: 700;
   line-height: 1.2;
   color: #FFFFFF;
 }
 @media (max-width: 1024px) {
-  .contact__container .contact__title {
+  .index-contact__container .index-contact__title {
     font-size: 5rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__container .contact__title {
+  .index-contact__container .index-contact__title {
     font-size: 4.8rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__container .contact__title {
+  .index-contact__container .index-contact__title {
     font-size: 4rem;
   }
 }
 @media (max-width: 390px) {
-  .contact__container .contact__title {
+  .index-contact__container .index-contact__title {
     font-size: 3.2rem;
   }
 }
-.contact__container .contact__desc {
+.index-contact__container .index-contact__desc {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2098,50 +2104,44 @@ a {
       null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
 }
 @media (max-width: 1024px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 390px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     font-size: 1.4rem;
   }
 }
 @media (max-width: 1024px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     padding-top: 0.4rem;
     padding-bottom: 2rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     padding-top: 0.2rem;
     padding-bottom: 2.4rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__container .contact__desc {
+  .index-contact__container .index-contact__desc {
     padding-top: 0.2rem;
     padding-bottom: 2rem;
   }
 }
-@media (max-width: 390px) {
-  .contact__container .contact__desc {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
-.contact__container .contact__button {
+.index-contact__container .index-contact__button {
   padding-left: 10rem;
   padding-right: 10rem;
   padding-top: 1rem;
@@ -2162,70 +2162,52 @@ a {
   border-radius: 5rem;
 }
 @media (max-width: 1024px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     padding-left: 7rem;
     padding-right: 7rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     padding-left: 10rem;
     padding-right: 10rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     padding-left: 6rem;
     padding-right: 6rem;
   }
 }
-@media (max-width: 390px) {
-  .contact__container .contact__button {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-  }
-}
 @media (max-width: 1024px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
-@media (max-width: 480px) {
-  .contact__container .contact__button {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-@media (max-width: 390px) {
-  .contact__container .contact__button {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-}
 @media (max-width: 1024px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 480px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 390px) {
-  .contact__container .contact__button {
+  .index-contact__container .index-contact__button {
     font-size: 1.4rem;
   }
 }
@@ -2366,8 +2348,8 @@ a {
   }
 }
 .cdmo-process__container {
-  gap: 10.4rem;
-  justify-content: space-evenly;
+  gap: 0;
+  justify-content: space-between;
 }
 @media (max-width: 1024px) {
   .cdmo-process__container {
@@ -2388,9 +2370,6 @@ a {
   .cdmo-process__container {
     gap: 3rem;
   }
-}
-.cdmo-process__title {
-  font-size: clamp(5rem, 2.714rem + 2.232vw, 7rem);
 }
 .cdmo-process__subtitle {
   font-size: 4.2rem;
@@ -2420,10 +2399,10 @@ a {
   }
 }
 .cdmo-process__desc {
-  max-width: 92.2rem;
   flex-direction: column;
   align-items: start;
   gap: 1.6rem;
+  padding-right: clamp(0rem, -66.667rem + 55.556vw, 40rem);
 }
 .cdmo-process__desc > * {
   font-size: 2rem;
@@ -2467,7 +2446,231 @@ a {
 }
 
 .cdmo-credible__container {
+  gap: 5.4rem;
+  align-items: start;
   flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__container {
+    gap: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__container {
+    gap: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__container {
+    gap: 4rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__container {
+    gap: 3rem;
+  }
+}
+.cdmo-credible__title-wrapper > * {
+  text-align: left;
+}
+.cdmo-credible__subtitle {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1C1C;
+  margin-top: 1rem;
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__subtitle {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__subtitle {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__subtitle {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__subtitle {
+    font-size: 1.6rem;
+  }
+}
+.cdmo-credible__content {
+  gap: 2.1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__content {
+    gap: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__content {
+    gap: 2rem;
+  }
+}
+.cdmo-credible__content li {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  background-color: #F6F6F6;
+  border-radius: 2rem;
+  padding-left: clamp(2rem, -0.286rem + 2.232vw, 4rem);
+  padding-right: clamp(2rem, -0.286rem + 2.232vw, 4rem);
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__content li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__content li {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__content li {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__content li {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__content li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__content li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__content li {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__content li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.cdmo-credible__content img {
+  width: clamp(17.5rem, -0.671rem + 17.746vw, 33.4rem);
+}
+.cdmo-credible__content h3 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1C1C1C;
+  padding-top: 2rem;
+  padding-bottom: 0.8rem;
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+  /* null 체크
+      null이면 media query를 생성하지 않으므로 small과 xsmall에서 값이 동일하면 $mobile-S를 생략할 수 있음 */
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__content h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__content h3 {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__content h3 {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__content h3 {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__content h3 {
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__content h3 {
+    padding-top: 1.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__content h3 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__content h3 {
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+}
+.cdmo-credible__content p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1C1C1C;
+}
+@media (max-width: 1024px) {
+  .cdmo-credible__content p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .cdmo-credible__content p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cdmo-credible__content p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 390px) {
+  .cdmo-credible__content p {
+    font-size: 1.3rem;
+  }
 }
 
 .header {

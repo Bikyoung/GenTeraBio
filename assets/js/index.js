@@ -1,8 +1,8 @@
 // ------------------------------ index-hero ------------------------------
 // .index-hero__title과 .index-hero__subtitle이 스크롤에 따라 fadeInUp
-const $indexHeroTimeline = gsap.timeline();
+const $indexHeroTl = gsap.timeline();
 
-$indexHeroTimeline
+$indexHeroTl
     .from(".index-hero__subtitle", {
         y: 100,
         autoAlpha: 0,
@@ -30,7 +30,7 @@ gsap.from(".story__title, .story__subtitle", {
 });
 
 // .story__container--top와 .story__container--bottom이 스크롤에 따라 y축으로 이동하며, 중첩되어 있던 picture img가 등장
-const $storyTimeline = gsap.timeline({
+const $storyTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".story",
         start: "8% top",
@@ -41,7 +41,7 @@ const $storyTimeline = gsap.timeline({
     }
 });
 
-$storyTimeline
+$storyTl
     .to(".story__container--top", {
         y: "-100%"
     },)
