@@ -104,3 +104,9 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+// 모든 브라우저에서 재생 버튼을 포함한 모든 컨트롤 패널 숨기기
+video::-webkit-media-controls-panel {
+    display: none !important;
+    -webkit-appearance: none;
+}

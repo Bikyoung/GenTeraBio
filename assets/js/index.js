@@ -1,3 +1,20 @@
+function removeControls() {
+    var video = document.querySelector('video');
+    video.removeAttribute('controls');
+  }
+  
+  function addControlsMobile() {
+    var video = document.querySelector('video');
+    video.setAttribute('controls', 'controls');
+  }
+  
+  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    removeControls();
+    addControlsMobile();
+  }
+  
 // ------------------------------ index-hero ------------------------------
 // .index-hero__title과 .index-hero__subtitle이 스크롤에 따라 fadeInUp
 const $indexHeroTl = gsap.timeline();
@@ -131,6 +148,21 @@ gsap.from(".facilities__container", {
 });
 
 // ------------------------------ network ------------------------------
+const networkVideo = $(".network video");
+const networkImg = $(".network img");
+
+// 비디오 재생이 불가할 시, 배경을 이미지로 대체
+networkVideo.on("error", function() {
+    networkVideo.css("display", "none");
+    networkImg.css("display", "block");
+});
+
+// 비디오 재생이 가능할 시, 비디오 재생
+networkVideo.on("play", function() {
+    networkVideo.css("display", "block");
+    networkImg.css("display", "none");
+});
+
 // .network__value-number의 숫자가 동시에 카운트 업
 let networkList = $(".network__value-number");
 let counter = {c1: 0, c2: 0, c3: 0, c4: 0, c5: 0, c6: 0 };
