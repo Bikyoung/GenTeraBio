@@ -21,7 +21,7 @@ a {
 // only-* 구조의 클래스명인 경우, 특정 해상도에서만 보여짐
 .only {
     @each $label, $width in abs.$breakpoints {
-        $nextLabel: abs.findNextKey(abs.$brekapoints, $label);
+        $nextLabel: abs.findNextKey(abs.$breakpoints, $label);
 
         &-#{$width} {
             @include abs.responsiveShow($width);
