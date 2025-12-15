@@ -4,7 +4,7 @@
 .cdmo-hero {
     height: 100dvh;
     position: relative;
-    background-image: url("../images/facility_02.webp");
+    background-image: url("../images/cdmo_hero.webp");
 
     &::before {
         content: "";
@@ -89,12 +89,12 @@
     }
 }
 
-//--------------- cdmo-credible ---------------
-.cdmo-credible {
+//--------------- credibility ---------------
+.credibility {
     &__container {
+        @include abs.responsivePaddingY(8rem, 8rem, 6rem, 5rem, 4rem);
         @include abs.responsiveGap(5.4rem, 5rem, 4rem, 4rem, 3rem);
 
-        align-items: start;
         flex-direction: column;
     }
 
@@ -118,7 +118,7 @@
         grid-template-columns: repeat(4, 1fr);
 
         li {
-            @include abs.responsivePaddingX(4rem, 2rem, 4rem, 3rem, 4rem);
+            @include abs.responsivePaddingX(2rem, 2rem, 4rem, 3rem, 4rem);
             @include abs.responsivePaddingY(4rem, 2rem, 2rem, 3rem, 2rem);
 
             background-color: map-get(abs.$colors, gray-50);
@@ -129,7 +129,8 @@
         }
         
         img {
-            width: clamp(17.5rem, -0.671rem + 17.746vw, 33.4rem);
+            width: 100%;
+            border-bottom: 0.1rem solid map-get(abs.$colors, primary);
         }
 
         h3 {
@@ -142,6 +143,478 @@
         }
     }
 
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        &__content {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(1.5rem, 0.662rem + 1.742vw, 2rem);
+        }
 
+        li {
+            padding-left: clamp(1.5rem, -2.69rem + 8.711vw, 4rem);
+            padding-right: clamp(1.5rem, -2.69rem + 8.711vw, 4rem);
+        }
+    }
 
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__content {
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: 1fr;
+        }
+
+        &__title, &__subtitle {
+            text-align: center;
+        }
+
+        li {
+            padding: 3rem;
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, xsmall)) {
+        li {
+            padding: 2rem 4rem;
+        }
+    }
+}
+
+.manufacture {
+    background-color: map-get(abs.$colors, gray-50);
+
+    &__container {
+        @include abs.responsivePaddingY(8rem, 8rem, 6rem, 5rem, 4rem);
+        @include abs.responsiveGap(5.4rem, 5rem, 4rem, 4rem, 3rem);
+
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        @include abs.font(subtitle2, map-get(abs.$colors, black));
+
+        margin-top: 1rem;
+    }
+
+    &__content {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__tab-list {
+        flex-direction: column;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 0.2rem;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: map-get(abs.$colors, gray-100);
+        }
+    }
+
+    &__tab {
+        @include abs.font(subtitle2, map-get(abs.$colors, gray-250));
+
+        padding: 3rem 7.1rem 3rem 0;
+
+        &.on {
+            color: map-get(abs.$colors, primary-dark);
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 0.2rem;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 5;
+                background-color: map-get(abs.$colors, primary-dark);
+            }
+        }
+    }
+
+    &__panel-list {
+        position: relative;     
+    }
+
+    &__panel {
+        @include abs.responsiveGap(2rem, 1rem, 1.2rem, 3rem);
+
+        width: clamp(95rem, -19.6rem + 79.583vw, 133.2rem);
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &:not(.on) {
+            display: none;
+        }
+
+        &.cmo {
+            z-index: 3;
+        }
+
+        &.cdo {
+            z-index: 2;
+        }
+
+        &.cas {
+            z-index: 1;
+        }
+
+        > div {
+            @include abs.responsiveGap(2rem, 1.6rem, 1.4rem, 1.6rem, 1rem);
+
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-image {
+            width: 100%;
+            height: 35.2rem;
+            border-radius: 2rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                z-index: 5;
+                background-color: rgba(0,0,0,0.2);
+                border-radius: 2rem;
+            }
+        }
+
+        &-title {
+            @include abs.font(subtitle3, map-get(abs.$colors, black));
+
+            text-align: center;
+        }
+    }
+
+    .cmo {
+        :nth-child(1) .manufacture__panel-image {
+            background-image: url("../images/manufacture_cmo_01.webp");
+        }
+
+        :nth-child(2) .manufacture__panel-image {
+            background-image: url("../images/manufacture_cmo_02.webp");
+        }
+
+        :nth-child(3) .manufacture__panel-image {
+            background-image: url("../images/manufacture_cmo_03.webp");
+        }
+    }
+
+    .cdo {
+        height: 39.3rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+
+        &__text {
+            width: fit-content;
+            align-items: start;
+            gap: 2rem;
+            padding-right: 32rem;
+            flex-direction: row;
+
+            &:nth-child(1) {
+                position: relative;
+                padding-bottom: 5rem;
+
+                &::before {
+                    content: "";
+                    width: 90%;
+                    height: 0.2rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-color: map-get(abs.$colors, primary-dark);
+                }
+            }
+
+            &:nth-child(2) {
+                padding-top: 5rem;
+            }
+        }
+
+        &__title {
+            @include abs.font(title5, map-get(abs.$colors, black));
+
+            display: block;
+            width: 33.7rem;
+            text-align: center;
+        }
+
+        &__desc-group {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 1.8rem;
+        }
+
+        &__desc {
+            @include abs.font(subtitle3, map-get(abs.$colors, gray-250));
+        }
+    }
+
+    .cas {
+        :nth-child(1) .manufacture__panel-image {
+            background-image: url("../images/manufacture_cas_01.webp");
+        }
+
+        :nth-child(2) .manufacture__panel-image {
+            background-image: url("../images/manufacture_cas_02.webp");
+        }
+
+        :nth-child(3) .manufacture__panel-image {
+            background-image: url("../images/manufacture_cas_03.webp");
+        }
+    }
+
+    @media (max-width: 1440px) {
+
+        &__content {
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        &__tab-list {
+            max-width: 1200px;
+            width: 100%;
+            flex-direction: row;
+
+            &::before {
+                width: 100%;
+                height: 0.2rem;
+                top: 100%;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 0.1rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: map-get(abs.$colors, gray-100);
+            }
+        }
+
+        &__tab {
+            flex: 1;
+            text-align: center;
+            padding: 1.4rem 0;
+
+            &.on {
+                &::before {
+                    width: 100%;
+                    height: 0.2rem;
+                    top: 100%;
+                    left: 0;
+                }
+            }
+        }
+
+        &__panel-list {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        &__panel {
+            width: 100%;
+        }
+
+        .cdo {   
+            padding-left: 5rem;
+            padding-right: 5rem;
+
+            &__text {
+                width: 100%;
+                justify-content: space-around;
+                padding: 0;
+    
+                &:nth-child(1) {
+    
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__title {
+                width: fit-content;
+            }
+
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__panel {
+           flex-direction: column; 
+
+           > div {
+                width: 100%;
+            }
+        }
+
+        .cmo, .cas {
+            .manufacture__panel-image {
+                height: 24rem;
+            }
+        }
+
+        .cdo {   
+            padding: 0;
+        }
+    }
+}
+
+.readmore {
+    &__container {
+        @include abs.responsivePaddingY(8rem, 2.4rem, 2rem);
+        @include abs.responsiveGap(4rem, 3rem, 2.4rem);
+
+        flex-direction: column;
+    }
+
+    &__content-list {
+        @include abs.responsiveGap(2rem, 1.5rem);
+
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__content {
+        @include abs.responsivePaddingX(4rem, 3rem, 3rem, 2rem);
+        @include abs.responsivePaddingY(4rem, 2.4rem);
+
+        height: 45.6rem;
+        flex: 1;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: grayscale(100%);
+            transition: all 0.25s ease-in-out;
+        }
+
+        &:hover {
+            flex-grow: 2;
+            border-radius: 2rem;
+
+            .desc {
+                display: block;
+            }
+
+            .arrow {
+                display: block;
+            }
+
+            &::before {
+                backdrop-filter: grayscale(0);
+            }
+        }
+
+        &.car-t {
+            background-image: url("../images/cdmo_t.webp");
+        }
+
+        &.car-nk {
+            background-image: url("../images/cdmo_nk.webp");
+        }
+
+        &.msc {
+            background-image: url("../images/cdmo_msc.webp");
+        }
+
+        .title {
+            @include abs.font(title2, map-get(abs.$colors, black));
+
+            transition: all 0.25s ease-in-out;
+        }
+
+        .desc {
+            @include abs.font(subtitle3, map-get(abs.$colors, black));
+
+            margin-top: 0.6rem;
+            display: none;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .arrow {
+            font-size: 4rem;
+            position: absolute;
+            right: 4rem;
+            bottom: 4rem; 
+            display: none;
+            transition: all 0.25s ease-in-out;           
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, large)) {
+        &__content-list {
+            flex-direction: column;
+        }
+
+        &__content-list {
+            height: fit-content;
+        }
+
+        &__content {
+            flex: none;
+            width: 100%;
+            height: 30rem;
+            border-radius: 2rem;
+
+            &::before {
+                backdrop-filter: grayscale(0);
+            }
+
+            .title, .desc, .arrow {
+                display: block;
+            }
+
+            .arrow {
+                font-size: 3rem;
+                right: 3rem;
+                bottom: 2.4rem;           
+            }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        &__content {
+            height: 20.6rem;
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__content {
+            height: 25.6rem;
+
+            .arrow {
+                right: 2rem;
+            }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, xsmall)) {
+        &__content {
+            height: 20.2rem;
+        }
+    }
 }

@@ -11,8 +11,24 @@
     <title>GenTeraBio</title>
 </head>
 <body>
-    <header>
-
+    <header class="flex-center header">
+        <div class="header__left logo">
+            <a href="https://genterabio.netlify.app/">
+                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+            </a>
+        </div>
+        <nav class="flex-center header__medium">
+            <a href="#" class="nav__about">ABOUT</a>
+            <a href="#" class="nav__cdmo">CDMO</a>
+            <a href="#" class="nav__randd">R&D</a>
+            <a href="#" class="nav__news">NEWS</a>
+        </nav>
+        <div class="header__right">
+            <a href="#" class="nav__contact">CONTACT</a>
+        </div>
+        <button type="button" class="flex-center header__hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
     
     <main>
@@ -83,7 +99,7 @@
                     <ul class="technology-image__list">
                         <li class="technology-image__item on">
                             <img src="./assets/images/technology_t.webp" alt="CAR-T 설명 이미지">
-                            <div class="max-768px technology-content">
+                            <div class="max-1440px technology-content">
                                 <a href="#" class="flex-center">
                                     <div class="flex-center technology-content__text">
                                         <span class="technology-content__title">
@@ -537,15 +553,55 @@
         </section>
     </main>
     
-    <footer>
-
+    <footer class="flex-center footer">
+        <div class="flex-center footer__top">
+            <p class="company">
+                (주)젠테라바이오 
+            </p>
+            <p class="address">
+                주소 : 인천광역시 남동구 인주대로 593, 엔타스빌딩 12층<br>
+                Tel : 032-719-4074&nbsp;&nbsp;&nbsp;&nbsp;Fax : 032-719-40575&nbsp;&nbsp;&nbsp;&nbsp;<br class="max-620px">Mail : gtbio@genterabio.com
+            </p>
+        </div>
+        <div class="flex-center footer__bottom">
+            <p class="copyright">
+                COPYRIGHT ⓒ 2025 GENTERABIO ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex-center agreement">
+                <p>
+                    개인정보처리방침
+                </p>
+                <p>
+                    이용약관
+                </p>
+                <p>
+                    법적고지
+                </p>
+            </div>
+        </div>
     </footer>
 
 
 
 
 
-
+    <div class="side-menu">
+        <div class="flex-center side-menu__top">
+            <a href="https://genterabio.netlify.app/">
+                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+            </a>
+            <button type="button" class="flex-center cls-btn">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <nav class="flex-center">
+            <a href="#" class="nav__about">ABOUT</a>
+            <a href="#" class="nav__cdmo">CDMO</a>
+            <a href="#" class="nav__randd">R&D</a>
+            <a href="#" class="nav__news">NEWS</a>
+            <a href="#" class="nav__contact">CONTACT</a>
+        </nav>
+    </div>
 
     <!-- JQuery 링크 연결 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -555,6 +611,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <!-- Swiper 링크 연결 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./assets/js/common.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

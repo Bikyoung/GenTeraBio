@@ -1,0 +1,48 @@
+@use "../abstracts/bundle" as abs;
+
+.footer {
+    @include abs.responsivePaddingX(10rem, 6rem, 4.6rem, 3.5rem, 3rem);
+    @include abs.responsivePaddingY(5rem, 4rem, 4rem, 3rem);
+    @include abs.responsiveGap(3rem, 1rem, 0, 0.8rem);
+
+    flex-direction: column;
+    align-items: start;
+    background-color: map-get(abs.$colors, gray-50);
+
+    .company {
+        @include abs.font(button2, map-get(abs.$colors, gray-400));
+    }
+
+    .address {
+        @include abs.font(body1, map-get(abs.$colors, gray-400));
+    }
+
+    .copyright {
+        @include abs.font(body1, map-get(abs.$colors, gray-450));
+    }
+
+    .agreement {
+        @include abs.font(button2, map-get(abs.$colors, gray-400));
+        @include abs.responsiveGap(4.3rem, 4.3rem, 4rem, 3rem);
+    }
+
+    &__top {
+        @include abs.responsiveGap(1.6rem, 1.4rem, 0.6rem, 0.8rem, 0.6rem);
+
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__bottom {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        &__bottom {
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+        }
+    }
+}

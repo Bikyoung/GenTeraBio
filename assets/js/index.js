@@ -239,6 +239,7 @@ $(window).on("resize", () => {setPartnersSlideHeight()});
 
 
 // ------------------------------ contact ------------------------------
+
 gsap.from(".contact__container", {
     scale: 0.2,
     autoAlpha: 0.2,

@@ -1,0 +1,162 @@
+@use "../abstracts/bundle" as abs;
+
+.header {
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    background-color: transparent;
+
+    &__left {
+        padding-left: clamp(5rem, -77.273rem + 45.455vw, 10rem);
+        
+        img {
+            width: clamp(22rem, 19.714rem + 2.232vw, 24rem);
+        }
+    }
+
+    nav {
+        gap: clamp(6.5rem, 0.214rem + 6.138vw, 12rem);
+
+        a {
+            @include abs.font(title5, map-get(abs.$colors, white));
+        }
+    } 
+
+    &__right {
+        @include abs.responsivePaddingX(8rem, 3rem);
+
+        padding-top: clamp(2.6rem, 1.229rem + 1.339vw, 3.8rem);
+        padding-bottom: clamp(2.6rem, 1.229rem + 1.339vw, 3.8rem);
+        background-color: map-get(abs.$colors, primary);
+
+        .nav__contact {
+            @include abs.font(title5, map-get(abs.$colors, white));
+        }
+    }
+
+    &__hamburger {
+        display: none;
+    }
+    
+    @media (max-width: map-get(abs.$breakpoints, large)) {
+        &__left {
+            padding-left: clamp(2.5rem, -45.942rem + 50.725vw, 6rem);
+        }
+
+        nav {
+            gap: clamp(4rem, -3.5rem + 9.766vw, 6.5rem);
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+        @include abs.responsiveMaxWidth(); 
+        @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);  
+
+        width: 100%;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+
+        .logo {
+            padding-left: 0;
+        }
+
+
+        nav, .header__right {
+            display: none;
+        }
+
+        &__hamburger {
+            display: flex;
+            color: map-get(abs.$colors, white);
+            width: 4.4rem;
+            height: 4.4rem;
+            justify-content: end;
+            background-color: transparent;
+            border: none;
+
+            i {
+                position: relative;
+
+                &::before {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+
+        &__hamburger {
+            i {
+                &::before {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+.side-menu {
+    width: 100%;
+    display :none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: map-get(abs.$colors, white);
+
+    &__top {
+        width: 100%;
+        padding: 1.8rem 4.6rem;
+        justify-content: space-between;
+
+        .cls-btn {
+            width: 4.4rem;
+            height: 4.4rem;
+            border: none;
+            background-color: transparent;
+            justify-content: end;
+        }
+
+        i {
+            font-size: 2.1rem;
+            color: map-get(abs.$colors, gray-350);
+        }
+
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: start;
+        gap: 4rem;
+        padding: 2rem 10rem 5rem 10rem;
+
+        a {
+            @include abs.font(subtitle1, map-get(abs.$colors, gray-350));
+        }
+    }
+    
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__top {
+            padding: 0.7rem 2.4rem;
+
+            i {
+                font-size: 1.5rem;
+            }
+    
+        }
+        
+        nav {
+            gap: 2.6rem;
+            padding: 1.6rem 3.4rem 3.6rem 3.4rem;
+        }
+    }
+}
