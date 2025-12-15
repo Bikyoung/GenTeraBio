@@ -37,6 +37,7 @@ select {
             transform: translateY(-50%);
             @include abs.font(display, map-get(abs.$colors, white));
         }
+
         &--dec {
             opacity: 0;
             transform: translateY(-50%);

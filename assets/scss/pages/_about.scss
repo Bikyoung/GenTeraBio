@@ -1,211 +1,386 @@
 @use "../abstracts/bundle" as abs;
+
 // -----------폰트,믹스인연결-------------
-.chip01{
+.chip01 {
     background-color: #43c0b9;
 }
-.chip02{
+
+.chip02 {
     background-color: #71c7a8;
 }
-.chip03{
+
+.chip03 {
     background-color: #176fb7;
 }
-// .about__brand img{
-//     // 브랜드 키워드 걸어놓기
-//     position: relative;
-// }
+
 .about {
-    &__hero{
+    &__hero {
         background-image: url("../images/sub01_about_hero.webp");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100dvh;
 
-        &--container{
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-        position: relative;
+        &--background {
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                inset: 0;
+            }
         }
-        &--mintitle{
-                @include abs.font(title2, map-get(abs.$colors, white));  
+
+        &--container {
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
         }
+
+        &--mintitle {
+            @include abs.font(title2, map-get(abs.$colors, white));
+        }
+
         &--title {
             @include abs.font(display, map-get(abs.$colors, white));
         }
-    
-    @media (max-width: map-get(abs.$breakpoints, medium)) {
-    &--container {
-        align-items: center;
-    }
 
-    &--mintitle, &--title {
-        text-align: center;
-    }
-    }
+        @media (max-width: map-get(abs.$breakpoints, medium)) {
+            &--container {
+                align-items: center;
+            }
 
-    @media (max-width: map-get(abs.$breakpoints, medium)) and (min-width: map-get(abs.$breakpoints, small)){
-        &--title {
-            font-size: clamp(4.4rem, 3.4rem + 2.083vw, 5rem);
+            &--mintitle,
+            &--title {
+                text-align: center;
+            }
         }
-    }
+
+        @media (max-width: map-get(abs.$breakpoints, medium)) and (min-width: map-get(abs.$breakpoints, small)) {
+            &--title {
+                font-size: clamp(4.4rem, 3.4rem + 2.083vw, 5rem);
+            }
+        }
     }
 
     // --------1920----ci--------
-    &__ci{
-        @include abs.responsivePaddingY($pc: (pt: 14rem, pb:18rem), $laptop:(pt: 8rem, pb: 12rem), $tablet: (pt: 12rem, pb: 12rem), $mobile-L: (pt: 7.8rem, pb: 7.8rem));
+    &__ci {
+        @include abs.responsivePaddingY($pc: (pt: 14rem, pb:18rem), $laptop: (pt: 8rem, pb: 12rem), $tablet: (pt: 12rem, pb: 12rem), $mobile-L: (pt: 7.8rem, pb: 7.8rem));
         text-align: center;
 
-        &--dec-wrap{
-            @include abs.responsivePaddingY($pc: (pt: 0, pb:10rem), $laptop:(pt: 4rem, pb: 6rem), $tablet: (pt: 4rem, pb: 6rem), $mobile-L: (pt: 5rem, pb: 5rem));
+        &--dec-wrap {
+            @include abs.responsivePaddingY($pc: (pt: 0, pb:10rem), $laptop: (pt: 4rem, pb: 6rem), $tablet: (pt: 4rem, pb: 6rem), $mobile-L: (pt: 5rem, pb: 5rem));
         }
-        // &--logo{}
-        &--logo img{
-            width: clamp(26rem,31.6vw,60.8rem);
+
+        &--logo img {
+            width: clamp(26rem, 31.6vw, 60.8rem);
             padding-bottom: 2rem;
         }
-        &--dec{
-            @include abs.font(subtitle2,map-get(abs.$colors,black));
+
+        &--dec {
+            @include abs.font(subtitle2, map-get(abs.$colors, black));
         }
-        &--color-list{
+
+        &--color-list {
             display: flex;
             width: 100%;
-            gap:1.4rem;
+            gap: 1.4rem;
         }
-        &--color-wrap{
+
+        &--color-wrap {
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
-        &--colorChip{
-            height: clamp(6.6rem,29.375vw,12rem);
+
+        &--colorChip {
+            height: clamp(6.6rem, 29.375vw, 12rem);
             border-radius: 2rem;
         }
-        &--colorWord{
-            @include abs.font(title4,map-get(abs.$colors,white));
+
+        &--colorWord {
+            @include abs.font(title4, map-get(abs.$colors, white));
             position: relative;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
-        &--color-text{
-        padding: 2rem 0;
+
+        &--color-text {
+            padding: 2rem 0;
             gap: 1.4rem;
             justify-content: space-between;
             align-items: center;
         }
-        &--colorNum{
-            @include abs.font(body1,map-get(abs.$colors,gray-200));
+
+        &--colorNum {
+            @include abs.font(body1, map-get(abs.$colors, gray-200));
             width: 100%;
             padding: 2rem 0;
         }
+
         // ------------480 ic 
         @media (max-width: map-get(abs.$breakpoints, small)) {
-        
-            &--color-list{
-            display: flex;
-            flex-direction: column;
-                }
+            &--color-list {
+                display: flex;
+                flex-direction: column;
             }
+        }
     }
 
-    &__bigtitle{
-    @include abs.font(title1,map-get(abs.$colors,black));
-    @include abs.responsivePaddingY($pc: (pt: 0, pb:6rem), $laptop:(pt: 0, pb: 4rem), $tablet: (pt: 0, pb: 4rem), $mobile-L: (pt: 0, pb: 5rem));
+    &__bigtitle {
+        @include abs.font(title1, map-get(abs.$colors, black));
+        @include abs.responsivePaddingY($pc: (pt: 0, pb:6rem), $laptop: (pt: 0, pb: 4rem), $tablet: (pt: 0, pb: 4rem), $mobile-L: (pt: 0, pb: 5rem));
     }
+
     // -----------1920---brand
-    &__brand img{
-        width: clamp(28rem,26.0416vw,50rem);
+    &__brand img {
+        width: clamp(28rem, 26.0416vw, 50rem);
     }
-    &__brand{
-         @include abs.responsivePaddingY($pc: (pt: 0, pb:18rem), $laptop:(pt: 0, pb: 12rem), $tablet: (pt: 0 , pb: 12rem), $mobile-L: (pt: 0 , pb: 12.6rem));
+
+    &__brand {
+        @include abs.responsivePaddingY($pc: (pt: 0, pb:18rem), $laptop: (pt: 0, pb: 12rem), $tablet: (pt: 0, pb: 12rem), $mobile-L: (pt: 0, pb: 12.6rem));
         text-align: center;
         // 브랜드 키워드 걸어놓기
         position: relative;
 
-        &--wrap00{
+        &--wrap00 {
             position: absolute;
             top: 12rem;
             left: 50%;
             transform: translateX(-50%);
         }
-        &--text-wrap01{
+
+        &--text-wrap01 {
             display: flex;
-            // @include abs.responsiveGap($pc:0, $laptop: 13rem, $tablet: 8rem, $mobile-L: 4rem);
-            
-            // position: absolute;
-            // left:clamp(30%, 4vw + 28%, 38%);
-            // bottom: clamp(6%, 1vw + 5%, 16%);
-            // transform: translateX(-16%);
-            // gap: clamp(18rem,8.6373vw,23rem);
         }
-        &--wrap02{
+
+        &--wrap02 {
             position: absolute;
             bottom: 18%;
-            left: 32%;
-            transform: translate(-18%,-32%);
+            left: 31%;
+            transform: translate(-18%, -31%);
         }
-        &--wrap03{
+
+        &--wrap03 {
             position: absolute;
-            bottom: 18%;
-            right: 27%;
-            transform: translate(-18%,-27%);
+            bottom: 19%;
+            right: 26%;
+            transform: translate(-19%, -26%);
         }
-        // &--wrap02:nth-child(1){
-        //     margin-right:clamp( 18rem,12.6373vw,23rem);
-        // }
+
         // ----------여기서 부터하면됌
 
-        &--title01, &--title02 {
+        &--title01,&--title02 {
             text-align: center;
-            @include abs.font(title4,map-get(abs.$colors,black));
-            background-color: map-get(abs.$colors , black );
-            color: map-get(abs.$colors ,white );
+            @include abs.font(title4, map-get(abs.$colors, black));
+            background-color: map-get(abs.$colors , black);
+            color: map-get(abs.$colors , white);
             border-radius: 2rem;
             padding: 0.5rem 1.5rem;
         }
-        &--title01{
+
+        &--title01 {
             width: 21.6rem;
         }
-        &--title02{
+
+        &--title02 {
             width: 12rem;
             margin: 0 auto;
         }
-        &--dec{
-             @include abs.font(body1,map-get(abs.$colors,black));
-             padding-top: 1rem;
+
+        &--dec {
+            @include abs.font(body1, map-get(abs.$colors, black));
+            padding-top: 1rem;
         }
-        // @media (max-width: map-get(abs.$breakpoints, large)){ 
-        
-        // }
-        @media (max-width: map-get(abs.$breakpoints, medium)){
-            //  &--text-wrap01{
-            // position: absolute;
-            // left:clamp(34%, 4vw + 28%, 38%);
-            // bottom: clamp(8%, 1vw + 5%, 16%);
-            // transform: translate(-16%,-38%);
-            // gap: clamp(1rem,10.416vw,8rem);
-        // }
-            &--title01, &--title02 {
-            padding: 0.5rem 1rem;
+
+        @media (max-width: map-get(abs.$breakpoints, large)) {
+            &--wrap00 {
+                position: absolute;
+                top: 8rem;
             }
-            &--title01{
-            width: 16rem;
+
+            &--wrap02 {
+                position: absolute;
+                bottom: 9%;
+                left: 26%;
+                transform: translate(-9%, -26%);
             }
-            &--title02{
-             width: 10rem;
+
+            &--wrap03 {
+                position: absolute;
+                bottom: 10%;
+                right: 20%;
+                transform: translate(-10%, -20%);
             }
-         }
-        @media (max-width: map-get(abs.$breakpoints, small)){
-            &--text-wrap{
+        }
+
+        @media (max-width: map-get(abs.$breakpoints, medium)) {
+
+            &--title01,&--title02 {
+                padding: 0.5rem 1rem;
+            }
+
+            &--title01 {
+                width: 16rem;
+            }
+
+            &--title02 {
+                width: 10rem;
+            }
+
+            &--wrap00 {
+                position: absolute;
+                top: 8rem;
+            }
+
+            &--wrap02 {
+                position: absolute;
+                bottom: 9%;
+                left: 17%;
+                transform: translate(-9%, -17%);
+            }
+
+            &--wrap03 {
+                position: absolute;
+                bottom: 10%;
+                right: 11%;
+                transform: translate(-10%, -11%);
+            }
+
+        }
+
+        @media (max-width: map-get(abs.$breakpoints, small)) {
+            &--text-wrap {
                 left: clamp(15%, 5vw + 21%, 30%);
             }
-            &--title02{
-             width: 8.8rem;
+
+            &--title02 {
+                width: 8.8rem;
             }
-         }
+
+            &--wrap02 {
+                position: absolute;
+                bottom: 9%;
+                left: 7%;
+                transform: translate(-9%, -7%);
+            }
+
+            &--wrap03 {
+                position: absolute;
+                bottom: 10%;
+                right: -1%;
+                transform: translate(-10%, -1%);
+            }
+        }
     }
 
 
-    // &__location{}
+    &__location {
+        text-align: center;
+
+        &--map {
+            width: 100%;
+            height: clamp(24rem, 30.7692vw, 53.6vw) !important;
+        }
+
+        &--traffic-wrap {
+            @include abs.responsivePaddingX($pc: 4rem, $laptop: 4rem, $tablet: 4rem, $mobile-L: 3rem, $mobile-S: 2.4rem);
+            @include abs.responsivePaddingY($pc: 4rem, $laptop: 3rem, $tablet: 3rem, $mobile-L: 2.4rem, $mobile-S: 2rem);
+            background-color: map-get(abs.$colors, gray-50);
+            border-radius: 2rem;
+            margin-top: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+
+        &--traffic-list, &--traffic-list01, &--traffic-list02,&--traffic {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &--traffic-list {
+            justify-content: space-evenly;
+            padding-top: 1rem;
+        }
+
+        &--traffic-list01, &--traffic-list02,&--traffic {
+            justify-content: space-between;
+        }
+
+        &--traffic-list01 {
+            gap: 6rem;
+        }
+
+        &--traffic-list02 {
+            gap: clamp(3rem, 7.3242vw, 8rem);
+        }
+
+        &--traffic {
+            gap: 1rem;
+        }
+
+        &--title, &--traffic h3 {
+            @include abs.font(body1, map-get(abs.$colors, black));
+        }
+
+        &--traffic p {
+            @include abs.font(body1, map-get(abs.$colors, gray-200));
+        }
+
+        &--mintitle {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        &--mintitle img {
+            object-fit: contain;
+        }
+
+        @media (max-width: map-get(abs.$breakpoints, large)) {
+
+            &--traffic-wrap {
+                display: flex;
+                align-items: center;
+                gap: 5.6rem;
+            }
+
+            &--traffic-list {
+                justify-content: space-between;
+            }
+
+            &--traffic-list01 {
+                gap: 2rem;
+            }
+
+            &--traffic-list02 {
+                padding-top: 1rem;
+            }
+        }
+
+        @media (max-width:863px) {
+
+            &--traffic-list01, &--traffic-list02 {
+                gap: 1rem;
+            }
+
+            @media (max-width: map-get(abs.$breakpoints, medium)) {
+
+                &--traffic-wrap {
+                    display: block;
+                    gap: 2rem;
+                }
+
+                &--traffic-list01,&--traffic-list02 {
+                    gap: 1rem;
+                }
+            }
+        }
+        //  @media (max-width: map-get(abs.$breakpoints, small)){}
+    }
 }
