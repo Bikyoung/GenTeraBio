@@ -178,6 +178,7 @@
     }
 }
 
+//--------------- manufacture ---------------
 .manufacture {
     background-color: map-get(abs.$colors, gray-50);
 
@@ -185,6 +186,7 @@
         @include abs.responsivePaddingY(8rem, 8rem, 6rem, 5rem, 4rem);
         @include abs.responsiveGap(5.4rem, 5rem, 4rem, 4rem, 3rem);
 
+        height: fit-content;
         flex-direction: column;
     }
 

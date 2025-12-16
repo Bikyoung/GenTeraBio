@@ -110,3 +110,11 @@ video::-webkit-media-controls-panel {
     display: none !important;
     -webkit-appearance: none;
 }
+
+.hidden {
+    overflow: hidden;
+}
+
+.block {
+    display: block;
+}

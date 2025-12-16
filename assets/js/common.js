@@ -1,13 +1,21 @@
-gsap.registerPlugin("ScrollTrigger");
+import {tab} from "./modules/tab.js";
 
-$(function() {
-    // GNB 기능
-    $(".header__hamburger").on("click", function() {
-        console.log("눌");
-        $(".side-menu").stop().slideDown();
-    });
-    
-    $(".side-menu").on("click", function() {
-        $(".side-menu").stop().slideUp();
-    })
+gsap.registerPlugin(ScrollTrigger);
+AOS.init({
+    duration: 600, 
+    easing: 'ease-in-out'
 });
+
+
+// GNB 기능
+$(".header__hamburger").on("click", function() {
+    $(".side-menu").stop().slideDown();
+});
+
+$(".side-menu").on("click", function() {
+    $(".side-menu").stop().slideUp();
+})
+
+tab();
+
+

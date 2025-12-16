@@ -1,23 +1,4 @@
-// ------------------------------ about-hero ------------------------------
-// .index-hero__title과 .index-hero__subtitle이 스크롤에 따라 fadeInUp
-const $aboutHeroTl = gsap.timeline();
-
-$aboutHeroTl
-    .from(".about__hero--mintitle", {
-        y: 100,
-        autoAlpha: 0,
-        duration: 1,
-        ease: "power1.out"
-    })
-    .from(".about__hero--title", {
-        y: 100,
-        autoAlpha: 0,
-        duration: 1,
-        ease: "power1.out"
-    },"-=0.35");
-
 // --------------about-map----------------
-
 $(function() {
     // 지도를 표시할 div
     let $mapContainer = $('#map')[0]; 

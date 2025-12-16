@@ -1,0 +1,38 @@
+@use "../abstracts/bundle" as abs;
+
+.line__tab-list {
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 0.2rem;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: map-get(abs.$colors, gray-100);
+    }
+}
+
+.line__tab {
+    @include abs.font(subtitle2, map-get(abs.$colors, gray-250));
+
+    padding: 3rem 7.1rem 3rem 0;
+
+    &.on {
+        color: map-get(abs.$colors, primary-dark);
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 0.2rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 5;
+            background-color: map-get(abs.$colors, primary-dark);
+        }
+    }
+}
