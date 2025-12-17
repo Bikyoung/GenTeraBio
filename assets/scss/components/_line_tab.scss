@@ -21,7 +21,7 @@
     padding: 3rem 7.1rem 3rem 0;
 
     &.on {
-        color: map-get(abs.$colors, primary-dark);
+        color: map-get(abs.$colors, primary-100);
         position: relative;
 
         &::before {
@@ -32,7 +32,7 @@
             top: 0;
             right: 0;
             z-index: 5;
-            background-color: map-get(abs.$colors, primary-dark);
+            background-color: map-get(abs.$colors, primary-100);
         }
     }
 }

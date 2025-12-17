@@ -1,5 +1,6 @@
 @use "../abstracts/bundle" as abs;
 
+//--------------- tech-hero ---------------
 .tech-hero {
     height: 100dvh;
     opacity: 0.7;
@@ -35,6 +36,7 @@
     }
 }
 
+//--------------- mechanism ---------------
 .mechanism {
     @include abs.responsivePaddingY((16rem, 8rem), (12rem, 6rem), (12rem, 6rem), (8rem, 5rem), (7rem, 3.5rem));
 
@@ -58,7 +60,9 @@
     }
 
     &__panel {
-        > div {
+        display: none;
+
+        &.on {
             display: flex;
             align-items: center;
             gap: 2rem;
@@ -68,6 +72,7 @@
             @include abs.responsiveBorderRadius(2rem, 2rem, 2rem, 0);
 
             width: clamp(50rem, -11.5rem + 42.708vw, 70.5rem);
+            object-fit: cover;
         }
 
         .text {
@@ -92,8 +97,7 @@
     }
 
     @media (max-width: 1440px) {
-        &__content {
-            width: 100%;
+        &.on {
             justify-content: center;
             gap: 6rem;
         }
@@ -104,6 +108,10 @@
 
         &__panel {
             width: 100%; 
+
+            &.on {
+                flex-direction: column;
+            }
 
             > div {
                 width: 100%;
@@ -128,6 +136,7 @@
 
     @media (max-width: map-get(abs.$breakpoints, large)) {
         &__content {
+            width: 100%;
             flex-direction: column;
         }
 
@@ -160,4 +169,63 @@
             }
         }
     }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__panel {
+            .text {
+                text-align: left;
+            }
+        }
+    }
+}
+
+//--------------- difference ---------------
+.difference {
+    @include abs.responsivePaddingY(8rem, 6rem, 6rem, 5rem, 4rem);
+
+    .container {
+        @include abs.responsiveGap(6rem, 6rem, 6rem, 4rem);
+
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+//--------------- pipeline ---------------
+.pipeline {
+    @include abs.responsivePaddingY(8rem, 6rem, 6rem, 5rem, 4rem);
+
+    &__container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .table-wrapper {
+        @include abs.responsivePaddingX(14.4rem, 4rem);
+        @include abs.responsiveGap(9rem, 0);
+
+        width: 100%;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        border-radius: 2rem;
+        border: 0.1rem solid map-get(abs.$colors, gray-250);
+        justify-content: left;
+        align-items: end;
+    }
+
+
+    .table {
+        &__main-category {
+            > * {
+                @include abs.font(title4, map-get(abs.$colors, gray-250));
+            }
+        }
+
+        &__sub-category {
+            > * {
+                @include abs.font(title5, map-get(abs.$colors, gray-250));
+            }
+        }
+    }
+    
 }
