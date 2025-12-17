@@ -1,6 +1,3 @@
-import {tab} from "./modules/tab.js";
-
-gsap.registerPlugin(ScrollTrigger);
 AOS.init({
     duration: 600, 
     easing: 'ease-in-out'
@@ -16,6 +13,6 @@ $(".side-menu").on("click", function() {
     $(".side-menu").stop().slideUp();
 })
 
-tab();
+
 
 

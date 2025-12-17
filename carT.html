@@ -12,30 +12,114 @@
     </header>
 
     <main>
-        <!-- carT-hero -->
-        <section class="carT-hero">
-            <div class="flex-center container carT-hero__container">
-                <!-- title -->
-                <h1 class="hidden carT-hero__title">
-                    <span class="block" data-aos="fade-up">CAR-T</span>
-                </h1>
-                <!-- subtitle -->
-                <p class="carT-hero__subtitle" data-aos="fade-up">
-                    T세포에 항체 기반 인공 수용체(CAR)를 장착하여<br>
-                    MHC 의존성과 무관하게 암세포 표면 항원을 직접 인식하고<br> 
-                    공격하도록 설계된 차세대 면역세포 치료제입니다.<br>
-                    현재 CD19, BCMA, HER2 등<br>
-                    다양한 항원을 표적으로 하는 CAR-T 치료제가 개발 중이며,<br> 
-                    재발성 또는 불응성 혈액암에 뛰어난 치료 효과를 입증하고<br class="max-390px"> 있습니다.
- 
-
-                </p>
+        <!-- tech-hero -->
+        <section class="bg-center tech-hero carT-hero">
+            <div class="flex-center container tech-hero__container">
+                <div class="tech__title-wrapper">
+                    <!-- title -->
+                    <h1 class="hidden tech-hero__title">
+                        <span class="block" data-aos="fade-up">CAR-T</span>
+                    </h1>
+                    <!-- subtitle -->
+                    <p class="tech-hero__subtitle" data-aos="fade-up">
+                        T세포에 항체 기반 인공 수용체(CAR)를 장착하여<br>
+                        MHC 의존성과 무관하게 암세포 표면 항원을 직접 인식하고<br> 
+                        공격하도록 설계된 차세대 면역세포 치료제입니다.<br>
+                        현재 CD19, BCMA, HER2 등<br>
+                        다양한 항원을 표적으로 하는 CAR-T 치료제가 개발 중이며,<br> 
+                        재발성 또는 불응성 혈액암에 뛰어난 치료 효과를 입증하고<br class="max-390px"> 있습니다.
+                    </p>
+                </div>
+                <nav class="tech-nav">
+                    <a href="#" class="tab on">CAR-T</a>
+                    <a href="#" class="tab">CAR-NK</a>
+                    <a href="#" class="tab">MSC</a>
+                </nav>
             </div>
+        </section>
+
+        <!-- tech-mechanism -->
+        <section class="mechanism">
+            <div class="flex-center container mechanism__container">
+                <!-- title -->
+                <h2 class="hidden section-title-left mechanism__title">
+                    <span class="block" data-aos="fade-up">
+                        Mechanism
+                    </span>
+                </h2>
+                <div class="flex-center mechanism__content">
+                    <ul class="flex-center tab-list line-tab__list mechanism__tab-list">
+                        <li class="tab line-tab mechanism__tab on">
+                            Step 1 : <br class="max-480px">유전자 삽입
+                        </li>
+                        <li class="tab line-tab mechanism__tab">
+                            Step 2 : <br class="max-480px">항원 인식
+                        </li>
+                        <li class="tab line-tab mechanism__tab">
+                            Step 3 : <br class="max-480px">세포독성 발현
+                        </li>
+                    </ul>
+
+                    <ul class="mechanism__panel-list">
+                        <li class="mechanism__panel cmo on">
+                            <div>
+                                <img src="./assets/images/tech_mech_T-01.webp" alt="carT 이미지">
+                                <div class="flex-center text">
+                                    <h3 class="title">CAR-T 유전자 삽입</h3>
+                                    <div class="flex-center desc-wrapper">
+                                        <p class="desc">
+                                            환자의 혈액에서 면역세포인 T세포를 분리한 후,<br>  
+                                            암세포 표면 항원을 인식하도록<br> 
+                                            정밀 설계된 키메라 항원 수용체(CAR) 유전자를 도입합니다
+                                        </p>
+                                        <p class="desc">
+                                            해당 유전자는 T세포 표면에 암세포 특이적 항원을 인식하고<br> 
+                                            반응할 수 있는 합성 수용체를 발현하도록 설계되어 있으며,<br> 이를 통해 생성된 CAR-T세포는 기존 T세포와<br> 
+                                            달리 암세포를 직접 인식하고 선택적 제거 능력을 갖춥니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="./assets/images/tech_mech_T-02.webp" alt="carT 이미지">
+                                <div class="flex-center text">
+                                    <h3 class="title">CAR-T 항원 정밀 인식</h3>
+                                    <p class="desc">
+                                        CAR-T 세포는 세포 표면에 발현된 키메라 항원 수용체(CAR)를 통해<br> 암세포 표면의 특정 항원(CD19, BCMA, HER2 등)을 정밀하게 인식합니다.<br>
+                                        항원 결합이 이루어지면 T세포 수용체 신호전달 경로가 활성화되어,<br> 세포 내에서 사이토카인 분비 및 세포독성 반응이 유도됩니다.<br>
+                                        이를 통해 CAR-T 세포는<br> 
+                                        표적 암세포를 선택적으로 공격하며 면역반응을 수행합니다
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="./assets/images/tech_mech_T-03.webp" alt="carT 이미지">
+                                <div class="flex-center text">
+                                    <h3 class="title">CAR-T 세포 독성 발현</h3>
+                                    <p class="desc">
+                                        퍼포린(Perforin)과 그랜자임(Granzyme) 등의<br> 
+                                        세포독성 단백질을 방출하여 암세포의 세포막을 파괴하고<br>
+                                        아포토시스를 유도합니다. 동시에 IFN-γ, TNF-α 등의<br> 
+                                        염증성 사이토카인을 분비하여 주변 면역세포의 활성화를 촉진하고,<br> 종양 미세환경 내 항암 면역반응을 증폭시킵니다.<br> 
+                                        이 과정을 통해 CAR-T 세포는 지속적이고 선택적인 항암 효과를 발현합니다
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
         </section>
     </main>
 
     <footer>
 
     </footer>
+
+    <!-- AOS 링크 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- JQuery 링크 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./assets/js/common.js"></script>
 </body>
 </html>

@@ -17,6 +17,8 @@ function removeControls() {
   
 // ------------------------------ index-hero ------------------------------
 // .index-hero__title과 .index-hero__subtitle이 스크롤에 따라 fadeInUp
+gsap.registerPlugin(ScrollTrigger);
+
 const $indexHeroTl = gsap.timeline();
 
 $indexHeroTl
@@ -238,15 +240,15 @@ setPartnersSlideHeight();
 $(window).on("resize", () => {setPartnersSlideHeight()});
 
 
-// ------------------------------ contact ------------------------------
+// ------------------------------ index-contact ------------------------------
 
-gsap.from(".contact__container", {
+gsap.from(".index-contact__container", {
     scale: 0.2,
     autoAlpha: 0.2,
     duration: 1,
     ease: "power1.out",
     scrollTrigger: {
-        trigger: ".contact",
+        trigger: ".index-contact",
         start: "top 50%",
     }
 });

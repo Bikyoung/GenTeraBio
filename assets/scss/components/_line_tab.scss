@@ -1,6 +1,6 @@
 @use "../abstracts/bundle" as abs;
 
-.line__tab-list {
+.line-tab__list {
     flex-direction: column;
     position: relative;
 
@@ -15,7 +15,7 @@
     }
 }
 
-.line__tab {
+.line-tab {
     @include abs.font(subtitle2, map-get(abs.$colors, gray-250));
 
     padding: 3rem 7.1rem 3rem 0;
@@ -33,6 +33,45 @@
             right: 0;
             z-index: 5;
             background-color: map-get(abs.$colors, primary-dark);
+        }
+    }
+}
+
+@media (max-width: map-get(abs.$breakpoints, large)) {
+    .line-tab__list {
+        width: 100%;
+        flex-direction: row;
+
+        &::before {
+            width: 100%;
+            height: 0.2rem;
+            top: 100%;
+            left: 0;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 0.1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: map-get(abs.$colors, gray-100);
+        }
+    }
+
+    .line-tab {
+        flex: 1;
+        text-align: center;
+        padding: 1.4rem 0;
+
+        &.on {
+            &::before {
+                width: 100%;
+                height: 0.2rem;
+                top: 100%;
+                left: 0;
+            }
         }
     }
 }
