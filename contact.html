@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenTeraBio_contact</title>
-    <link rel="stylesheet" href="./css/main.css">
+     <!-- AOS 링크 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
@@ -14,8 +16,8 @@
         <section class="contact__hero">
             <img src="./assets/images/sub05_hero_sec01.webp" alt="히어로섹션">
             <div class="contact__hero--wrap contact-container">
-                <h2 class="contact__hero--title">CONTACT</h2>
-                <p class="contact__hero--dec">GenTeraBio에 문의할 사항이 있으신가요?<br>
+                <h2 class="contact__hero--title" data-aos="fade-up">CONTACT</h2>
+                <p class="contact__hero--dec" data-aos="fade-up">GenTeraBio에 문의할 사항이 있으신가요?<br>
                     담당자 확인 후, 연락드리도록 하겠습니다.
                 </p>
             </div>
@@ -66,8 +68,8 @@
                 </div>
                 <div class="contact__inquiry--rowWrap ">
                     <div class="field">
-                        <label class="contact__inquiry--title" for="number">연락처 *</label>
-                        <input class="contact__inquiry--input" type="number" placeholder="연락처 입력" required>
+                        <label class="contact__inquiry--title" for="tel">연락처 *</label>
+                        <input class="contact__inquiry--input" type="tel" placeholder="연락처 입력" required>
                     </div>
                     <div class="field">
                         <label class="contact__inquiry--title" for="email">이메일 *</label>
@@ -93,16 +95,15 @@
                     <input class="contact__inquiry--inquiry" type="text" placeholder="문의내용 입력" required>
                 </div>
             </div>
-            <!-- 첨부파일 : 선택된 파일 응용 하기 방법 더 찾아보기ㅜㅠㅠㅠㅠ -->
             <div class="contact__inquiry--field">
                 <div class="file">
                     <label class="contact__inquiry--title" for="file">첨부파일 *</label>
                     <div class="contact__inaquiry--file">
-                        <label class="file-label">첨부 파일 입력</label>
-                        <input type="file" accept=".zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif"
+                        <label id="filename" class="file-label">첨부 파일</label>
+                        <input id="fileInput" type="file" accept=".zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif"
                             required>
 
-                        <button type="submit" class="file-name">파일 선택 </button>
+                        <button type="button" class="file-name">파일 선택 </button>
                     </div>
                 </div>
             </div>
@@ -126,27 +127,65 @@
                 <p class="contact__inquiry--agreeCheck">개인정보 수집 및 이용에 동의합니다.</p>
             </div>
             <!-- 버튼 -->
-            <button class="contact__inquiry--btn" type="submit" class="submit-btn">보내기</button>
+            <button class="contact__inquiry--btn" type="button" class="submit-btn">보내기</button>
         </section>
+
+         <footer class="flex-center footer">
+        <div class="flex-center footer__top">
+            <p class="company">
+                (주)젠테라바이오 
+            </p>
+            <p class="address">
+                주소 : 인천광역시 남동구 인주대로 593, 엔타스빌딩 12층<br>
+                Tel : 032-719-4074&nbsp;&nbsp;&nbsp;&nbsp;Fax : 032-719-40575&nbsp;&nbsp;&nbsp;&nbsp;<br class="max-620px">Mail : gtbio@genterabio.com
+            </p>
+        </div>
+        <div class="flex-center footer__bottom">
+            <p class="copyright">
+                COPYRIGHT ⓒ 2025 GENTERABIO ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex-center agreement">
+                <p>
+                    개인정보처리방침
+                </p>
+                <p>
+                    이용약관
+                </p>
+                <p>
+                    법적고지
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="side-menu">
+        <div class="flex-center side-menu__top">
+            <a href="https://genterabio.netlify.app/">
+                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+            </a>
+            <button type="button" class="flex-center cls-btn">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <nav class="flex-center">
+            <a href="#" class="nav__about">ABOUT</a>
+            <a href="#" class="nav__cdmo">CDMO</a>
+            <a href="#" class="nav__randd">R&D</a>
+            <a href="#" class="nav__news">NEWS</a>
+            <a href="#" class="nav__contact">CONTACT</a>
+        </nav>
+    </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-
+    <!-- JQuery 링크 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- AOS 링크 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        gsap.to(".contact__hero--title", {
-            duration: 2,
-            opacity: 1,
-            y: 0,
-            ease: "power2.out"
-        });
-        gsap.to(".contact__hero--dec", {
-            duration: 2,
-            opacity: 1,
-            y: 0,
-            ease: "power2.out"
-        });
-
+        AOS.init();
     </script>
-    <!-- <script src="./assets/js/index.js"></script> -->
+  
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/contact.js"></script>
 </body>
 
 </html>

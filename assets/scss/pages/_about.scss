@@ -14,22 +14,20 @@
 }
 
 .about {
+
     &__hero {
         background-image: url("../images/sub01_about_hero.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         height: 100dvh;
+        position: relative;
 
-        &--background {
-            &::before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.3);
-                position: absolute;
-                inset: 0;
-            }
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            inset: 0;
+            z-index: 1;
         }
 
         &--container {
@@ -40,7 +38,7 @@
             z-index: 1;
         }
 
-        &--mintitle {
+        &--subtitle {
             @include abs.font(title2, map-get(abs.$colors, white));
         }
 
@@ -53,7 +51,7 @@
                 align-items: center;
             }
 
-            &--mintitle,
+            &--subtitle,
             &--title {
                 text-align: center;
             }
@@ -131,11 +129,10 @@
         }
     }
 
-    &__bigtitle {
+    &__title {
         @include abs.font(title1, map-get(abs.$colors, black));
         @include abs.responsivePaddingY($pc: (pt: 0, pb:6rem), $laptop: (pt: 0, pb: 4rem), $tablet: (pt: 0, pb: 4rem), $mobile-L: (pt: 0, pb: 5rem));
     }
-
     // -----------1920---brand
     &__brand img {
         width: clamp(28rem, 26.0416vw, 50rem);
@@ -174,7 +171,8 @@
 
         // ----------여기서 부터하면됌
 
-        &--title01,&--title02 {
+        &--title01,
+        &--title02 {
             text-align: center;
             @include abs.font(title4, map-get(abs.$colors, black));
             background-color: map-get(abs.$colors , black);
@@ -220,7 +218,8 @@
 
         @media (max-width: map-get(abs.$breakpoints, medium)) {
 
-            &--title01,&--title02 {
+            &--title01,
+            &--title02 {
                 padding: 0.5rem 1rem;
             }
 
@@ -277,8 +276,7 @@
             }
         }
     }
-
-
+    
     &__location {
         text-align: center;
 
@@ -297,7 +295,10 @@
             height: 100%;
         }
 
-        &--traffic-list, &--traffic-list01, &--traffic-list02,&--traffic {
+        &--traffic-list,
+        &--traffic-list01,
+        &--traffic-list02,
+        &--traffic {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -308,7 +309,9 @@
             padding-top: 1rem;
         }
 
-        &--traffic-list01, &--traffic-list02,&--traffic {
+        &--traffic-list01,
+        &--traffic-list02,
+        &--traffic {
             justify-content: space-between;
         }
 
@@ -324,7 +327,8 @@
             gap: 1rem;
         }
 
-        &--title, &--traffic h3 {
+        &--title,
+        &--traffic h3 {
             @include abs.font(body1, map-get(abs.$colors, black));
         }
 
@@ -365,7 +369,8 @@
 
         @media (max-width:863px) {
 
-            &--traffic-list01, &--traffic-list02 {
+            &--traffic-list01,
+            &--traffic-list02 {
                 gap: 1rem;
             }
 
@@ -376,11 +381,11 @@
                     gap: 2rem;
                 }
 
-                &--traffic-list01,&--traffic-list02 {
+                &--traffic-list01,
+                &--traffic-list02 {
                     gap: 1rem;
                 }
             }
         }
-        //  @media (max-width: map-get(abs.$breakpoints, small)){}
     }
 }
