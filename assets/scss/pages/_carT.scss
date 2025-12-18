@@ -27,6 +27,26 @@
             background: rgba(0, 0, 0, 0.2);
         }
     }
+    .carNK-hero__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: url("../images/carNK_hero.webp");
+        animation: scale-up 1s ease-in-out;
+        animation-fill-mode: forwards;  // 애니메이션의 완료 상태를 유지
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
 
 
     &__container {

@@ -11,13 +11,37 @@
 </head>
 
 <body>
+     <header class="flex-center header" id="header">
+        <div class="header__left logo">
+            <a href="https://genterabio.netlify.app/">
+                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+            </a>
+        </div>
+        <nav class="flex-center header__medium">
+            <a href="#" class="nav__about">ABOUT</a>
+            <a href="#" class="nav__cdmo">CDMO</a>
+            <a href="#" class="nav__randd">R&D</a>
+            <a href="#" class="nav__news">NEWS</a>
+        </nav>
+        <div class="header__right">
+            <a href="#" class="nav__contact">CONTACT</a>
+        </div>
+        <button type="button" class="flex-center header__hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
 
     <main>
         <section class="contact__hero">
-            <img src="./assets/images/sub05_hero_sec01.webp" alt="히어로섹션">
+            <img src="./assets/images/contact_hero.webp" alt="히어로섹션">
             <div class="contact__hero--wrap contact-container">
-                <h2 class="contact__hero--title" data-aos="fade-up">CONTACT</h2>
-                <p class="contact__hero--dec" data-aos="fade-up">GenTeraBio에 문의할 사항이 있으신가요?<br>
+                  <!-- title -->
+                <h1 class="hidden contact__hero--title">
+                    <span class="block">CONTACT</span>
+                </h1>
+                <!-- subtitle -->
+                <p class="contact__hero--dec">
+                    GenTeraBio에 문의할 사항이 있으신가요?<br>
                     담당자 확인 후, 연락드리도록 하겠습니다.
                 </p>
             </div>
@@ -129,8 +153,9 @@
             <!-- 버튼 -->
             <button class="contact__inquiry--btn" type="button" class="submit-btn">보내기</button>
         </section>
-
-         <footer class="flex-center footer">
+    </main>
+    
+     <footer class="flex-center footer">
         <div class="flex-center footer__top">
             <p class="company">
                 (주)젠테라바이오 
@@ -161,7 +186,7 @@
     <div class="side-menu">
         <div class="flex-center side-menu__top">
             <a href="https://genterabio.netlify.app/">
-                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+                <img src="../assets/images/logo_gray.webp" alt="젠테라바이오 로고 이미지">
             </a>
             <button type="button" class="flex-center cls-btn">
                 <i class="fa-solid fa-x"></i>
@@ -175,14 +200,14 @@
             <a href="#" class="nav__contact">CONTACT</a>
         </nav>
     </div>
-    </main>
+
     <!-- JQuery 링크 연결 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- AOS 링크 연결 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
+    <!-- <script>
         AOS.init();
-    </script>
+    </script> -->
   
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/contact.js"></script>

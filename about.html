@@ -11,12 +11,33 @@
 </head>
 
 <body>
+      <header class="flex-center header" id="header">
+        <div class="header__left logo">
+            <a href="https://genterabio.netlify.app/">
+                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+            </a>
+        </div>
+        <nav class="flex-center header__medium">
+            <a href="#" class="nav__about">ABOUT</a>
+            <a href="#" class="nav__cdmo">CDMO</a>
+            <a href="#" class="nav__randd">R&D</a>
+            <a href="#" class="nav__news">NEWS</a>
+        </nav>
+        <div class="header__right">
+            <a href="#" class="nav__contact">CONTACT</a>
+        </div>
+        <button type="button" class="flex-center header__hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
     <main>
         <section class="bg-center flex-center about__hero about-hero">
             <div class="flex-center container about__hero--container about-hero__container">
+                <!-- subtitle -->
                 <p class="about__hero--subtitle about-hero__subtitle" data-aos="fade-up">
                     GenTeraBio
                 </p>
+                <!-- title -->
                 <h1 class="about__hero--title about-hero__title" data-aos="fade-up">
                     인류의 건강한 삶과<br> 행복한 미래의<br class="only-768px"> 발걸음을 함께 합니다.
                 </h1>
@@ -141,10 +162,10 @@
 
                 </div>
             </div>
-
         </section>
+    </main>
 
-         <footer class="flex-center footer">
+     <footer class="flex-center footer">
         <div class="flex-center footer__top">
             <p class="company">
                 (주)젠테라바이오 
@@ -175,7 +196,7 @@
     <div class="side-menu">
         <div class="flex-center side-menu__top">
             <a href="https://genterabio.netlify.app/">
-                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+                <img src="../assets/images/logo_gray.webp" alt="젠테라바이오 로고 이미지">
             </a>
             <button type="button" class="flex-center cls-btn">
                 <i class="fa-solid fa-x"></i>
@@ -189,7 +210,6 @@
             <a href="#" class="nav__contact">CONTACT</a>
         </nav>
     </div>
-    </main>
 
     <!-- 카카오지도 링크 연결 -->
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2f0f39db91600ba1cdd75b51b6f3120a"></script>
