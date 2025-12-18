@@ -23,7 +23,7 @@
 
         &.on {
             color: map-get(abs.$colors, white);
-            background-color: map-get(abs.$colors, primary-dark);
+            background-color: map-get(abs.$colors, primary-100);
         }
     }
 }

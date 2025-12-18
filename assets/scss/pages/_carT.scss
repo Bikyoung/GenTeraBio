@@ -5,23 +5,32 @@
     height: 100dvh;
     opacity: 0.7;
     position: relative;
+    overflow: hidden;
 
-    &.carT-hero {
-        background-image: url("../images/carT_hero.webp");
-    }
-
-    &::before {
-        content: "";
+    .carT-hero__bg {
         width: 100%;
         height: 100%;
         position: absolute;
         inset: 0;
         z-index: -1;
-        background: rgba(0, 0, 0, 0.2);
+        background-image: url("../images/carT_hero.webp");
+        animation: scale-up 1s ease-in-out;
+        animation-fill-mode: forwards;  // 애니메이션의 완료 상태를 유지
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: rgba(0, 0, 0, 0.2);
+        }
     }
 
+
     &__container {
-        @include abs.responsivePaddingY(20rem, 18rem, 16rem, 12.6rem);
+        @include abs.responsivePaddingY((20rem, 0), (18rem, 0), 16rem, 12.6rem);
     
         flex-direction: column;
         text-align: center;
@@ -194,38 +203,197 @@
 //--------------- pipeline ---------------
 .pipeline {
     @include abs.responsivePaddingY(8rem, 6rem, 6rem, 5rem, 4rem);
+    @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);
 
+    width: 100%;
+    overflow-x: scroll;
+    
     &__container {
+        width: fit-content;
+        display: flex;
         flex-direction: column;
         gap: 4rem;
     }
 
     .table-wrapper {
         @include abs.responsivePaddingX(14.4rem, 4rem);
-        @include abs.responsiveGap(9rem, 0);
+        @include abs.responsiveGap(9rem, 2rem);
 
-        width: 100%;
         padding-top: 6rem;
         padding-bottom: 6rem;
-        border-radius: 2rem;
+        justify-content: space-between;
+        align-items: end; 
         border: 0.1rem solid map-get(abs.$colors, gray-250);
-        justify-content: left;
-        align-items: end;
+        border-radius: 2rem;
     }
-
 
     .table {
         &__main-category {
-            > * {
-                @include abs.font(title4, map-get(abs.$colors, gray-250));
+            th {
+                @include abs.font(title4, map-get(abs.$colors, gray-300));
+            }
+
+            .development-stage {
+                padding-right: 2rem;
             }
         }
 
         &__sub-category {
-            > * {
+            th {
+                @include abs.font(subtitle4, map-get(abs.$colors, gray-250));
+                @include abs.responsivePaddingY((6rem, 0), (4rem, 0));
+
+                padding-right: 6rem;
+                white-space: nowrap;
+            }
+
+            .permission {
+                padding-right: 2rem;
+            }
+        }
+
+        &__data {
+            td {
                 @include abs.font(title5, map-get(abs.$colors, gray-250));
+                @include abs.responsivePaddingY((6rem, 0), (4rem, 0));
+
+                white-space: nowrap;
+                text-align: center;
+                padding-right: 7rem;
+            }
+
+            .disease {
+                width: 18rem;
+            }
+
+            .progress {
+                width: 56rem;
+                padding-right: 2rem;
+
+                &__track {
+                    width: 100%;
+                    height: 2.2rem;
+                    padding: 0.4rem;
+                    background-color: map-get(abs.$colors, gray-50);
+                    border-radius: 10rem;
+                    justify-content: space-between;
+                    position: relative;
+                    
+                    .marker {
+                        height: 100%;
+                        flex: 1;
+                    }
+    
+                    .marker:not(:last-of-type) {
+                        border-right: 0.1rem dashed map-get(abs.$colors, gray-250);
+                    }
+                }
+
+                &__bar {
+                    position: absolute;
+                    top: 0.4rem;
+                    left: 0.4rem;
+                    width: 100%;
+                    height: calc(100% - 0.8rem);
+                    background: linear-gradient(20deg, rgba(114, 199, 168, 0.75), rgba(71, 192, 186, 0.75));
+                    border-radius: 10rem;
+
+                    &.carti01 {
+                        width: calc((100% - 0.8rem) * (3 / 4));
+                    }
+
+                    &.carti02 {
+                        width: calc((100% - 0.8rem) * 1);
+                    }
+
+                    &.carti03 {
+                        width: calc((100% - 0.8rem) * (3 / 4));
+                    }
+                }
+
+                &__pointer {
+                    width: 1.1rem;
+                    height: 1.1rem;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: 50%;
+                    right: 0.2rem;
+                    transform: translateY(-50%);
+                    background-color: map-get(abs.$colors, white);
+                }
+            }
+
+            .partnering {
+                padding-right: 0;
             }
         }
     }
+
+    @media (max-width: map-get(abs.$breakpoints, large)) {
+        .table {
+            &__sub-category {
+                width: 35.4rem;
+
+                th {
+                    padding-right: 2rem;
+                }
+            }
+
+            &__data {
+                td {
+                    padding-right: 3rem;
+                }
     
+                .disease {
+                    width: 15.5rem;
+                }
+
+                .progress {
+                    width: 35.3rem;
+
+                    &__track {
+                        height: 1.5rem;
+                        padding: 0.2rem;
+                    }
+
+                    &__bar {
+                        top: 0.2rem;
+                        left: 0.2rem;
+                        width: 100%;
+                        height: calc(100% - 0.4rem);
+
+                        &.carti01 {
+                            width: calc((100% - 0.4rem) * (3 / 4));
+                        }
+    
+                        &.carti02 {
+                            width: calc((100% - 0.4rem) * 1);
+                        }
+    
+                        &.carti03 {
+                            width: calc((100% - 0.4rem) * (3 / 4));
+                        }
+                    }
+                        
+                    &__pointer {
+                        width: 0.8rem;
+                        height: 0.8rem;
+                    }  
+                }
+
+                .partnering {
+                    width: 20.4rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }

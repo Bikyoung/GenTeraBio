@@ -2,8 +2,10 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widdiv=device-widdiv, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
+    <!-- AOS 링크 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>GenTeraBio</title>
 </head>
 <body>
@@ -13,7 +15,8 @@
 
     <main>
         <!-- --------------- tech-hero --------------- -->
-        <section class="bg-center tech-hero carT-hero">
+        <section class="tech-hero carT-hero">
+            <div class="bg-center tech-hero__bg carT-hero__bg"></div>
             <div class="flex-center container tech-hero__container">
                 <div class="tech__title-wrapper">
                     <!-- title -->
@@ -47,7 +50,7 @@
                         Mechanism
                     </span>
                 </h2>
-                <div class="flex-center mechanism__content">
+                <div class="flex-center mechanism__content" data-aos="fade-up">
                     <ul class="flex-center tab-list line-tab__list mechanism__tab-list">
                         <li class="tab line-tab mechanism__tab on">
                             Step 1 : <br class="max-480px">유전자 삽입
@@ -111,12 +114,12 @@
         <section class="difference">
             <div class="flex-center container difference__container">
                 <!-- title -->
-                <h2 class="hidden section-title-left difference__title">
+                <h2 class="hidden section-title-left difference__title" data-aos="fade-up">
                     <span class="block" data-aos="fade-up">
-                        dive Difference
+                        The Difference
                     </span>
                 </h2>
-                <div class="flex-center tech__card-list difference__list">
+                <div class="flex-center tech__card-list difference__list" data-aos="fade-up">
                     <div class="tech__card difference__card expand">
                         <div class="text">
                             <div class="title">
@@ -174,69 +177,94 @@
         
         <!-- --------------- pipeline --------------- -->
         <section class="pipeline">
-            <div class="flex-center container pipeline__container">
+            <div class="flex-center pipeline__container">
                 <!-- title -->
                 <h2 class="hidden section-title-left pipeline__title">
                     <span class="block" data-aos="fade-up">
                         Pipeline
                     </span>
                 </h2>
-                <!-- table -->
-                <div class="flex-center table-wrapper">
+                <div class="flex-center table-wrapper" data-aos="fade-up">
                     <img src="./assets/images/table_logo.webp" alt="젠테라바이오 로고 이미지">
-                    <div class="table">
-                        <!-- 분야 -->
-                        <div class="type">
-                            <p class="table__main-category">분야</p>
-                            <div class="code">
-                                <p>CARTi- 01</p>
-                                <p>CARTi- 02</p>
-                                <p>CARTi- 03</p>
-                            </div>
-                            <div class="cell">
-                                <p>자가 T 세포</p>
-                                <p>동종 T 세포</p>
-                                <p>자가 T 세포</p>
-                            </div>
-                        </div>
-                        <!-- 질병 -->
-                        <div class="disease">
-                            <p class="table__main-category">질병</p>
-                            <div class="target">
-                                <p>
+                    <!-- table -->
+                    <table class="table">
+                        <thead>
+                            <tr class="table__main-category">
+                                <th rowspan="2" colspan="2">분야</th>
+                                <th rowspan="2">질병</th>
+                                <th colspan="5" class="development-stage">개발단계</th>
+                                <th rowspan="2">파트너여부</th>
+                            </tr>
+                            <tr class="table__sub-category">
+                                <th>임상 1상</th>
+                                <th>임상 1상 완료</th>
+                                <th>임상 2상</th>
+                                <th>임상 2상 완료</th>
+                                <th class="permission">허가</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__data carti01">
+                                <td>CARTi- 01</td>
+                                <td>자가 T 세포</td>
+                                <td class="disease">
                                     급성 림프구성<br>
-                                    백혈병</p>
-                                <p>
-                                    고형암
-                                    (췌장암)</p>
-                                <p>재발성 림프종</p>
-                            </div>
-                        </div>
-                        <!-- 개발단계 -->
-                        <div class="development">
-                            <p class="table__main-category">
-                                개발단계
-                            </p>
-                            <div class="development__process">
-                                <p>임상 1상</p>
-                                <p>임상 1상 완료</p>
-                                <p>임상 2상</p>
-                                <p>임상 2상 완료</p>
-                                <p>허가</p>
-                            </div>
-                            <div class="development__graph">
-                                <div class="carti01"></div>
-                                <div class="carti02"></div>
-                                <div class="carti03"></div>
-                            </div>
-                        </div>
-                        <!-- 파트너여부 -->
-                        <div class="partnering">
-                            <p>국내 대학 병원</p>
-                            <p>비공개</p>
-                            <p>병원 공동 연구</p>
-                        </div>
-                    </div>
+                                    백혈병
+                                </td>
+                                <td class="progress" colspan="5">
+                                    <div class="flex-center progress__track">
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <div class="progress__bar carti01">
+                                            <div class="progress__pointer"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="partnering">국내 대학 병원</td>
+                            </tr>
+                            <tr class="table__data">
+                                <td>CARTi- 02</td>
+                                <td>동종 T 세포</td>
+                                <td class="disease">
+                                    고형암<br>
+                                    (췌장암)
+                                </td>
+                                <td class="progress" colspan="5">
+                                    <div class="flex-center progress__track">
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <div class="progress__bar carti02">
+                                            <div class="progress__pointer"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="partnering">비공개</td>
+                            </tr>
+                            <tr class="table__data">
+                                <td>CARTi- 03</td>
+                                <td>자가 T 세포</td>
+                                <td class="disease">
+                                    재발성 림프종
+                                </td>
+                                <td class="progress" colspan="5">
+                                    <div class="flex-center progress__track">
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <span class="marker"></span>
+                                        <div class="progress__bar carti03">
+                                            <div class="progress__pointer"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="partnering">병원 공동 연구</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
