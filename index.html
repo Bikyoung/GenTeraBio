@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font-awesome 링크 연결 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS 링크 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <title>GenTeraBio</title>
 </head>
 <body>
-    <header class="flex-center header">
+    <header class="flex-center header" id="header">
         <div class="header__left logo">
-            <a href="https://genterabio.netlify.app/">
-                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+            <a href="#">
+                <img src="./assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
             </a>
         </div>
         <nav class="flex-center header__medium">
-            <a href="#" class="nav__about">ABOUT</a>
-            <a href="#" class="nav__cdmo">CDMO</a>
-            <a href="#" class="nav__randd">R&D</a>
-            <a href="#" class="nav__news">NEWS</a>
+            <a href="/about.html" class="nav__about">ABOUT</a>
+            <a href="/cdmo.html" class="nav__cdmo">CDMO</a>
+            <a href="/carT.html" class="nav__randd">R&D</a>
+            <a href="/news_list.html" class="nav__news">NEWS</a>
         </nav>
         <div class="header__right">
-            <a href="#" class="nav__contact">CONTACT</a>
+            <a href="./contact.html" class="nav__contact">CONTACT</a>
         </div>
         <button type="button" class="flex-center header__hamburger">
             <i class="fa-solid fa-bars"></i>
@@ -42,18 +42,44 @@
             </div>
             <div class="flex-center container index-hero__container">
                 <!-- index-hero__subtitle -->
-                <p class="index-hero__subtitle">
+                <p class="index-hero__subtitle" data-aos="fade-up">
                     인류의 더 나은 삶과 행복을 위해
                 </p>
                 <!-- index-hero__title -->
-                <h1 class="index-hero__title">
-                    젠테라바이오는<br class="max-480px"> 다가올<br class="no-mobile">
-                    새로운<br class="max-480px"> 미래를 준비합니다.
+                <h1 class="index-hero__title no-mobile">
+                    <span class="block hidden">
+                        <span class="block" data-aos="fade-up" data-aos-delay="300">
+                            젠테라바이오는 다가올
+                        </span>
+                    </span>
+                    <span class="block hidden">
+                        <span class="block" data-aos="fade-up" data-aos-delay="300">
+                            새로운 미래를 준비합니다.
+                        </span>
+                    </span>
+                </h1>
+                <!-- 모바일에서는 fadeIn 효과를 다르게 적용하기 위함 -->
+                <h1 class="index-hero__title max-480px">
+                    <span class="block hidden">
+                        <span class="block" data-aos="fade-up" data-aos-delay="300">
+                            젠테라바이오는
+                        </span>
+                    </span>
+                    <span class="block hidden">
+                        <span class="block" data-aos="fade-up" data-aos-delay="300">
+                            다가올 새로운
+                        </span>
+                    </span>
+                    <span class="block hidden">
+                        <span class="block" data-aos="fade-up" data-aos-delay="300">
+                            미래를 준비합니다.
+                        </span>
+                    </span>
                 </h1>
                 <!-- index-hero__scroll -->
                 <div class="index-hero__scroll">
                     <p>SCROLL</p>
-                    <i class="fa-solid fa-arrow-down"></i>
+                    <img src="./assets/images/arrow_down.webp" alt="아래 화살표 이미지">
                 </div>
             </div>
         </section>
@@ -86,14 +112,16 @@
         <section class="technology">
             <div class="container flex-center technology__container">
                 <div class="section-title-left title-wrapper">
-                    <h2 class="technology__title">
-                        TECHNOLOGY
+                    <h2 class="hidden technology__title">
+                        <span class="block" data-aos="fade-up">
+                            TECHNOLOGY
+                        </span>
                     </h2>
-                    <p class="technology__subtitle">
+                    <p class="technology__subtitle" data-aos="fade-up" data-aos-delay="300">
                         연구 과제 및 기술 현황
                     </p>
                 </div>
-                <div class="flex-center content-wrapper">
+                <div class="flex-center content-wrapper" data-aos="fade-up" data-aos-delay="300">
                     <ul class="technology-image__list">
                         <li class="technology-image__item on">
                             <img src="./assets/images/technology_t.webp" alt="CAR-T 설명 이미지">
@@ -109,7 +137,7 @@
                                     </div>
                                     <div class="flex-center technology-content__detail">
                                         <span>자세히보기</span>
-                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                        <img src="./assets/images/arrow_right.webp" class="arrow" alt="오른쪽 화살표 이미지">
                                     </div>
                                 </a>
                             </div>
@@ -128,7 +156,7 @@
                                     </div>
                                     <div class="flex-center technology-content__detail">
                                         <span>자세히보기</span>
-                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                        <img src="./assets/images/arrow_right.webp" class="arrow" alt="오른쪽 화살표 이미지">
                                     </div>
                                 </a>
                             </div>
@@ -147,7 +175,7 @@
                                     </div>
                                     <div class="flex-center technology-content__detail">
                                         <span>자세히보기</span>
-                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                        <img src="./assets/images/arrow_right.webp" class="arrow" alt="오른쪽 화살표 이미지">
                                     </div>
                                 </a>
                             </div>
@@ -161,7 +189,7 @@
                                         <span class="title">
                                             CAR-T
                                         </span>
-                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                        <img src="./assets/images/arrow_right_white.webp" class="arrow" alt="오른쪽 화살표 이미지">
                                     </div>
                                     <div class="technology-content__desc on">
                                         <p class="summary">
@@ -184,7 +212,7 @@
                                         <span class="title">
                                             CAR-NK
                                         </span>
-                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                        <img src="./assets/images/arrow_right_white.webp" class="arrow" alt="오른쪽 화살표 이미지">
                                     </div>
                                     <div class="technology-content__desc">
                                         <p class="summary">
@@ -207,7 +235,7 @@
                                         <span class="title">
                                             MSC
                                         </span>
-                                        <i class="fa-solid fa-circle-arrow-right arrow"></i>
+                                        <img src="./assets/images/arrow_right_white.webp" class="arrow" alt="오른쪽 화살표 이미지">
                                     </div>
                                     <div class="technology-content__desc">
                                         <p class="summary">
@@ -232,14 +260,16 @@
         <section class="facilities">
             <div class="container flex-center facilities__container">
                 <div class="section-title-left title-wrapper">
-                    <h2 class="technology__title">
-                        FACILITIES
+                    <h2 class="hidden technology__title">
+                        <span class="block" data-aos="fade-up">
+                            FACILITIES
+                        </span>
                     </h2>
-                    <p class="technology__subtitle">
+                    <p class="technology__subtitle" data-aos="fade-up" data-aos-delay="300">
                         국내 원료의약품 연구소 및 생산시설
                     </p>
                 </div>
-                <div class="swiper facilities__Swiper">
+                <div class="swiper facilities__Swiper" data-aos="fade-up" data-aos-delay="300">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="bg-center facilities__image">
@@ -302,10 +332,10 @@
                     </div>
                     <div class="flex-center swiper-button">
                         <div class="swiper-button-prev">
-                            <i class="fa-solid fa-circle-arrow-left"></i>
+                            <img src="./assets/images/arrow_left.webp" class="arrow left-arrow" alt="왼쪽 화살표 이미지">
                         </div>
                         <div class="swiper-button-next">
-                            <i class="fa-solid fa-circle-arrow-right"></i>
+                            <img src="./assets/images/arrow_right.webp" class="arrow right-arrow" alt="오른쪽 화살표 이미지">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -323,10 +353,12 @@
                 </video>
             </div>
             <div class="container flex-center network__container">
-                <h2 class="section-title-left network__title">
-                    Global Network
+                <h2 class="hidden section-title-left network__title">
+                    <span class="block" data-aos="fade-up">
+                        Global Network
+                    </span>
                 </h2>
-                <div class="network__content">
+                <div class="network__content" data-aos="fade"  data-aos-delay="300">
                     <div class="flex-center network__value-group">
                         <div class="network__value">
                             <div>
@@ -386,9 +418,9 @@
         </section>
 
         <!-- --------------- partners --------------- -->
-        <section class="bg-center flex-center section-paddingY  partners">
+        <section class="bg-center flex-center section-paddingY partners">
             <div class="container flex-center partners__container">
-                <div class="partners__title">
+                <div class="partners__title" data-aos="fade-up">
                     <p class="partners__title--top">
                         국내 주요 의료기관과<br class="max-480px"> 기업, 연구소들이
                     </p>
@@ -396,8 +428,74 @@
                         GenTeraBio와<br class="max-1024px"> 함께 하고 있습니다
                     </p>
                 </div>
-                <div class="swiper partnersSwiper">
+                <div class="swiper partnersSwiper" data-aos="fade" data-aos-delay="300">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide partners-slide">
+                            <img src="./assets/images/partners_01.webp" alt="차병원 로고">
+                            <p class="partners-slide__name">차병원</p>
+                            <p class="partners-slide__technology">
+                                CAR-T,<br class="max-480px"> CAR-NK
+                            </p>
+                            <p class="partners-slide__desc">
+                                정밀한 암세포 타깃 기술을 통해<br>
+                                환자들에게 안전하고<br>
+                                일관된 치료를 진행할 수 있었습니다
+                            </p>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <img src="./assets/images/partners_02.webp" alt="한국과학기술원 로고">
+                            <p class="partners-slide__name">한국과학기술원</p>
+                            <p class="partners-slide__technology">CAR-NK</p>
+                            <p class="partners-slide__desc">
+                                세포의 동결•해동 기술 덕분에<br>
+                                뛰어난 세포 생존율로<br> 
+                                일관된 치료 결과를 얻을 수 있었습니다.
+                            </p>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <img src="./assets/images/partners_03.webp" alt="한국생명공학연구원 로고">
+                            <p class="partners-slide__name">한국생명공학연구원</p>
+                            <p class="partners-slide__technology">협동 연구</p>
+                            <p class="partners-slide__desc">
+                                GMP 등급의 시스템을 통해<br>
+                                임상 실험의 단계를 마무리 했습니다.
+                            </p>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <img src="./assets/images/partners_04.webp" alt="세브란스병원 로고">
+                            <p class="partners-slide__name">세브란스병원</p>
+                            <p class="partners-slide__technology">MSC 제대혈 유래</p>
+                            <p class="partners-slide__desc">
+                                Xeno-free MSC 배양 시스템을<br> 
+                                적용해동물성 성분 없이,세포 품질을<br> 
+                                장기적으로 유지하고 있습니다.
+                            </p>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <img src="./assets/images/partners_05.webp" alt="서울아산병원 로고">
+                            <p class="partners-slide__name">서울아산병원</p>
+                            <p class="partners-slide__technology">
+                                협동 연구
+                            </p>
+                            <p class="partners-slide__desc">
+                                GMP 등급의 시스템을 통해<br>
+                                보다 안전하고 쾌적한 상태의<br>
+                                임상효능을 입증할 수 있었습니다.
+                            </p>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <img src="./assets/images/partners_06.webp" alt="국립암센터 로고">
+                            <p class="partners-slide__name">국립암센터</p>
+                            <p class="partners-slide__technology">
+                                CAR-T,<br class="max-480px"> CAR-NK
+                            </p>
+                            <p class="partners-slide__desc">
+                                세포지료제 개발 과정에<br>
+                                정밀한 공정 모니터링을 통해<br>
+                                데이터 신뢰성을 확보했습니다.
+                            </p>
+                        </div>
+                        <!-- 자연스러운 롤링 효과를 위한 복제본 -->
                         <div class="swiper-slide partners-slide">
                             <img src="./assets/images/partners_01.webp" alt="차병원 로고">
                             <p class="partners-slide__name">차병원</p>
@@ -538,14 +636,16 @@
         <section class="bg-center index-contact">
             <div class="container flex-center index-contact__container">
                 <div class="index-contact__bg"></div>
-                <h2 class="index-contact__title">
-                    Contact us
-                </h2>
-                <p class="index-contact__desc">
-                    GenTeraBio에 문의할 사항이 있으신가요?<br>
-                    담당자 확인 후, 연락드리도록 하겠습니다.
-                </p>
-                <a href="#" class="index-contact__button">
+                <div data-aos="fade-up">
+                    <h2 class="index-contact__title">
+                        Contact us
+                    </h2>
+                    <p class="index-contact__desc">
+                        GenTeraBio에 문의할 사항이 있으신가요?<br>
+                        담당자 확인 후, 연락드리도록 하겠습니다.
+                    </p>
+                </div>
+                <a href="#" class="index-contact__button" data-aos="fade-up" data-aos-delay="300">
                     문의하기
                 </a>
             </div>
@@ -587,7 +687,7 @@
     <div class="side-menu">
         <div class="flex-center side-menu__top">
             <a href="https://genterabio.netlify.app/">
-                <img src="../assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
+                <img src="./assets/images/logo.webp" alt="젠테라바이오 로고 이미지">
             </a>
             <button type="button" class="flex-center cls-btn">
                 <i class="fa-solid fa-x"></i>
@@ -602,6 +702,15 @@
         </nav>
     </div>
 
+    <div class="floating-btn">
+        <a href="#header">
+            <img src="./assets/images/arrow_up.webp" alt="상승 화살표 이미지">
+        </a>
+    </div>
+
+    
+    <!-- AOS 링크 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- JQuery 링크 연결 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Gsap 링크 연결 -->

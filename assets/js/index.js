@@ -14,26 +14,6 @@ function removeControls() {
     removeControls();
     addControlsMobile();
   }
-  
-// ------------------------------ index-hero ------------------------------
-// .index-hero__title과 .index-hero__subtitle이 스크롤에 따라 fadeInUp
-gsap.registerPlugin(ScrollTrigger);
-
-const $indexHeroTl = gsap.timeline();
-
-$indexHeroTl
-    .from(".index-hero__subtitle", {
-        y: 100,
-        autoAlpha: 0,
-        duration: 1,
-        ease: "power1.out"
-    })
-    .from(".index-hero__title", {
-        y: 100,
-        autoAlpha: 0,
-        duration: 1,
-        ease: "power1.out"
-    },"-=0.35");
 
 // ------------------------------ story ------------------------------
 // .story__title과 .story__subtitle이 스크롤에 따라 fadeIn
@@ -94,18 +74,6 @@ $(".technology-content__item").on("mouseleave", function() {
     $(".technology-image__item").eq(0).addClass("on");
 });
 
-// .technology__container가 스크롤에 따라 fadeInUp
-gsap.from(".technology__container", {
-    y: 100,
-    autoAlpha: 0,
-    duration: 1,
-    ease: "power1.out",
-    scrollTrigger: {
-        trigger: ".technology",
-        start: "top 30%"
-    }
-});
-
 // ------------------------------ facilities ------------------------------
 // 화살표 버튼 클릭 및 스와이프 시, 슬라이드가 좌우로 이동
 let facilitiesSwiper = new Swiper(".facilities__Swiper", {
@@ -135,19 +103,6 @@ function setFacilitiesSlideHeight() {
 setFacilitiesSlideHeight();
 
 $(window).on("resize", () => {setFacilitiesSlideHeight()});
-
-
-// .facilities__container가 스크롤에 따라 fadeInUp
-gsap.from(".facilities__container", {
-    y: 100,
-    autoAlpha: 0,
-    duration: 0.8,
-    ease: "power1.out",
-    scrollTrigger: {
-        trigger: ".facilities",
-        start: "top 45%"
-    }
-});
 
 // ------------------------------ network ------------------------------
 const networkVideo = $(".network video");
@@ -179,7 +134,7 @@ gsap.to(counter, {
     scrollTrigger: {
         trigger: ".network",
         start: "top 25%",
-        toggleActions: "play none none reset"
+        toggleActions: "play none none reset",
     },
     duration: 1.5,
     onUpdate() {
@@ -240,16 +195,4 @@ setPartnersSlideHeight();
 $(window).on("resize", () => {setPartnersSlideHeight()});
 
 
-// ------------------------------ index-contact ------------------------------
-
-gsap.from(".index-contact__container", {
-    scale: 0.2,
-    autoAlpha: 0.2,
-    duration: 1,
-    ease: "power1.out",
-    scrollTrigger: {
-        trigger: ".index-contact",
-        start: "top 50%",
-    }
-});
 
