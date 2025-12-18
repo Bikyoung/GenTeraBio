@@ -873,7 +873,7 @@
 
             background-color: map-get(abs.$colors, white);
             border-radius: 5rem;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s ease-in-out;
 
             &:hover {
                 background-color: map-get(abs.$colors, black);
