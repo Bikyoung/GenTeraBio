@@ -64,327 +64,339 @@
         }
     }
 
-    // --------1920----ci--------
-    &__ci {
-        @include abs.responsivePaddingY($pc: (pt: 14rem, pb:18rem), $laptop: (pt: 8rem, pb: 12rem), $tablet: (pt: 12rem, pb: 12rem), $mobile-L: (pt: 7.8rem, pb: 7.8rem));
-        text-align: center;
-
-        &--dec-wrap {
-            @include abs.responsivePaddingY($pc: (pt: 0, pb:10rem), $laptop: (pt: 4rem, pb: 6rem), $tablet: (pt: 4rem, pb: 6rem), $mobile-L: (pt: 5rem, pb: 5rem));
-        }
-
-        &--logo img {
-            width: clamp(26rem, 31.6vw, 60.8rem);
-            padding-bottom: 2rem;
-        }
-
-        &--dec {
-            @include abs.font(subtitle2, map-get(abs.$colors, black));
-        }
-
-        &--color-list {
-            display: flex;
-            width: 100%;
-            gap: 1.4rem;
-        }
-
-        &--color-wrap {
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        &--colorChip {
-            height: clamp(6.6rem, 29.375vw, 12rem);
-            border-radius: 2rem;
-        }
-
-        &--colorWord {
-            @include abs.font(title4, map-get(abs.$colors, white));
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &--color-text {
-            padding: 2rem 0;
-            gap: 1.4rem;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &--colorNum {
-            @include abs.font(body1, map-get(abs.$colors, gray-200));
-            width: 100%;
-            padding: 2rem 0;
-        }
-
-        // ------------480 ic 
-        @media (max-width: map-get(abs.$breakpoints, small)) {
-            &--color-list {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-
     &__title {
         @include abs.font(title1, map-get(abs.$colors, black));
         @include abs.responsivePaddingY($pc: (pt: 0, pb:6rem), $laptop: (pt: 0, pb: 4rem), $tablet: (pt: 0, pb: 4rem), $mobile-L: (pt: 0, pb: 5rem));
     }
-    // -----------1920---brand
-    &__brand img {
-        width: clamp(28rem, 26.0416vw, 50rem);
+
+    &__ci {
+        @include abs.responsivePaddingY($pc: (pt: 14rem, pb:18rem), $laptop: (pt: 8rem, pb: 12rem), $tablet: (pt: 12rem, pb: 12rem), $mobile-L: (pt: 7.8rem, pb: 7.8rem));
+        text-align: center;
     }
 
+    // -----------1920---brand 이미지
     &__brand {
         @include abs.responsivePaddingY($pc: (pt: 0, pb:18rem), $laptop: (pt: 0, pb: 12rem), $tablet: (pt: 0, pb: 12rem), $mobile-L: (pt: 0, pb: 12.6rem));
         text-align: center;
         // 브랜드 키워드 걸어놓기
         position: relative;
+    }
 
-        &--wrap00 {
-            position: absolute;
-            top: 12rem;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    &__brand img {
+        width: clamp(28rem, 26.0416vw, 50rem);
+    }
 
-        &--text-wrap01 {
+    &__location {
+        text-align: center;
+    }
+}
+
+// --------1920----ci--------
+.ci {
+
+    &__dec-wrap {
+        @include abs.responsivePaddingY($pc: (pt: 0, pb:10rem), $laptop: (pt: 4rem, pb: 6rem), $tablet: (pt: 4rem, pb: 6rem), $mobile-L: (pt: 5rem, pb: 5rem));
+    }
+
+    &__logo img {
+        width: clamp(26rem, 31.6vw, 60.8rem);
+        padding-bottom: 2rem;
+    }
+
+    &__dec {
+        @include abs.font(subtitle2, map-get(abs.$colors, black));
+    }
+
+    &__color-list {
+        display: flex;
+        width: 100%;
+        gap: 1.4rem;
+    }
+
+    &__color-wrap {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__colorChip {
+        height: clamp(6.6rem, 29.375vw, 12rem);
+        border-radius: 2rem;
+    }
+
+    &__colorWord {
+        @include abs.font(title4, map-get(abs.$colors, white));
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__color-text {
+        padding: 2rem 0;
+        gap: 1.4rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__colorNum {
+        @include abs.font(body1, map-get(abs.$colors, gray-200));
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    // ------------480 ic 
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__color-list {
             display: flex;
+            flex-direction: column;
         }
+    }
+}
 
-        &--wrap02 {
+.brand {
+
+    &__wrap00 {
+        position: absolute;
+        top: 12rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__text-wrap01 {
+        display: flex;
+    }
+
+    &__wrap02 {
+        position: absolute;
+        bottom: 18%;
+        left: 31%;
+        transform: translate(-18%, -31%);
+    }
+
+    &__wrap03 {
+        position: absolute;
+        bottom: 19%;
+        right: 26%;
+        transform: translate(-19%, -26%);
+    }
+
+    &__title01,
+    &__title02 {
+        text-align: center;
+        @include abs.font(title4, map-get(abs.$colors, black));
+        background-color: map-get(abs.$colors , black);
+        color: map-get(abs.$colors , white);
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    &__title01 {
+        width: 21.6rem;
+    }
+
+    &__title02 {
+        width: 12rem;
+        margin: 0 auto;
+    }
+
+    &__dec {
+        @include abs.font(body1, map-get(abs.$colors, black));
+        padding-top: 1rem;
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, large)) {
+        &__wrap00 {
             position: absolute;
-            bottom: 18%;
-            left: 31%;
-            transform: translate(-18%, -31%);
+            top: 8rem;
         }
 
-        &--wrap03 {
+        &__wrap02 {
             position: absolute;
-            bottom: 19%;
-            right: 26%;
-            transform: translate(-19%, -26%);
+            bottom: 9%;
+            left: 26%;
+            transform: translate(-9%, -26%);
         }
 
-        // ----------여기서 부터하면됌
+        &__wrap03 {
+            position: absolute;
+            bottom: 10%;
+            right: 20%;
+            transform: translate(-10%, -20%);
+        }
+    }
 
-        &--title01,
-        &--title02 {
-            text-align: center;
-            @include abs.font(title4, map-get(abs.$colors, black));
-            background-color: map-get(abs.$colors , black);
-            color: map-get(abs.$colors , white);
-            border-radius: 2rem;
-            padding: 0.5rem 1.5rem;
+    @media (max-width: map-get(abs.$breakpoints, medium)) {
+
+        &__title01,
+        &__title02 {
+            padding: 0.5rem 1rem;
         }
 
-        &--title01 {
-            width: 21.6rem;
+        &__title01 {
+            width: 16rem;
         }
 
-        &--title02 {
-            width: 12rem;
-            margin: 0 auto;
+        &__title02 {
+            width: 10rem;
         }
 
-        &--dec {
-            @include abs.font(body1, map-get(abs.$colors, black));
+        &__wrap00 {
+            position: absolute;
+            top: 8rem;
+        }
+
+        &__wrap02 {
+            position: absolute;
+            bottom: 9%;
+            left: 17%;
+            transform: translate(-9%, -17%);
+        }
+
+        &__wrap03 {
+            position: absolute;
+            bottom: 10%;
+            right: 11%;
+            transform: translate(-10%, -11%);
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__text-wrap {
+            left: clamp(15%, 5vw + 21%, 30%);
+        }
+
+        &__title02 {
+            width: 8.8rem;
+        }
+
+        &__wrap02 {
+            position: absolute;
+            bottom: 9%;
+            left: 7%;
+            transform: translate(-9%, -7%);
+        }
+
+        &__wrap03 {
+            position: absolute;
+            bottom: 10%;
+            right: -1%;
+            transform: translate(-10%, -1%);
+        }
+    }
+}
+
+
+.location {
+
+    &__map {
+        width: 100%;
+        height: clamp(24rem, 30.7692vw, 53.6vw) !important;
+    }
+
+    &__traffic-wrap {
+        @include abs.responsivePaddingX($pc: 4rem, $laptop: 4rem, $tablet: 4rem, $mobile-L: 3rem, $mobile-S: 2.4rem);
+        @include abs.responsivePaddingY($pc: 4rem, $laptop: 3rem, $tablet: 3rem, $mobile-L: 2.4rem, $mobile-S: 2rem);
+
+        background-color: map-get(abs.$colors, gray-50);
+        border-radius: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 6rem;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__traffic-list,
+    &__traffic-list01,
+    &__traffic-list02,
+    &__traffic {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__traffic-list {
+        justify-content: space-evenly;
+        padding-top: 1rem;
+    }
+
+    &__traffic-list01,
+    &__traffic-list02,
+    &__traffic {
+        justify-content: space-between;
+    }
+
+    &__traffic-list01 {
+        gap: 6rem;
+    }
+
+    &__traffic-list02 {
+        gap: clamp(3rem, 7.3242vw, 8rem);
+    }
+
+    &__traffic {
+        gap: 1rem;
+    }
+
+    &__title,
+    &__traffic h3 {
+        @include abs.font(body1, map-get(abs.$colors, black));
+    }
+
+    &__traffic p {
+        @include abs.font(body1, map-get(abs.$colors, gray-200));
+    }
+
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__subtitle img {
+        object-fit: contain;
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, large)) {
+
+        &__traffic-wrap {
+            display: flex;
+            align-items: center;
+            gap: 5.6rem;
+            margin-bottom: 4rem;
+        }
+
+        &__traffic-list {
+            justify-content: space-between;
+        }
+
+        &__traffic-list01 {
+            gap: 2rem;
+        }
+
+        &__traffic-list02 {
             padding-top: 1rem;
         }
+    }
 
-        @media (max-width: map-get(abs.$breakpoints, large)) {
-            &--wrap00 {
-                position: absolute;
-                top: 8rem;
-            }
+    @media (max-width:863px) {
 
-            &--wrap02 {
-                position: absolute;
-                bottom: 9%;
-                left: 26%;
-                transform: translate(-9%, -26%);
-            }
-
-            &--wrap03 {
-                position: absolute;
-                bottom: 10%;
-                right: 20%;
-                transform: translate(-10%, -20%);
-            }
+        &__traffic-list01,
+        &__traffic-list02 {
+            gap: 1rem;
         }
 
         @media (max-width: map-get(abs.$breakpoints, medium)) {
 
-            &--title01,
-            &--title02 {
-                padding: 0.5rem 1rem;
-            }
-
-            &--title01 {
-                width: 16rem;
-            }
-
-            &--title02 {
-                width: 10rem;
-            }
-
-            &--wrap00 {
-                position: absolute;
-                top: 8rem;
-            }
-
-            &--wrap02 {
-                position: absolute;
-                bottom: 9%;
-                left: 17%;
-                transform: translate(-9%, -17%);
-            }
-
-            &--wrap03 {
-                position: absolute;
-                bottom: 10%;
-                right: 11%;
-                transform: translate(-10%, -11%);
-            }
-
-        }
-
-        @media (max-width: map-get(abs.$breakpoints, small)) {
-            &--text-wrap {
-                left: clamp(15%, 5vw + 21%, 30%);
-            }
-
-            &--title02 {
-                width: 8.8rem;
-            }
-
-            &--wrap02 {
-                position: absolute;
-                bottom: 9%;
-                left: 7%;
-                transform: translate(-9%, -7%);
-            }
-
-            &--wrap03 {
-                position: absolute;
-                bottom: 10%;
-                right: -1%;
-                transform: translate(-10%, -1%);
-            }
-        }
-    }
-    
-    &__location {
-        text-align: center;
-
-        &--map {
-            width: 100%;
-            height: clamp(24rem, 30.7692vw, 53.6vw) !important;
-        }
-
-        &--traffic-wrap {
-            @include abs.responsivePaddingX($pc: 4rem, $laptop: 4rem, $tablet: 4rem, $mobile-L: 3rem, $mobile-S: 2.4rem);
-            @include abs.responsivePaddingY($pc: 4rem, $laptop: 3rem, $tablet: 3rem, $mobile-L: 2.4rem, $mobile-S: 2rem);
-            background-color: map-get(abs.$colors, gray-50);
-            border-radius: 2rem;
-            margin-top: 1rem;
-            width: 100%;
-            height: 100%;
-        }
-
-        &--traffic-list,
-        &--traffic-list01,
-        &--traffic-list02,
-        &--traffic {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        &--traffic-list {
-            justify-content: space-evenly;
-            padding-top: 1rem;
-        }
-
-        &--traffic-list01,
-        &--traffic-list02,
-        &--traffic {
-            justify-content: space-between;
-        }
-
-        &--traffic-list01 {
-            gap: 6rem;
-        }
-
-        &--traffic-list02 {
-            gap: clamp(3rem, 7.3242vw, 8rem);
-        }
-
-        &--traffic {
-            gap: 1rem;
-        }
-
-        &--title,
-        &--traffic h3 {
-            @include abs.font(body1, map-get(abs.$colors, black));
-        }
-
-        &--traffic p {
-            @include abs.font(body1, map-get(abs.$colors, gray-200));
-        }
-
-        &--mintitle {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        &--mintitle img {
-            object-fit: contain;
-        }
-
-        @media (max-width: map-get(abs.$breakpoints, large)) {
-
-            &--traffic-wrap {
-                display: flex;
-                align-items: center;
-                gap: 5.6rem;
-            }
-
-            &--traffic-list {
-                justify-content: space-between;
-            }
-
-            &--traffic-list01 {
+            &__traffic-wrap {
+                display: block;
                 gap: 2rem;
             }
 
-            &--traffic-list02 {
-                padding-top: 1rem;
-            }
-        }
-
-        @media (max-width:863px) {
-
-            &--traffic-list01,
-            &--traffic-list02 {
+            &__traffic-list01,
+            &__traffic-list02 {
                 gap: 1rem;
-            }
-
-            @media (max-width: map-get(abs.$breakpoints, medium)) {
-
-                &--traffic-wrap {
-                    display: block;
-                    gap: 2rem;
-                }
-
-                &--traffic-list01,
-                &--traffic-list02 {
-                    gap: 1rem;
-                }
             }
         }
     }

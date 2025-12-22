@@ -7,15 +7,16 @@
     position: relative;
     overflow: hidden;
 
-    .carT-hero__bg {
+    .carT-hero__bg,
+    .carNK-hero__bg,
+    .msc-hero__bg {
         width: 100%;
         height: 100%;
         position: absolute;
         inset: 0;
         z-index: -1;
-        background-image: url("../images/carT_hero.webp");
         animation: scale-up 1s ease-in-out;
-        animation-fill-mode: forwards;  // 애니메이션의 완료 상태를 유지
+        animation-fill-mode: forwards; // 애니메이션의 완료 상태를 유지
 
         &::before {
             content: "";
@@ -27,31 +28,23 @@
             background: rgba(0, 0, 0, 0.2);
         }
     }
-    .carNK-hero__bg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        background-image: url("../images/carNK_hero.webp");
-        animation: scale-up 1s ease-in-out;
-        animation-fill-mode: forwards;  // 애니메이션의 완료 상태를 유지
 
-        &::before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            background: rgba(0, 0, 0, 0.2);
-        }
+    .carT-hero__bg {
+        background-image: url("../images/carT_hero.webp");
+    }
+
+    .carNK-hero__bg {
+        background-image: url("../images/carNK_hero.webp");
+    }
+
+    .msc-hero__bg {
+        background-image: url("../images/msc_hero.webp");
     }
 
 
     &__container {
         @include abs.responsivePaddingY((20rem, 0), (18rem, 0), 16rem, 12.6rem);
-    
+
         flex-direction: column;
         text-align: center;
     }
@@ -69,7 +62,7 @@
 .mechanism {
     @include abs.responsivePaddingY((16rem, 8rem), (12rem, 6rem), (12rem, 6rem), (8rem, 5rem), (7rem, 3.5rem));
 
-    &__container{
+    &__container {
         @include abs.responsiveGap(4rem, 4rem, 6rem, 4rem);
 
         flex-direction: column;
@@ -136,17 +129,17 @@
         }
 
         &__panel {
-            width: 100%; 
+            width: 100%;
 
             &.on {
                 flex-direction: column;
             }
 
-            > div {
+            >div {
                 width: 100%;
                 flex-direction: column;
                 align-items: start;
-                
+
             }
 
             img {
@@ -157,7 +150,7 @@
 
     @media (max-width: 1440px) and (min-width: 1025px) {
         &__panel {
-            > div {
+            >div {
                 gap: 3rem;
             }
         }
@@ -176,7 +169,7 @@
         &__panel {
             width: 100%;
 
-            > div {
+            >div {
                 @include abs.responsiveGap(2rem, 2rem, 2.2rem, 4rem);
 
                 width: 100%;
@@ -227,7 +220,7 @@
 
     width: 100%;
     overflow-x: scroll;
-    
+
     &__container {
         width: fit-content;
         display: flex;
@@ -242,7 +235,7 @@
         padding-top: 6rem;
         padding-bottom: 6rem;
         justify-content: space-between;
-        align-items: end; 
+        align-items: end;
         border: 0.1rem solid map-get(abs.$colors, gray-250);
         border-radius: 2rem;
     }
@@ -298,12 +291,12 @@
                     border-radius: 10rem;
                     justify-content: space-between;
                     position: relative;
-                    
+
                     .marker {
                         height: 100%;
                         flex: 1;
                     }
-    
+
                     .marker:not(:last-of-type) {
                         border-right: 0.1rem dashed map-get(abs.$colors, gray-250);
                     }
@@ -329,6 +322,33 @@
                     &.carti03 {
                         width: calc((100% - 0.8rem) * (3 / 4));
                     }
+
+                    // ------------------nk 그래프 
+                    &.carnki01 {
+                        width: calc((100% - 0.8rem) * (3 / 4));
+                    }
+
+                    &.carnki02 {
+                        width: calc((100% - 0.8rem) * (2 / 4));
+                    }
+
+                    &.carnki03 {
+                        width: calc((100% - 0.8rem) * (3 / 4));
+                    }
+
+                    // ------------------MSC 그래프 
+
+                    &.msci01 {
+                        width: calc((100% - 0.8rem) * (3 / 4));
+                    }
+
+                    &.msci02 {
+                        width: calc((100% - 0.8rem) * (1 / 4));
+                    }
+
+                    &.msci03 {
+                        width: calc((100% - 0.8rem) * (2 / 4));
+                    }
                 }
 
                 &__pointer {
@@ -350,6 +370,9 @@
     }
 
     @media (max-width: map-get(abs.$breakpoints, large)) {
+        // 가로스크롤 밑에 여백
+        margin-bottom: 6rem;
+
         .table {
             &__sub-category {
                 width: 35.4rem;
@@ -363,7 +386,7 @@
                 td {
                     padding-right: 3rem;
                 }
-    
+
                 .disease {
                     width: 15.5rem;
                 }
@@ -385,20 +408,20 @@
                         &.carti01 {
                             width: calc((100% - 0.4rem) * (3 / 4));
                         }
-    
+
                         &.carti02 {
                             width: calc((100% - 0.4rem) * 1);
                         }
-    
+
                         &.carti03 {
                             width: calc((100% - 0.4rem) * (3 / 4));
                         }
                     }
-                        
+
                     &__pointer {
                         width: 0.8rem;
                         height: 0.8rem;
-                    }  
+                    }
                 }
 
                 .partnering {
@@ -413,6 +436,7 @@
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.1);
     }

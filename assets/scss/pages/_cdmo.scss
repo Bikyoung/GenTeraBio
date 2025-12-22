@@ -13,8 +13,8 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background: rgba(0,0,0,0.5);
-        
+        background: rgba(0, 0, 0, 0.5);
+
     }
 
     &__container {
@@ -38,7 +38,7 @@
         }
 
         &__subtitle {
-           text-align: center;
+            text-align: center;
         }
     }
 
@@ -66,7 +66,7 @@
         gap: 1.6rem;
         padding-right: clamp(0rem, -66.667rem + 55.556vw, 40rem);
 
-        > * {
+        >* {
             @include abs.font(body1, map-get(abs.$colors, black));
 
             max-width: 92.2rem;
@@ -82,10 +82,12 @@
     }
 
     @media (max-width: map-get(abs.$breakpoints, small)) {
-        &__container, &__desc {
+
+        &__container,
+        &__desc {
             align-items: center;
             text-align: center;
-        }    
+        }
     }
 }
 
@@ -99,7 +101,7 @@
     }
 
     &__title-wrapper {
-        > * {
+        >* {
             text-align: left;
         }
     }
@@ -127,7 +129,7 @@
             padding-right: clamp(2rem, -0.286rem + 2.232vw, 4rem);
             text-align: center;
         }
-        
+
         img {
             width: 100%;
             border-bottom: 0.1rem solid map-get(abs.$colors, primary);
@@ -162,7 +164,8 @@
             grid-template-columns: 1fr;
         }
 
-        &__title, &__subtitle {
+        &__title,
+        &__subtitle {
             text-align: center;
         }
 
@@ -239,7 +242,7 @@
     }
 
     &__panel-list {
-        position: relative;     
+        position: relative;
     }
 
     &__panel {
@@ -266,7 +269,7 @@
             z-index: 1;
         }
 
-        > div {
+        >div {
             @include abs.responsiveGap(2rem, 1.6rem, 1.4rem, 1.6rem, 1rem);
 
             width: calc(100% / 3);
@@ -287,7 +290,7 @@
                 height: 100%;
                 inset: 0;
                 z-index: 5;
-                background-color: rgba(0,0,0,0.2);
+                background-color: rgba(0, 0, 0, 0.2);
                 border-radius: 2rem;
             }
         }
@@ -434,7 +437,7 @@
             width: 100%;
         }
 
-        .cdo {   
+        .cdo {
             padding-left: 5rem;
             padding-right: 5rem;
 
@@ -442,9 +445,9 @@
                 width: 100%;
                 justify-content: space-around;
                 padding: 0;
-    
+
                 &:nth-child(1) {
-    
+
                     &::before {
                         width: 100%;
                     }
@@ -459,21 +462,24 @@
     }
 
     @media (max-width: map-get(abs.$breakpoints, small)) {
-        &__panel {
-           flex-direction: column; 
+        background-color: map-get(abs.$colors, white);
 
-           > div {
+        &__panel {
+            flex-direction: column;
+
+            >div {
                 width: 100%;
             }
         }
 
-        .cmo, .cas {
+        .cmo,
+        .cas {
             .manufacture__panel-image {
                 height: 24rem;
             }
         }
 
-        .cdo {   
+        .cdo {
             padding: 0;
         }
     }
@@ -561,9 +567,9 @@
             font-size: 4rem;
             position: absolute;
             right: 4rem;
-            bottom: 4rem; 
+            bottom: 4rem;
             display: none;
-            transition: all 0.25s ease-in-out;           
+            transition: all 0.25s ease-in-out;
         }
     }
 
@@ -586,14 +592,16 @@
                 backdrop-filter: grayscale(0);
             }
 
-            .title, .desc, .arrow {
+            .title,
+            .desc,
+            .arrow {
                 display: block;
             }
 
             .arrow {
                 font-size: 3rem;
                 right: 3rem;
-                bottom: 2.4rem;           
+                bottom: 2.4rem;
             }
         }
     }
