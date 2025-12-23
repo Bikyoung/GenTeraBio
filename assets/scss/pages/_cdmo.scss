@@ -263,6 +263,9 @@
 
         &.cdo {
             z-index: 2;
+            background-color: map-get(abs.$colors, white);
+            border-radius: 2rem;
+            padding: 0 4rem;
         }
 
         &.cas {
@@ -332,10 +335,11 @@
             &:nth-child(1) {
                 position: relative;
                 padding-bottom: 5rem;
+                padding-right: clamp(32rem, 29.1666vw, 56rem);
 
                 &::before {
                     content: "";
-                    width: 90%;
+                    width: 100%;
                     height: 0.2rem;
                     position: absolute;
                     left: 0;
@@ -447,6 +451,7 @@
                 padding: 0;
 
                 &:nth-child(1) {
+                    padding-right: 0;
 
                     &::before {
                         width: 100%;
