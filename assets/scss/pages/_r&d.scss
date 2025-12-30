@@ -216,16 +216,20 @@
 //--------------- pipeline ---------------
 .pipeline {
     @include abs.responsivePaddingY(8rem, 6rem, 6rem, 5rem, 4rem);
-    @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);
-
-    width: 100%;
-    overflow-x: scroll;
 
     &__container {
+        @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);
+
         width: fit-content;
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        margin: 0 auto;
+    }
+
+    &__content {
+        width: fit-content;
+        overflow: auto;
     }
 
     .table-wrapper {

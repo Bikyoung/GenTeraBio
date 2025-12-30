@@ -510,15 +510,26 @@
         }
 
         .swiper-pagination {
-            width: fit-content;
-            height: fit-content;
+            @include abs.responsiveGap(0.8rem, 0.7rem, 0.5rem);
+
+            z-index: 10;
+            display: flex;
             position: absolute;
-            top: clamp(1rem, 0.077rem + 2.564vw, 5rem);
+            top: 0;
             left: 50%;
-            padding-left: clamp(4rem, 2.667rem + 1.736vw, 6rem);
+            margin-top: clamp(1rem, 0.077rem + 2.564vw, 5rem);
+            margin-left: clamp(4rem, 2.667rem + 1.736vw, 6rem);
 
             &-bullet {
+                width: 1.4rem;
+                height: 1.4rem;
+                border-radius: 10rem;
                 position: relative;
+                background-color: #ccc;
+
+                &[aria-current="true"]{
+                    background-color: map-get(abs.$colors, blue);
+                }
             }
         }
     }
@@ -573,11 +584,16 @@
             }
 
             .swiper-pagination {
-                padding-top: 4rem;
+                margin-top: 4rem;
                 top: 35.3rem;
                 left: 50%;
                 transform: translateX(-50%);
-                padding-left: 0; 
+                margin-left: 0; 
+
+                &-bullet {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
             }
         }
 
@@ -595,8 +611,14 @@
 
         &__Swiper {
             .swiper-pagination {
+                margin-top: 1rem;
                 padding-top: 24rem;
                 top: 4rem;
+
+                &-bullet {
+                    width: 1rem;
+                    height: 1rem;
+                }
             }
         }
     }
@@ -800,6 +822,8 @@
 
         .swiper-wrapper {
             display: flex;
+            height: auto;
+            align-items: stretch;
         }
 
         .partners-slide {

@@ -151,48 +151,15 @@ gsap.to(counter, {
 // ------------------------------ partners ------------------------------
 // .partners-slide가 무한 반복 자동 재생
 let partnersSwiper = new Swiper(".partnersSwiper", {
-    slidesPerView: 1.2,
+    slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 14,
     loop: true,
     autoplay: {
-        delay: 900,
-    },
-
-    breakpoints: {
-        // 화면 너비가 481px 이상일 때 적용
-        480: {
-            slidesPerView: 1.4
-        },
-        // 화면 너비가 560px 이상일 때 적용
-        561: {
-            slidesPerView: 1.8
-        },
-        // 화면 너비가 768px 이상일 때 적용
-        768: {
-            slidesPerView: "auto",
-            spaceBetween: 26
-        }
+        delay: 1150,
     }
 });
 
-// .swiper-slide의 제각각 높이를 하나로 통일함
-function setPartnersSlideHeight() {
-    let partnersSlideArray = $(".partners .swiper-slide");
-
-    /* 모든 .swiper-slide의 높이를 초기화
-        반응형시 .swiper-slide의 기존 높이가 필요함 */
-    partnersSlideArray.css("height", "auto");
-
-    // .swiper-slide 중 높이가 제일 큰 첫 번째 요소의 높이를 가져옴
-    let firstSlideHeight = partnersSlideArray.eq(0).outerHeight();
-
-    partnersSlideArray.css("height", `${firstSlideHeight}px`);
-}
-
-setPartnersSlideHeight();
-
-$(window).on("resize", () => {setPartnersSlideHeight()});
 
 
 
