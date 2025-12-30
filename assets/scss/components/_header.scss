@@ -11,7 +11,7 @@
 
     &__left {
         padding-left: clamp(5rem, -77.273rem + 45.455vw, 10rem);
-        
+
         img {
             width: clamp(22rem, 19.714rem + 2.232vw, 24rem);
         }
@@ -23,7 +23,7 @@
         a {
             @include abs.font(title5, map-get(abs.$colors, white));
         }
-    } 
+    }
 
     &__right {
         @include abs.responsivePaddingX(8rem, 3rem);
@@ -40,7 +40,7 @@
     &__hamburger {
         display: none;
     }
-    
+
     @media (max-width: map-get(abs.$breakpoints, large)) {
         &__left {
             padding-left: clamp(2.5rem, -45.942rem + 50.725vw, 6rem);
@@ -52,8 +52,8 @@
     }
 
     @media (max-width: map-get(abs.$breakpoints, medium)) {
-        @include abs.responsiveMaxWidth(); 
-        @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);  
+        @include abs.responsiveMaxWidth();
+        @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);
 
         width: 100%;
         margin: 0 auto;
@@ -67,7 +67,8 @@
         }
 
 
-        nav, .header__right {
+        nav,
+        .header__right {
             display: none;
         }
 
@@ -85,6 +86,7 @@
 
                 &::before {
                     font-size: 2.5rem;
+                    padding: 2rem 1rem 0 2rem;
                 }
             }
         }
@@ -106,7 +108,7 @@
 
 .side-menu {
     width: 100%;
-    display :none;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -132,18 +134,18 @@
         }
 
     }
-    
+
     nav {
         flex-direction: column;
         align-items: start;
         gap: 4rem;
-        padding: 2rem 10rem 5rem 10rem;
+        padding: 5rem 10rem;
 
         a {
             @include abs.font(subtitle1, map-get(abs.$colors, gray-350));
         }
     }
-    
+
     @media (max-width: map-get(abs.$breakpoints, small)) {
         &__top {
             padding: 0.7rem 2.4rem;
@@ -151,9 +153,9 @@
             i {
                 font-size: 1.5rem;
             }
-    
+
         }
-        
+
         nav {
             gap: 2.6rem;
             padding: 1.6rem 3.4rem 3.6rem 3.4rem;
