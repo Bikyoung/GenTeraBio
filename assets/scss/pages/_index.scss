@@ -436,7 +436,7 @@
 
 //--------------- facilities ---------------
 .facilities {
-    @include abs.responsivePaddingY(15rem, 10rem, 8rem, 5.5rem);
+    @include abs.responsivePaddingY(15rem, 10rem, (8rem, 0), (5.5rem, 0));
 
     &__container {
         @include abs.responsiveGap(7rem, 3rem, 6rem, 4rem, 4rem);
