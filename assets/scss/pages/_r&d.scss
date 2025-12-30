@@ -220,7 +220,6 @@
     &__container {
         @include abs.responsivePaddingX($pc: 5rem, $laptop: 2.5rem, $tablet: 1.6rem, $mobile-L: 1.5rem, $mobile-S: 1.2rem);
 
-        width: fit-content;
         display: flex;
         flex-direction: column;
         gap: 4rem;
@@ -228,14 +227,16 @@
     }
 
     &__content {
-        width: fit-content;
+        width: 100%;
         overflow: auto;
+        padding-bottom: 6rem; 
     }
 
     .table-wrapper {
         @include abs.responsivePaddingX(14.4rem, 4rem);
         @include abs.responsiveGap(9rem, 2rem);
 
+        width: 172rem;
         padding-top: 6rem;
         padding-bottom: 6rem;
         justify-content: space-between;
@@ -374,6 +375,10 @@
     }
 
     @media (max-width: map-get(abs.$breakpoints, large)) {
+        .table-wrapper {
+            width: 114rem;
+            justify-content: start;
+        }
         // 가로스크롤 밑에 여백
         margin-bottom: 6rem;
 
@@ -432,6 +437,12 @@
                     width: 20.4rem;
                 }
             }
+        }
+    }
+
+    @media (max-width: map-get(abs.$breakpoints, small)) {
+        &__content {
+            padding-bottom: 4rem; 
         }
     }
 }
