@@ -71,6 +71,7 @@ select {
 
         &--subtitle {
             @include abs.font(subtitle2, map-get(abs.$colors, gray-150));
+
         }
 
         &--list {
@@ -87,6 +88,7 @@ select {
             padding: 1.5rem 0;
             gap: clamp(1.5rem, 2.0833vw, 4rem);
             transition: 0.2s all ease-in-out;
+            cursor: pointer;
         }
 
         &--box img {
