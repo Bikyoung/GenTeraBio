@@ -68,9 +68,10 @@
         background-position: center;
         background-size: cover;
         margin-bottom: clamp(1rem, 5vw, 5rem);
-        }
+    }
 
-    &__desc p, a {
+    &__desc p,
+    a {
         @include abs.font(body2, map-get(abs.$colors, gray-300));
     }
 
@@ -87,7 +88,7 @@
             max-width: 100%;
             white-space: nowrap;
         }
-    
+
         &-btnPrev,
         &-btnNext {
             display: flex;
@@ -96,10 +97,10 @@
             padding-block: clamp(1.6rem, 6vw, 2.4rem);
             border-top: 0.1rem solid #d9d9d9;
         }
-    
+
         &-btnNext {
             border-bottom: 0.1rem solid #d9d9d9;
             margin-bottom: 10rem;
-         }
+        }
     }
 }

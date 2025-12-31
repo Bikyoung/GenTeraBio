@@ -43,7 +43,7 @@
 
 
     &__container {
-        @include abs.responsivePaddingY((20rem, 0), (18rem, 0), 16rem, 12.6rem);
+        @include abs.responsivePaddingY((20rem, 0), (18rem, 0), (16rem, 0), (12.6rem, 0));
 
         flex-direction: column;
         text-align: center;
@@ -51,6 +51,7 @@
 
     &__title {
         @include abs.font(title1, map-get(abs.$colors, white));
+        padding-bottom: 2rem;
     }
 
     &__subtitle {
@@ -229,7 +230,7 @@
     &__content {
         width: 100%;
         overflow: auto;
-        padding-bottom: 6rem; 
+        padding-bottom: 6rem;
     }
 
     .table-wrapper {
@@ -379,6 +380,7 @@
             width: 114rem;
             justify-content: start;
         }
+
         // 가로스크롤 밑에 여백
         margin-bottom: 6rem;
 
@@ -442,7 +444,7 @@
 
     @media (max-width: map-get(abs.$breakpoints, small)) {
         &__content {
-            padding-bottom: 4rem; 
+            padding-bottom: 4rem;
         }
     }
 }
