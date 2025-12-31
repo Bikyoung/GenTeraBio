@@ -883,11 +883,15 @@
 
         .index-contact__title {
             @include abs.font(title1, map-get(abs.$colors, white));
+            
+            text-align: center;
         }
 
         .index-contact__desc {
             @include abs.font(body1, map-get(abs.$colors, white));
             @include abs.responsivePaddingY($pc: (pt: 0.2rem, pb: 3rem), $laptop: (pt: 0.4rem, pb: 2rem), $tablet: (pt: 0.2rem, pb: 2.4rem), $mobile-L: (pt: 0.2rem, pb: 2rem));
+
+            text-align: center;
         }
 
         .index-contact__button {

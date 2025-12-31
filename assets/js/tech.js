@@ -13,7 +13,7 @@ $(".mechanism__tab").on("click", function() {
 $(".difference__card").on("click", function() {
     $(".difference__card").removeClass("expand");
     $(this).addClass("expand");
-})
+});
 
 
 $(window).on("resize", () => {

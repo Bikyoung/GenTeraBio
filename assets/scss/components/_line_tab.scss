@@ -18,6 +18,7 @@
 .line-tab {
     @include abs.font(subtitle2, map-get(abs.$colors, gray-250));
 
+    cursor: pointer;
     padding: 3rem 7.1rem 3rem 0;
 
     &.on {
