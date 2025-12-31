@@ -66,6 +66,12 @@
             padding-left: 0;
         }
 
+        &__left {
+            img {
+                width: 16rem;
+            }
+        }
+
 
         nav,
         .header__right {
@@ -86,7 +92,7 @@
 
                 &::before {
                     font-size: 2.5rem;
-                    padding: 2rem 1rem 0 2rem;
+                    padding: 2rem 0 0 2rem;
                 }
             }
         }
@@ -133,16 +139,20 @@
             color: map-get(abs.$colors, gray-350);
         }
 
+        img {
+            width: 16rem;
+        }
+
     }
 
     nav {
         flex-direction: column;
         align-items: start;
         gap: 4rem;
-        padding: 5rem 10rem;
+        padding: 10rem 10rem;
 
         a {
-            @include abs.font(subtitle1, map-get(abs.$colors, gray-350));
+            @include abs.font(subtitle2, map-get(abs.$colors, gray-350));
         }
     }
 
@@ -158,7 +168,7 @@
 
         nav {
             gap: 2.6rem;
-            padding: 1.6rem 3.4rem 3.6rem 3.4rem;
+            padding: 3.4rem 3.4rem;
         }
     }
 }

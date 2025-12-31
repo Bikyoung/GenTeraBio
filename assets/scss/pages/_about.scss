@@ -95,7 +95,7 @@
 .ci {
 
     &__dec-wrap {
-        @include abs.responsivePaddingY($pc: (pt: 0, pb:10rem), $laptop: (pt: 4rem, pb: 6rem), $tablet: (pt: 4rem, pb: 6rem), $mobile-L: (pt: 5rem, pb: 5rem));
+        @include abs.responsivePaddingY($pc: (pt: 0, pb:10rem), $laptop: (pt: 4rem, pb: 6rem), $tablet: (pt: 0, pb: 6rem), $mobile-L: (pt: 0, pb: 5rem));
     }
 
     &__logo img {

@@ -108,6 +108,7 @@ select {
 
     &__title {
         @include abs.font(title2, map-get(abs.$colors, black));
+        padding-bottom: 2rem;
     }
 
     &__dec {
@@ -248,6 +249,11 @@ select {
 // -----------1024
 @media (max-width: map-get(abs.$breakpoints, large)) {
     .contact {
+        &__kind {
+            &--box {
+                padding: 1rem 0;
+            }
+        }
 
         &__inquiry {
 
