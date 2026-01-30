@@ -1,0 +1,28 @@
+# robots.txt for GenTeraBio
+# https://genterabio.netlify.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://genterabio.netlify.app/sitemap.xml
+
+# Disallow specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+# Crawl-delay (optional)
+# Crawl-delay: 1
