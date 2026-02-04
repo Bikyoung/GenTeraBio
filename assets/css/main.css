@@ -5699,6 +5699,7 @@ select {
   padding: 1.5rem 0;
   gap: clamp(1.5rem, 2.0833vw, 4rem);
   transition: 0.2s all ease-in-out;
+  cursor: pointer;
 }
 .contact__kind--box img {
   width: 3rem;
