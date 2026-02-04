@@ -240,6 +240,11 @@ select {
     @include abs.font(subtitle5, map-get(abs.$colors, gray-200));
     background-color: map-get(abs.$colors, white);
     transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.inquiry__btn {
+    cursor: pointer;
 }
 
 .file-name:hover,
