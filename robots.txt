@@ -1,0 +1,26 @@
+# robots.txt for GenTeraBio
+# https://genterabio.netlify.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap 위치
+Sitemap: https://genterabio.netlify.app/sitemap.xml
+
+# 크롤링 제외할 디렉토리 (필요시 추가)
+# Disallow: /admin/
+# Disallow: /private/
+
+# 크롤러별 설정
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# 크롤링 속도 제한 (선택사항)
+# Crawl-delay: 1
+

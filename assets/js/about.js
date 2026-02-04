@@ -1,4 +1,3 @@
-// --------------about-map----------------
 $(function () {
     // 지도를 표시할 div
     let $mapContainer = $('#map')[0];
