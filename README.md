@@ -38,3 +38,6 @@
     - 본 프로젝트에 등장하는 기업, 데이터, 파이프라인은 모두 가상 설정입니다.
     - 실제 의료·임상 판단을 목적으로 하지 않으며,
     세포치료 기업 홍보 사이트 UI/UX 및 정보 구조 연구를 위한 프로젝트입니다.
+7. 프로젝트 구조
+   - <img width="767" height="832" alt="Group 1" src="https://github.com/user-attachments/assets/9922c9ac-55fb-464e-87f8-6afaab0b2cd3" />
+
